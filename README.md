@@ -108,19 +108,19 @@ In case you want to display photos in a different resolution you can use the sam
 ##API Documentation
 ***
 ###Rescourses
-* **[Model](resources/model.md)**
-* **[Errors](resources/errors.md)**
+* **[Model](https://github.com/eyeem/API/tree/masterresources/model.md)**
+* **[Errors](https://github.com/eyeem/API/tree/masterresources/errors.md)**
 
 ###Endpoints
 
-* **[Users](endpoints/users.md)** 
-* **[Photos](endpoints/photos.md)**
-* **[Albums](endpoints/albums.md)**
-* **[News](endpoints/news.md)**
-* **[Topics](endpoints/topics.md)**
-* **[Search](endpoints/search.md)**
-* **[Venues](endpoints/venues.md)**
-* **[Auth](endpoints/auth.md)**
+* **[Users](https://github.com/eyeem/API/tree/masterendpoints/users.md)** 
+* **[Photos](https://github.com/eyeem/API/tree/masterendpoints/photos.md)**
+* **[Albums](https://github.com/eyeem/API/tree/masterendpoints/albums.md)**
+* **[News](https://github.com/eyeem/API/tree/masterendpoints/news.md)**
+* **[Topics](https://github.com/eyeem/API/tree/masterendpoints/topics.md)**
+* **[Search](https://github.com/eyeem/API/tree/masterendpoints/search.md)**
+* **[Venues](https://github.com/eyeem/API/tree/masterendpoints/venues.md)**
+* **[Auth](https://github.com/eyeem/API/tree/masterendpoints/auth.md)**
   
 ##Contact
 ***
