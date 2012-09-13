@@ -108,19 +108,19 @@ In case you want to display photos in a different resolution you can use the sam
 ##API Documentation
 ***
 ###Rescourses
-* **[Model](https://github.com/eyeem/API/tree/masterresources/model.md)**
-* **[Errors](https://github.com/eyeem/API/tree/masterresources/errors.md)**
+* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md)**
+* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md)**
 
 ###Endpoints
 
-* **[Users](https://github.com/eyeem/API/tree/masterendpoints/users.md)** 
-* **[Photos](https://github.com/eyeem/API/tree/masterendpoints/photos.md)**
-* **[Albums](https://github.com/eyeem/API/tree/masterendpoints/albums.md)**
-* **[News](https://github.com/eyeem/API/tree/masterendpoints/news.md)**
-* **[Topics](https://github.com/eyeem/API/tree/masterendpoints/topics.md)**
-* **[Search](https://github.com/eyeem/API/tree/masterendpoints/search.md)**
-* **[Venues](https://github.com/eyeem/API/tree/masterendpoints/venues.md)**
-* **[Auth](https://github.com/eyeem/API/tree/masterendpoints/auth.md)**
+* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md)** 
+* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md)**
+* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md)**
+* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md)**
+* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md)**
+* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md)**
+* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md)**
+* **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md)**
   
 ##Contact
 ***
