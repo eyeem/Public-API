@@ -24,19 +24,10 @@ Get a user's friends (users that they follow)
 200 and and a dictionary containing limit, offset, total and an array of friends (users)
 
 
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `https://www.eyeem.com/api/v2/users/1013/friends`
 
-
-
-
-
-
-
-[Errors]: 

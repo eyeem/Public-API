@@ -23,8 +23,7 @@ Retrieves an array of the users who like the album.
 
 200 and and a dictionary containing limit, offset, total and an array of likers (users)
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -37,5 +36,4 @@ Retrieves an array of the users who like the album.
 
 
 
-
-[Errors]: 
+ 

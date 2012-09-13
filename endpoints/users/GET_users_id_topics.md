@@ -24,10 +24,7 @@ Get a list of topics the user has contributed to (the topics correlate to tag al
 200 and and a dictionary containing limit, offset, total and an array of topic objects
 
 
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -36,8 +33,3 @@ Get a list of topics the user has contributed to (the topics correlate to tag al
 
 
 
-
-
-
-
-[Errors]: 

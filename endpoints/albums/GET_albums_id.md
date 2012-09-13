@@ -30,8 +30,7 @@ Retrieves album specified in the id URL query parameter.
 200 and a dictionary containing the album object
 
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -40,10 +39,4 @@ Retrieves album specified in the id URL query parameter.
 
 
 
-
-
-
-
-
-
-[Errors]: 
+ 

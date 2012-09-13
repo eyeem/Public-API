@@ -21,7 +21,7 @@ Add an existing photo to an album.
 
 200 if success
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -29,9 +29,3 @@ Add an existing photo to an album.
 `https://www.eyeem.com/api/v2/photos/1234/albums/11234134`
 
 
-
-
-
-
-
-[Errors]: 

@@ -7,4 +7,10 @@ This is the entry point to search EyeEm users and albums. To paginate through th
 ##Available Endpoints
 ***
 
-* `/search`, [GET]()
+* `/search`, [GET](https://github.com/eyeem/API/blob/master/endpoints/search/GET_search.md)
+
+
+##GET
+***
+
+* [`/search`](https://github.com/eyeem/API/blob/master/endpoints/search/GET_search.md)

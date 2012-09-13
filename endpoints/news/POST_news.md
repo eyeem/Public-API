@@ -23,8 +23,7 @@ Marks multiple news items as read.
 200
 
 
-[Errors][]
-
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 ### Examples
 ***
 
@@ -33,7 +32,4 @@ Marks multiple news items as read.
 
 
 
-
-
-
-[Errors]: 
+ 

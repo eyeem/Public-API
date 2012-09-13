@@ -22,8 +22,7 @@ Report a photo to EyeEm moderators.
 
 200 if success
 
-[Errors][]
-
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 ### Examples
 ***
 
@@ -31,8 +30,3 @@ Report a photo to EyeEm moderators.
 
 
 
-
-
-
-
-[Errors]: 

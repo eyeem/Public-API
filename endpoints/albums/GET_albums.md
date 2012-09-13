@@ -28,7 +28,7 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 ***
 200 and an array of album objects, optionally (for search) includes pagination parameters
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -37,10 +37,4 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 
 `http://www.eyeem.com/api/v2/albums?q=berlin&limit=25&offset=20`
 
-
-
-
-
-
-
-[Errors]: 
+ 

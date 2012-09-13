@@ -23,8 +23,7 @@ Retrieves an array of a photo's comments.
 
 200 and and a dictionary containing limit, offset, total and an array of comments
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -34,7 +33,4 @@ Retrieves an array of a photo's comments.
 
 
 
-
-
-
-[Errors]: 
+ 

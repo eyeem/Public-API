@@ -27,9 +27,7 @@ If requested from a user other than the authenticated one, only the user's liked
 200 and and a dictionary containing limit, offset, total and an array of albums
 
 
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -39,7 +37,3 @@ If requested from a user other than the authenticated one, only the user's liked
 
 
 
-
-
-
-[Errors]: 

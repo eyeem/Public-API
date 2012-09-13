@@ -22,10 +22,7 @@ Add users to the friends list (follow)
 
 200 if success
 
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -35,7 +32,3 @@ Add users to the friends list (follow)
 
 
 
-
-
-
-[Errors]: 

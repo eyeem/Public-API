@@ -1,22 +1,19 @@
-# GET /news/#{id} 
+# POST /photos/#{id}/topics       
 ***
-`/news/#{id}`
+`/photos/#{id}/topics `
 
 ### Description
 ***
-Updates a news item by id and sets it (and optionally, all items older than it) to "seen".
-
+Add a photo to a new topic (which automatically adds it to the album associated with that topic).
 
 ### Parameters
 ***
 
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
-|**id**|The id of the news.|integer|x||
+|**id**|The id of the photo|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
-|**include_older**|if true, marks all older news items as "seen"|boolean|||
-
-
+|**name**| the name of the topic |string|x||
 
 
 ### Response
@@ -30,8 +27,6 @@ Updates a news item by id and sets it (and optionally, all items older than it) 
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/news/1234`
+`https://www.eyeem.com/api/v2/photos/1234/topics?name=funfunfun`
 
 
-
- 

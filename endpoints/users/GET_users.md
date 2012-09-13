@@ -24,8 +24,7 @@ Search for users or retrieve suggested users.
 ***
 200, pagination params and a array of user objects (either those queried, or those suggested)
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -34,8 +33,3 @@ Search for users or retrieve suggested users.
 
 
 
-
-
-
-
-[Errors]: 

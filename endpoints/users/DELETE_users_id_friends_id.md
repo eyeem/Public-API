@@ -24,10 +24,7 @@ Remove a user from the friends list (unfollow).
 200 if success
 
 
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -36,8 +33,3 @@ Remove a user from the friends list (unfollow).
 
 
 
-
-
-
-
-[Errors]: 

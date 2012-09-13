@@ -23,17 +23,11 @@ Retrieves the authenticated user's latest twenty news items.
 200 and a dictionary containing pagination info and an array of news items.
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `http://www.eyeem.com/api/v2/news?offset=0&limit=20`
 
-
-
-
-
-
-
-[Errors]: 
+ 

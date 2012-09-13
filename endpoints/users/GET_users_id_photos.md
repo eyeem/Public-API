@@ -23,9 +23,7 @@ Get the given user's photos.
 
 200 and and a dictionary containing limit, offset, total and an array of photo objects
 
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -35,7 +33,3 @@ Get the given user's photos.
 
 
 
-
-
-
-[Errors]: 

@@ -25,19 +25,9 @@ Check if the given user is friends with (follows) another user.
 
 
 
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `https://www.eyeem.com/api/v2/users/1013/friends/1015`
-
-
-
-
-
-
-
-[Errors]: 

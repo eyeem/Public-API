@@ -20,8 +20,7 @@ Retrieves a news item by id.
 
 200 and an a news item
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -32,6 +31,4 @@ Retrieves a news item by id.
 
 
 
-
-
-[Errors]: 
+ 

@@ -23,7 +23,7 @@ Share a photo to the user's connected social media services.
 
 200 if success
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -32,8 +32,3 @@ Share a photo to the user's connected social media services.
 
 
 
-
-
-
-
-[Errors]: 

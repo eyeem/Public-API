@@ -21,11 +21,7 @@ Only available for the authenticated user, this call disconnects a service.
 200 and confirmation message
 
 
-
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -34,8 +30,3 @@ Only available for the authenticated user, this call disconnects a service.
 
 
 
-
-
-
-
-[Errors]: 

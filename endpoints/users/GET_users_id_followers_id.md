@@ -21,9 +21,7 @@ Check if a user follows the given user.
 200 if following, 404 if not
 
 
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -33,7 +31,3 @@ Check if a user follows the given user.
 
 
 
-
-
-
-[Errors]: 

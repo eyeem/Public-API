@@ -20,7 +20,7 @@ Unlike an album.
 
 200 if success
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -32,6 +32,4 @@ Unlike an album.
 
 
 
-
-
-[Errors]: 
+ 

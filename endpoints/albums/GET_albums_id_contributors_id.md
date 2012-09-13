@@ -21,7 +21,7 @@ Checks whether a user has contributed a photo to the album.
 200 if the user has contributed a photo to the album, 404 otherwise
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -30,8 +30,4 @@ Checks whether a user has contributed a photo to the album.
 
 
 
-
-
-
-
-[Errors]: 
+ 

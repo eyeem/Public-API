@@ -15,7 +15,7 @@ Retrieve the eyeem foursquare token (needed to create a venue).
 
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -24,8 +24,3 @@ Retrieve the eyeem foursquare token (needed to create a venue).
 
 
 
-
-
-
-
-[Errors]: 

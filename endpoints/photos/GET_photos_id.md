@@ -25,17 +25,9 @@ Retrieves a photo by id.
 
 200 and an a photo dictionary
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `https://www.eyeem.com/api/v2/photos/1234?detailed=1&includeAlbums=1&includeComments=1&numComment=5`
-
-
-
-
-
-
-
-[Errors]: 

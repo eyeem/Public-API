@@ -34,12 +34,7 @@ Only available for the authenticated user, this call edits a user's push and ema
 
 200 and confirmation message
 
-
-
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -47,9 +42,3 @@ Only available for the authenticated user, this call edits a user's push and ema
 `https://www.eyeem.com/api/v2/users/me/newsSettings`
 
 
-
-
-
-
-
-[Errors]: 

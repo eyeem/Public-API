@@ -29,7 +29,7 @@ Create a photo object, either by uploading a file or passing a filename (the res
 
 201 and a photo object
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -38,8 +38,3 @@ Create a photo object, either by uploading a file or passing a filename (the res
 
 
 
-
-
-
-
-[Errors]: 

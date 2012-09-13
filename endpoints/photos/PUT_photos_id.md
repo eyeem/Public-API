@@ -25,8 +25,7 @@ Edits a photo by id (has to be a photo belonging to the authenticated user or ad
 
 200 if success
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -36,7 +35,3 @@ Edits a photo by id (has to be a photo belonging to the authenticated user or ad
 
 
 
-
-
-
-[Errors]: 

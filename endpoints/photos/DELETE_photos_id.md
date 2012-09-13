@@ -22,7 +22,7 @@ Deletes a photo by id (has to be a photo belonging to the authenticated user).
 200 if success
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -32,7 +32,4 @@ Deletes a photo by id (has to be a photo belonging to the authenticated user).
 
 
 
-
-
-
-[Errors]: 
+ 

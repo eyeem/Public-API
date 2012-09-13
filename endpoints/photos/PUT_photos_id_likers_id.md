@@ -24,18 +24,10 @@ Like a photo.
 200 if success
 
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `https://www.eyeem.com/api/v2/photos/1234/likers/me`
 
-
-
-
-
-
-
-[Errors]: 

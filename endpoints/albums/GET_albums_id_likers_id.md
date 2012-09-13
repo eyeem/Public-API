@@ -22,7 +22,7 @@ Checks whether a user likes an album.
 
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -31,9 +31,4 @@ Checks whether a user likes an album.
 
 
 
-
-
-
-
-
-[Errors]: 
+ 

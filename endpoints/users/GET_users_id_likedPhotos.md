@@ -24,8 +24,7 @@ Get all the photos that a user has liked.
 200 and and a dictionary containing limit, offset, total and an array of photo objects
 
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -34,8 +33,3 @@ Get all the photos that a user has liked.
 
 
 
-
-
-
-
-[Errors]: 

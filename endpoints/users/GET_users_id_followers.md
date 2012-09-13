@@ -25,10 +25,7 @@ Get a user's followers.
 
 200 and and a dictionary containing limit, offset, total and an array of followers (users)
 
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -37,8 +34,3 @@ Get a user's followers.
 
 
 
-
-
-
-
-[Errors]: 

@@ -17,7 +17,8 @@ Upload a photo file and send back a filename that can then be use to call POST /
 ***
 
 201 and filename
-[Errors][]
+
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -25,9 +26,3 @@ Upload a photo file and send back a filename that can then be use to call POST /
 `https://www.eyeem.com/api/v2/photos/upload`
 
 
-
-
-
-
-
-[Errors]: 

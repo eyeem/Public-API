@@ -32,10 +32,7 @@ Only available for the authenticated user, this call adds a service to the user'
 
 
 
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -43,9 +40,3 @@ Only available for the authenticated user, this call adds a service to the user'
 `https://www.eyeem.com/api/v2/users/me/socialMedia/twitter`
 
 
-
-
-
-
-
-[Errors]: 

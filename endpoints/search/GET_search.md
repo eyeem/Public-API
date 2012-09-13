@@ -22,18 +22,10 @@ Retrieves an array containing a users and an albums dictionary.
 200 and an array containing a users dictionary and an albums dictionary.
 
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `http://www.eyeem.com/api/v2/search?q=berlin&includeAlbums=1`
 
-
-
-
-
-
-
-[Errors]: 

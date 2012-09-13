@@ -23,11 +23,7 @@ Only available for the authenticated user, this call returns the user's chosen n
 200 and confirmation message
 
 
-
-
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -38,6 +34,3 @@ Only available for the authenticated user, this call returns the user's chosen n
 
 
 
-
-
-[Errors]: 

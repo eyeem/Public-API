@@ -21,9 +21,7 @@ Retrieves an array containing a users and an albums dictionary.
 
 200 and an array of topics.
 
-
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -31,9 +29,3 @@ Retrieves an array containing a users and an albums dictionary.
 `http://www.eyeem.com/api/v2/topics?autoComplete=berl&offset=0&limit=20`
 
 
-
-
-
-
-
-[Errors]: 

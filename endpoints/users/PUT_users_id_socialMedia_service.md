@@ -34,7 +34,7 @@ Only available for the authenticated user, this call disconnects a service.
 
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -42,9 +42,3 @@ Only available for the authenticated user, this call disconnects a service.
 `https://www.eyeem.com/api/v2/users/me/socialMedia/facebook`
 
 
-
-
-
-
-
-[Errors]: 

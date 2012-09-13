@@ -24,8 +24,7 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 
 200 and an array of photos.
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -36,6 +35,4 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 
 
 
-
-
-[Errors]: 
+ 

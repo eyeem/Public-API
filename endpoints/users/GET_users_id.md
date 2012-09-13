@@ -21,18 +21,10 @@ Get a user's profile information.
 ***
 200 and a user object 
 
-
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
 
 `https://www.eyeem.com/api/v2/users/1013`
 
-
-
-
-
-
-
-[Errors]: 

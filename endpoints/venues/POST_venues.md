@@ -24,7 +24,7 @@ Create a venue on EyeEm.
 
 
 
-[Errors][]
+[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
 
 ### Examples
 ***
@@ -36,5 +36,3 @@ Create a venue on EyeEm.
 
 
 
-
-[Errors]: 
