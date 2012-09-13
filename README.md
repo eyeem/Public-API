@@ -108,19 +108,19 @@ In case you want to display photos in a different resolution you can use the sam
 ##API Documentation
 ***
 ###Rescourses
-* **[Model](tree/resources/model.md)**
-* **[Errors](tree/resources/errors.md)**
+* **[Model](resources/model.md)**
+* **[Errors](resources/errors.md)**
 
 ###Endpoints
 
-* **[Users](tree/endpoints/users.md)** 
-* **[Photos](tree/endpoints/photos.md)**
-* **[Albums](tree/endpoints/albums.md)**
-* **[News](tree/endpoints/news.md)**
-* **[Topics](tree/endpoints/topics.md)**
-* **[Search](tree/endpoints/search.md)**
-* **[Venues](tree/endpoints/venues.md)**
-* **[Auth](tree/endpoints/auth.md)**
+* **[Users](endpoints/users.md)** 
+* **[Photos](endpoints/photos.md)**
+* **[Albums](endpoints/albums.md)**
+* **[News](endpoints/news.md)**
+* **[Topics](endpoints/topics.md)**
+* **[Search](endpoints/search.md)**
+* **[Venues](endpoints/venues.md)**
+* **[Auth](endpoints/auth.md)**
   
 ##Contact
 ***
