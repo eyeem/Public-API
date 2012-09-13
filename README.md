@@ -109,17 +109,17 @@ In case you want to display photos in a different resolution you can use the sam
 ***
 
 * Resources
-  * [[Auth]]
-  * [[Endpoint: Users]]
-  * [[Endpoint: Photos]]
-  * [[Endpoint: Albums]]
-  * [[Endpoint: News]]
-  * [[Topics]]
-  * [[Search]]
-  * [[Invitations]]
-  * [[Endpoint: Venues]]
-* [[Model]]
-
+  * [Auth]
+  * [Endpoint: Users]
+  * [Endpoint: Photos]
+  * [[Endpoint: Albums]
+  * [Endpoint: News]
+  * [Topics]
+  * [Search]
+  * [Invitations]
+  * [Endpoint: Venues]
+  * [Model]
+  
 ##Contact
 ***
 
