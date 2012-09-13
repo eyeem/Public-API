@@ -107,18 +107,20 @@ In case you want to display photos in a different resolution you can use the sam
 
 ##API Documentation
 ***
+###Rescourses
+* **[Model](https://github.com/eyeem/API/blob/master/resources/model.md)**
+* **[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)**
 
-* Resources
-  * [Auth]
-  * [Endpoint: Users]
-  * [Endpoint: Photos]
-  * [[Endpoint: Albums]
-  * [Endpoint: News]
-  * [Topics]
-  * [Search]
-  * [Invitations]
-  * [Endpoint: Venues]
-  * [Model]
+###Endpoints
+
+* **[Users](https://github.com/eyeem/API/blob/master/endpoints/users.md)** 
+* **[Photos](https://github.com/eyeem/API/blob/master/endpoints/photos.md)**
+* **[Albums](https://github.com/eyeem/API/blob/master/endpoints/albums.md)**
+* **[News](https://github.com/eyeem/API/blob/master/endpoints/news.md)**
+* **[Topics](https://github.com/eyeem/API/blob/master/endpoints/topics.md)**
+* **[Search](https://github.com/eyeem/API/blob/master/endpoints/search.md)**
+* **[Venues](https://github.com/eyeem/API/blob/master/endpoints/venues.md)**
+* **[Auth](https://github.com/eyeem/API/blob/master/endpoints/auth.md)**
   
 ##Contact
 ***
