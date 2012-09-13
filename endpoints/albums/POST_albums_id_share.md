@@ -22,7 +22,7 @@ Share an album to the user's connected social media services.
 ***
 200 if success
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

@@ -31,10 +31,7 @@ Only available for the authenticated user, this call disconnects a service.
 
 
 
-
-
-
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

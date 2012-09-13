@@ -21,7 +21,7 @@ Remove an existing photo from an album.
 
 200 if success
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

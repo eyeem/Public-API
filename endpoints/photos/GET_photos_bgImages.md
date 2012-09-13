@@ -13,7 +13,7 @@ Get a selection of images that is used in the existing apps as a start screen ba
 
 200 and an array of bgImage png files. The images themselves can be retrieved using the standard /thumb url. 
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

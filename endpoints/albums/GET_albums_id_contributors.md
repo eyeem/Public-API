@@ -24,7 +24,7 @@ Retrieves an array of the users who have added photos to the album.
 200 and and a dictionary containing limit, offset, total and an array of contributors (users)
 
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 ### Examples
 ***
 

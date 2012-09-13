@@ -30,7 +30,7 @@ Retrieves photos of an album specified in the id URL query parameter.
 200 and and a dictionary containing limit, offset, total and an array of photos
 
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

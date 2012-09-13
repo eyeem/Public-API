@@ -22,7 +22,7 @@ Adds a new comment to a photo.
 
 200 and a comment object
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

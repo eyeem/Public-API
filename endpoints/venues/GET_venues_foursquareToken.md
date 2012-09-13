@@ -14,8 +14,7 @@ Retrieve the eyeem foursquare token (needed to create a venue).
  - 200 and a token
 
 
-
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

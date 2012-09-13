@@ -31,8 +31,7 @@ Only available for the authenticated user, this call adds a service to the user'
 200 and an array of services objects
 
 
-
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

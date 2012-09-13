@@ -21,7 +21,7 @@ Only available for the authenticated user, this call returns the status of the v
 
 200 and an array of services objects
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 ### Examples
 ***
 

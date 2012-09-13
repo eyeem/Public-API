@@ -1,4 +1,4 @@
-# GET /albums/#{id}
+../../# GET /albums/#{id}
 ***
 `/albums/#{id}`
 
@@ -30,7 +30,7 @@ Retrieves album specified in the id URL query parameter.
 200 and a dictionary containing the album object
 
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

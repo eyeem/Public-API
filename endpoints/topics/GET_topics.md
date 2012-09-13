@@ -21,8 +21,7 @@ Retrieves an array containing a users and an albums dictionary.
 
 200 and an array of topics.
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
-
+[Errors](../../resources/errors.md)
 ### Examples
 ***
 

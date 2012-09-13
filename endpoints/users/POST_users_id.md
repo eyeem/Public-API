@@ -30,7 +30,7 @@ Edit (parts of) a user's own profile.
 200 and a user object 
 
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

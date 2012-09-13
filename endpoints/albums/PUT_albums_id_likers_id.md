@@ -1,4 +1,4 @@
-# PUT /albums/#{id}/likers/#{user_id} 
+../../# PUT /albums/#{id}/likers/#{user_id} 
 ***
 `/albums/#{id}/likers/#{user_id}`
 
@@ -20,7 +20,7 @@ Like an album.
 
 200 if success
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 
 ### Examples
 ***

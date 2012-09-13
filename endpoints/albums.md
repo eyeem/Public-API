@@ -9,9 +9,12 @@ These are the API calls that you can use to retrieve albums, the photos in those
 ***
 
 * `/albums`, [GET](albums/GET_albums.md), POST (not available yet)
+<<<<<<< HEAD
 * `/albums/recommended`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_recommended.md)
 * `/albums/#{id}`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id.md)
 * `/albums/#{id}/photos`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id_photos.md)
+=======
+>>>>>>> correcting links
 * `/albums/recommended`, [GET](albums/GET_albums_recommended.md)
 * `/albums/#{id}`, [GET](albums/GET_albums_id.md)
 * `/albums/#{id}/photos`, [GET](albums/GET_albums_id_photos.md)
@@ -47,7 +50,7 @@ The various possible representations of an album (simple,detailed) are presented
 * [`/albums/#{id}/photos`](albums/GET_albums_id_photos.md)
 * `/albums/#{id}/hide`
 * [`/albums/#{id}/likers`](albums/GET_albums_id_likers.md)
-* [`/albums/#{id}/likers/#{user_id}`](albums/GET_albums_id_photos_id.md)
+* [`/albums/#{id}/likers/#{user_id}`](albums/GET_albums_id_likers_id.md)
 * [`/albums/#{id}/contributors`](albums/GET_albums_id_contributors.md)
 * [`/albums/#{id}/contributors/#{user_id}`](albums/GET_albums_id_contributors_id.md)
 

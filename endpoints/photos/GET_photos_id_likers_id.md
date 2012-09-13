@@ -21,8 +21,7 @@ Checks whether a user likes a photo.
 
 200 if the user likes a photo, 404 otherwise
 
-
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
+[Errors](../../resources/errors.md)
 ### Examples
 ***
 

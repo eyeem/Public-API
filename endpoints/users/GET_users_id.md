@@ -21,8 +21,7 @@ Get a user's profile information.
 ***
 200 and a user object 
 
-[Errors](https://github.com/eyeem/API/blob/master/resources/errors.md)
-
+[Errors](../../resources/errors.md)
 ### Examples
 ***
 
