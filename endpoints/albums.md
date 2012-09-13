@@ -13,8 +13,6 @@ These are the API calls that you can use to retrieve albums, the photos in those
 * `/albums/recommended`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_recommended.md)
 * `/albums/#{id}`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id.md)
 * `/albums/#{id}/photos`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id_photos.md)
-=======
->>>>>>> correcting links
 * `/albums/recommended`, [GET](albums/GET_albums_recommended.md)
 * `/albums/#{id}`, [GET](albums/GET_albums_id.md)
 * `/albums/#{id}/photos`, [GET](albums/GET_albums_id_photos.md)
