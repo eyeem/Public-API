@@ -8,7 +8,7 @@ These are the API calls that you can use to retrieve albums, the photos in those
 ##Available endpoints
 ***
 
-* `/albums`, [GET](/albums/GET_albums.md), POST (not available yet)
+* `/albums`, [GET](//albums/GET_albums.md), POST (not available yet)
 * `/albums/recommended`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_recommended.md)
 * `/albums/#{id}`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id.md)
 * `/albums/#{id}/photos`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id_photos.md)
