@@ -30,7 +30,7 @@ Edit (parts of) a user's own profile.
 200 and a user object 
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

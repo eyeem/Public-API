@@ -25,7 +25,7 @@ Updates a news item by id and sets it (and optionally, all items older than it) 
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

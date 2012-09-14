@@ -22,7 +22,7 @@ Add users to the friends list (follow)
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -29,7 +29,7 @@ Create a photo object, either by uploading a file or passing a filename (the res
 
 201 and a photo object
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -28,7 +28,7 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 ***
 200 and an array of album objects, optionally (for search) includes pagination parameters
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

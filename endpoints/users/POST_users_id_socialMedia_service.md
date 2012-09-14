@@ -31,7 +31,7 @@ Only available for the authenticated user, this call adds a service to the user'
 200 and an array of services objects
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

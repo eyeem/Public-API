@@ -22,7 +22,7 @@ Checks whether a user likes an album.
 
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

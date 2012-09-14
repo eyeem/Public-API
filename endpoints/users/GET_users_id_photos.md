@@ -23,7 +23,7 @@ Get the given user's photos.
 
 200 and and a dictionary containing limit, offset, total and an array of photo objects
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

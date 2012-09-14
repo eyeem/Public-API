@@ -20,7 +20,7 @@ Retrieves a news item by id.
 
 200 and an a news item
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

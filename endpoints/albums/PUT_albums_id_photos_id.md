@@ -17,12 +17,12 @@ Add an existing photo to an album.
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/1234/photos/11234134`
+`http://www.eyeem.com/api/v2/albums/1234/photos/11234134`)
 
 
  

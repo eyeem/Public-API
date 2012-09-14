@@ -22,7 +22,7 @@ Add a photo to a new topic (which automatically adds it to the album associated 
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

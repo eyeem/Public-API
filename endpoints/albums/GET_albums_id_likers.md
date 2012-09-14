@@ -23,7 +23,7 @@ Retrieves an array of the users who like the album.
 
 200 and and a dictionary containing limit, offset, total and an array of likers (users)
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -22,7 +22,7 @@ Adds a new comment to a photo.
 
 200 and a comment object
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

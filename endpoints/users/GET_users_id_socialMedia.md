@@ -21,7 +21,7 @@ Only available for the authenticated user, this call returns the status of the v
 
 200 and an array of services objects
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 

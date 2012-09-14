@@ -24,7 +24,7 @@ Check if the given user is friends with (follows) another user.
 200 if friends, 404 if not
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

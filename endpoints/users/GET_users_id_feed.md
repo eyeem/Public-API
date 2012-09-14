@@ -26,7 +26,7 @@ If requested from a user other than the authenticated one, only the user's liked
 
 200 and and a dictionary containing limit, offset, total and an array of albums
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

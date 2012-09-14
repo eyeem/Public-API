@@ -22,7 +22,7 @@ Report a photo to EyeEm moderators.
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 

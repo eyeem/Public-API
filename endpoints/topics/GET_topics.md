@@ -21,7 +21,7 @@ Retrieves an array containing a users and an albums dictionary.
 
 200 and an array of topics.
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 

@@ -30,7 +30,7 @@ Retrieves album specified in the id URL query parameter.
 200 and a dictionary containing the album object
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -23,7 +23,7 @@ Retrieves the authenticated user's latest twenty news items.
 200 and a dictionary containing pagination info and an array of news items.
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

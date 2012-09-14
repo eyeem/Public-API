@@ -23,7 +23,7 @@ Create a venue on EyeEm.
 201
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

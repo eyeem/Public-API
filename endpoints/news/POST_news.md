@@ -22,7 +22,7 @@ Marks multiple news items as read.
 
 200
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 

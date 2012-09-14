@@ -1,7 +1,7 @@
 #Endpoint: Auth
 ***
 
-These are the API calls available to native apps only. Note that all requests require authorization, either by including the access_token in the header, or the client_id and client_secret as a URL query parameter (see [home](https://github.com/eyeem/API/blob/master/README.md)).
+These are the API calls available to native apps only. Note that all requests require authorization, either by including the access_token in the header, or the client_id and client_secret as a URL query parameter (see [home](https://github.com/eyeem/API/blob/master/README.md#files)).
 
 Furthermore, only native apps can access this endpoint, and it's preferable to always include the following headers with every request:
 

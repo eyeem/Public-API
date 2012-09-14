@@ -25,7 +25,7 @@ Retrieves a photo by id.
 
 200 and an a photo dictionary
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

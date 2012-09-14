@@ -1,4 +1,4 @@
-#Endpoint: Venues
+md#files)#Endpoint: Venues
 ***
 
 To be completed.
@@ -7,17 +7,17 @@ To be completed.
 ***
 
 * `/venues`, GET (not implemented)
-* `/venues`, [POST](venuues/POST_venues.md)
-* `/venues/foursquareToken`, [GET](venues/POST_venues.md)
+* `/venues`, [POST](venuues/POST_venues.md#files)
+* `/venues/foursquareToken`, [GET](venues/POST_venues.md#files)
 
 
 
 ##GET
 ***
 
-* [`/venues/foursquareToken`](venues/POST_venues.md)
+* [`/venues/foursquareToken`](venues/POST_venues.md#files)
 
 ##POST
 ***
 
-* [`/venues`](venues/POST_venues.md)
+* [`/venues`](venues/POST_venues.md#files)

@@ -21,7 +21,7 @@ Retrieves albums recommended by the EyeEm community team.
 200 and an array of album objects, includes pagination parameters
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

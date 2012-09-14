@@ -24,7 +24,8 @@ Search for users or retrieve suggested users.
 ***
 200, pagination params and a array of user objects (either those queried, or those suggested)
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
+
 ### Examples
 ***
 

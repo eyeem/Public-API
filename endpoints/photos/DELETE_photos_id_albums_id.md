@@ -21,7 +21,7 @@ Remove an existing photo from an album.
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -18,7 +18,7 @@ Upload a photo file and send back a filename that can then be use to call POST /
 
 201 and filename
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

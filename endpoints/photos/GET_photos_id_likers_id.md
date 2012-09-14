@@ -21,7 +21,7 @@ Checks whether a user likes a photo.
 
 200 if the user likes a photo, 404 otherwise
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 

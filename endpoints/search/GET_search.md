@@ -22,7 +22,7 @@ Retrieves an array containing a users and an albums dictionary.
 200 and an array containing a users dictionary and an albums dictionary.
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -21,7 +21,7 @@ Delete a specific comment on a photo (users can only delete their own comments).
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

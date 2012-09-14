@@ -34,7 +34,8 @@ Only available for the authenticated user, this call edits a user's push and ema
 
 200 and confirmation message
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
+
 
 ### Examples
 ***

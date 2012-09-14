@@ -24,7 +24,7 @@ Get a user's friends (users that they follow)
 200 and and a dictionary containing limit, offset, total and an array of friends (users)
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

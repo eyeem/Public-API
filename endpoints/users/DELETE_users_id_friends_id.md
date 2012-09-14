@@ -23,7 +23,7 @@ Remove a user from the friends list (unfollow).
 
 200 if success
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

@@ -31,7 +31,7 @@ Only available for the authenticated user, this call disconnects a service.
 
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

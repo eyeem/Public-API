@@ -23,8 +23,7 @@ Retrieves an array of a photo's comments.
 
 200 and and a dictionary containing limit, offset, total and an array of comments
 
-[Errors](../../resources/errors.md)
-
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 

@@ -21,7 +21,7 @@ Checks whether a user has contributed a photo to the album.
 200 if the user has contributed a photo to the album, 404 otherwise
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

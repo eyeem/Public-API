@@ -21,7 +21,7 @@ Only available for the authenticated user, this call disconnects a service.
 200 and confirmation message
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

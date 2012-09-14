@@ -7,10 +7,10 @@ This is the entry point to search EyeEm users and albums. To paginate through th
 ##Available Endpoints
 ***
 
-* `/search`, [GET](search/GET_search.md)
+* `/search`, [GET](search/GET_search.md#files)
 
 
 ##GET
 ***
 
-* [`/search`](search/GET_search.md)
+* [`/search`](search/GET_search.md#files)

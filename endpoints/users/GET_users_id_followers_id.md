@@ -21,7 +21,7 @@ Check if a user follows the given user.
 200 if following, 404 if not
 
 
-[Errors](../../resources/errors.md)
+[Errors](../../resources/errors.md#files)
 
 ### Examples
 ***

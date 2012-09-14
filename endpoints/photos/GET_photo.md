@@ -24,8 +24,7 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 
 200 and an array of photos.
 
-[Errors](../../resources/errors.md)
-
+[Errors](../../resources/errors.md#files)
 ### Examples
 ***
 
