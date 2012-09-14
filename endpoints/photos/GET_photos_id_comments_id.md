@@ -25,7 +25,28 @@ Retrieves a specific comment on a photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/comments/11353`
+`https://www.eyeem.com/api/v2/photos/939584/comments/408870`
 
+```javascript
 
+{
+  "comment": {
+    "id": 408870,
+    "photoId": 939584,
+    "message": "moody photograph--I like it!",
+    "extendedMessage": "moody photograph--I like it!",
+    "user": {
+      "id": "1658",
+      "nickname": "starrush",
+      "fullname": "Star Rush",
+      "webUrl": "http://www.eyeem.com/u/starrush",
+      "thumbUrl": "https://graph.facebook.com/100000001240866/picture?type=square",
+      "photoUrl": "https://graph.facebook.com/100000001240866/picture?type=large"
+    },
+    "mentionedUsers": [],
+    "updated": "2012-09-12T21:11:03+0200"
+  }
+}
+
+```
  

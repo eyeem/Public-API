@@ -25,8 +25,14 @@ Checks whether a user likes a photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/likers/1013`
+`https://www.eyeem.com/api/v2/photos/939584/likers/3346`
 
 
+```javascript
 
+{
+  "message": "User has favorited this photo."
+}
+
+```
  

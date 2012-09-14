@@ -26,8 +26,15 @@ Check if a user follows the given user.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/1013/followers/1014`
+`https://www.eyeem.com/api/v2/users/1013/followers/1015`
 
 
+```javascript
 
+
+{
+  "message": "User X is following user Y."
+}
+
+```
 

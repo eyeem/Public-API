@@ -35,11 +35,60 @@ Retrieves photos of an album specified in the id URL query parameter.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/1234/photos?offset=0&limit=5`
+`http://www.eyeem.com/api/v2/albums/12/photos?offset=0&limit=5`
 
 
+```javascript
+{
+  "photos": {
+    "offset": 0,
+    "limit": 5,
+    "total": 19,
+    "items": [
+      {
+        "id": "56167",
+        "thumbUrl": "http://www.eyeem.com/thumb/h/100/6a59c1597178c55ca1cf6fe9e5a0056958eab8f1-1302692235",
+        "photoUrl": "http://www.eyeem.com/thumb/640/480/6a59c1597178c55ca1cf6fe9e5a0056958eab8f1-1302692235",
+        "width": 864,
+        "height": 640,
+        "updated": "2011-04-13T12:57:46+0200"
+      },
+      {
+        "id": "56166",
+        "thumbUrl": "http://www.eyeem.com/thumb/h/100/74f586ac6e4f7a711d3d7c17a954ad362e464578-1302692207",
+        "photoUrl": "http://www.eyeem.com/thumb/640/480/74f586ac6e4f7a711d3d7c17a954ad362e464578-1302692207",
+        "width": 864,
+        "height": 640,
+        "updated": "2011-04-13T12:56:55+0200"
+      },
+      {
+        "id": "56165",
+        "thumbUrl": "http://www.eyeem.com/thumb/h/100/8491863745c57723bfaa9419e00aafdd04c213d9-1302692115",
+        "photoUrl": "http://www.eyeem.com/thumb/640/480/8491863745c57723bfaa9419e00aafdd04c213d9-1302692115",
+        "width": 2048,
+        "height": 1530,
+        "updated": "2011-04-13T12:55:58+0200"
+      },
+      {
+        "id": "56164",
+        "thumbUrl": "http://www.eyeem.com/thumb/h/100/e9341d43b55d2ec7a3d537c816ec9d0881d63df9-1302692132",
+        "photoUrl": "http://www.eyeem.com/thumb/640/480/e9341d43b55d2ec7a3d537c816ec9d0881d63df9-1302692132",
+        "width": 864,
+        "height": 640,
+        "updated": "2011-04-13T12:55:40+0200"
+      },
+      {
+        "id": "56163",
+        "thumbUrl": "http://www.eyeem.com/thumb/h/100/7ea5fccdee012da92c5c54d42b177139c84742d5-1302692061",
+        "photoUrl": "http://www.eyeem.com/thumb/640/480/7ea5fccdee012da92c5c54d42b177139c84742d5-1302692061",
+        "width": 864,
+        "height": 640,
+        "updated": "2011-04-13T12:54:29+0200"
+      }
+    ]
+  }
+}
 
-
-
+```
 
  
