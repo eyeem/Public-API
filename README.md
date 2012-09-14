@@ -1,5 +1,6 @@
 #EyeEm API
 ***
+ **[Introduction](#introduction) | [Basics](#basics) | [OAuth](#oauth) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [API Documentation](#api-documentation) | [Contact](#contact)**
 
 ##Introduction
 ***
@@ -89,12 +90,12 @@ however, for the time being, it's also possible to send it as a  URL query param
 
 That's all you need to authenticate with EyeEm.
 
-##pagination
+##Pagination
 ***
 
 Some endpoints in the api return arrays of photos, users, or albums. Those endpoints always contain four fields: `offset`,`limit`,`total` and `items`. `items` is an array of the requested object, whereas the remaining parameters can be used to paginate the list.
 
-##images and image resolutions
+##Images and Image Resolutions
 ***
 
 You can request EyeEm photos in various sizes and formats. The default API endpoints return a `thumbUrl` and (optionally) a `photoUrl`
@@ -108,19 +109,19 @@ In case you want to display photos in a different resolution you can use the sam
 ##API Documentation
 ***
 ###Rescourses
-* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md)**
-* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md)**
+* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md#files)**
+* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md#files)**
 
 ###Endpoints
 
-* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md)** 
-* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md)**
-* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md)**
-* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md)**
-* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md)**
-* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md)**
-* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md)**
-* **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md)**
+* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md#files)** 
+* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md#files)**
+* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md#files)**
+* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md#files)**
+* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md#files)**
+* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md#files)**
+* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md#files)**
+* **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md#files)**
   
 ##Contact
 ***
