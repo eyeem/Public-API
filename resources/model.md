@@ -103,6 +103,18 @@ For users, albums and photos, we will also provide the simplest valid object tha
     "thumbUrl": "http://www.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
     "updated": "2012-02-03T18:06:08+0000",
     "type": "city",
+    "location": {
+      "latitude": "52.52437",
+      "longitude": "13.41053",
+      "countryAlbum": {
+        "id": "23",
+        "name": "Germany",
+        "type": "country",
+        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2645e5292c071481368030259ca6102dce273435-1347878975",
+        "updated": "2012-09-17T12:50:00+0200"
+      }
+    },
+    "webUrl": "http://www.eyeem.com/a/17",
     "totalPhotos": "10432",
     "totalLikers": 127,
     "totalContributors": 814,
