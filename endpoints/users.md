@@ -47,7 +47,7 @@ The various possible representations of a user (simple,detailed) are presented a
 * `/users/#{id}/likedAlbums`
 * [`/users/#{id}/feed`](users/GET_users_id_feed.md#files)
 * `/users/#{id}/discover`
-* [`/users/#{id}/friends`](users/GET_users_id_friend.md#files) 
+* [`/users/#{id}/friends`](users/GET_users_id_friends.md#files) 
 * [`/users/#{id}/friends/#{friend_id}`](users/GET_users_id_friends_id.md#files) 
 * [`/users/#{id}/followers`](users/GET_users_id_followers.md#files) 
 * [`/users/#{id}/followers/#{friend_id}`](users/GET_users_id_followers_id.md#files) 

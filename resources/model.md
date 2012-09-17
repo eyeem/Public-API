@@ -103,6 +103,18 @@ For users, albums and photos, we will also provide the simplest valid object tha
     "thumbUrl": "http://www.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
     "updated": "2012-02-03T18:06:08+0000",
     "type": "city",
+    "location": {
+      "latitude": "52.52437",
+      "longitude": "13.41053",
+      "countryAlbum": {
+        "id": "23",
+        "name": "Germany",
+        "type": "country",
+        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2645e5292c071481368030259ca6102dce273435-1347878975",
+        "updated": "2012-09-17T12:50:00+0200"
+      }
+    },
+    "webUrl": "http://www.eyeem.com/a/17",
     "totalPhotos": "10432",
     "totalLikers": 127,
     "totalContributors": 814,
@@ -253,13 +265,19 @@ In such a request, the number of inline photos to return, whether to include the
     "width": 1530,
     "height": 2048,
     "updated": "2012-02-02T10:16:33+0000",
+    "webUrl": "http://www.eyeem.com/p/215058",
     "user": {
       "id": "1013",
       "fullname": "ramz",
       "nickname": "ramz",
-      "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
+      "webUrl": "http://www.eyeem.com/u/ramz",
+      "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
+      "photoUrl": "http://www.eyeem.com/thumb/sq/200/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg"
     },
+    "title": "11:11 at Coffee to go",
     "caption": "11:11 at Coffee to go",
+    "latitude": "52.53499985",
+    "longitude": "13.40600014",
     "totalLikes": 12,
     "totalComments": 2,
     "comments": {

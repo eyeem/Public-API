@@ -1573,8 +1573,8 @@
                 <apigee:example url="/albums"/>
 
                 <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
-                <doc apigee:url="https://github.com/eyeem/Public-API/wiki/Endpoint:-Users#wiki-GETusersIdFriends">
-					Get a user's friends (users that they follow) note: sending onlyId=1 in request url returns a json array userIds containing just the ids
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_friends.md#files">
+					Get a user's friends (users that they follow)
                 </doc>
 				<request>
 
@@ -1664,25 +1664,6 @@
                 <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
                 <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_friends_id.md#files">
 					Check if the given user is friends with (follows) another user
-                </doc>
-            </method>
-            <method id="usersIdFriendCheckPut" name="PUT" apigee:displayName="/users/{id}/friend/{friend_id}">
-
-                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
-                <apigee:tags>
-                    <apigee:tag primary="true">Users</apigee:tag>
-                </apigee:tags>
-
-                <!-- Is authentication required for this method? -->
-                <apigee:authentication required="true"/>
-
-                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
-                <!-- Note: This is not used by the new Console -->
-                <apigee:example url="/albums"/>
-
-                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
-                <doc apigee:url="https://github.com/eyeem/Public-API/wiki/Endpoint:-Users#wiki-PUTusersIdFriendsId">
-					Add a user to the friends list (follow)
                 </doc>
             </method>
             <method id="usersIdFriendCheckDelete" name="DELETE" apigee:displayName="/users/{id}/friend/{friend_id}">
