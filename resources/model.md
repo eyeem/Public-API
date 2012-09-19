@@ -1,7 +1,7 @@
 #API data model and object types
 ***
 
-Below are the possible representation of users, albums, photos, comments, topics, news, and services.
+Below are the possible representation of [users](#users), [albums](#albums), [photos](#photos), [comments](#comments), [topics](#topics), [news](#news), and [services](#services).
 The objects and variables are hopefully self-explanatory, but we will describe those that might be not so clear.
 
 For users, albums and photos, we will also provide the simplest valid object that the server might send back, as well as the possible dictionary names that would contain items of the respective objects.
