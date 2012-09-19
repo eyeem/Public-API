@@ -34,7 +34,6 @@ For users, albums and photos, we will also provide the simplest valid object tha
     "email": "ramz@eyeem.com",
     "emailNotifications": true,
     "pushNotifications": true,
-    "admin": true,
     "newsSettings": {
       "push_photo_like": true,
       "push_photo_comment": true,
