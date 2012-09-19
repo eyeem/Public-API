@@ -81,7 +81,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 ```
 #### Remarks
 * Arrays of user items can have the following dictionary names as wrappers: `friends`, `contributors`, `followers`, `likers`, `users`
-* The fields `email`, `emailNotifications`, `pushNotifications` and the `services` dictionary are only available for the authenticated user object
+* The fields `email`, `emailNotifications`, `pushNotifications`, `newsSettings` and the `services` dictionary are only available for the authenticated user object
 
 ##Albums
 ***
