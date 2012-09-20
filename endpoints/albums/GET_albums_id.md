@@ -1,4 +1,4 @@
-../../# GET /albums/#{id}
+# GET /albums/#{id}
 ***
 `/albums/#{id}`
 
