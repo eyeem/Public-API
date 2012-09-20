@@ -123,7 +123,6 @@ In case you want to display photos in a different resolution you can use the sam
 * **[Topics](https://github.com/eyeem/public-API/tree/master/endpoints/topics.md#files)**
 * **[Search](https://github.com/eyeem/public-API/tree/master/endpoints/search.md#files)**
 * **[Venues](https://github.com/eyeem/public-API/tree/master/endpoints/venues.md#files)**
-* **[Auth](https://github.com/eyeem/public-API/tree/master/endpoints/auth.md#files)**
   
 ##Contact
 ***
