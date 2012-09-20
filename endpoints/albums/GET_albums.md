@@ -4,14 +4,14 @@
 
 ### Description
 ***
-Retrieves albums specified in the id URL query parameter, or searches for albums based on their names.
+Retrieves albums specified in the ids URL query parameter, or searches for albums based on their names.
 
 ### Parameters
 ***
 
 |parameter| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
-|**id**|a comma-separated list of album ids to retrieve|string|||
+|**ids**|a comma-separated list of album ids to retrieve|string|||
 |**q**|search albums by (renders the ids parameter invalid)|string|||
 |**trending**|returns 30 new and growing topical albums|boolean|||
 |**geoSearch**|"city" or "nearbyVenues" or "foursquareVenue"|string|||
