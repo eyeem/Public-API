@@ -9,13 +9,9 @@ These are the API calls that you can use to retrieve albums, the photos in those
 ***
 
 * `/albums`, [GET](albums/GET_albums.md#files), POST (not available yet)
-<<<<<<< HEAD
 * `/albums/recommended`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_recommended.md#files)
 * `/albums/#{id}`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id.md#files)
 * `/albums/#{id}/photos`, [GET](https://github.com/eyeem/API/blob/master/endpoints/albums/GET_albums_id_photos.md#files)
-* `/albums/recommended`, [GET](albums/GET_albums_recommended.md#files)
-* `/albums/#{id}`, [GET](albums/GET_albums_id.md#files)
-* `/albums/#{id}/photos`, [GET](albums/GET_albums_id_photos.md#files)
 * `/albums/#{id}/hide`, GET, POST, DELETE << will it stay HIDE or change to a different name?
 * `/albums/#{id}/photos/#{photo_id}`, [PUT](albums/PUT_albums_id_photos_id.md#files),[DELETE](albums/DELETE_albums_id_photos_id.md#files) (see relevant endpoint in [photos](https://github.com/eyeem/API/blob/master/endpoints/photos.md#files))
 * `/albums/#{id}/likers` [GET](albums/GET_albums_id_likers.md#files)
