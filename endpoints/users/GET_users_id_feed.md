@@ -14,9 +14,9 @@ If requested from a user other than the authenticated one, only the user's liked
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|the user id to get information from|integer|x||
+|**parameter**| **description**| **type** |**required?** |**default**|
 |**X-GEO-closestVenueFsIds**|should contain a comma-separated list of foursquare venue ids|string|||
 |**X-GEO-cityName**|should contain the name of the city the device "thinks" it's in|string|||
-|**parameter**| **description**| **type** |**required?** |**default**|
 |**limit**|num of photos to return|integer||20|
 |**offset**|offset of photos to start at|integer||0|
 
