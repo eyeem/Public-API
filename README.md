@@ -105,6 +105,7 @@ Both urls have the format `http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d
 
 In case you want to display photos in a different resolution you can use the same filename and change the two middle parts of the url like so:
 - `http://www.eyeem.com/thumb/h/{pixels}/filename` will return the image scaled to have a max height of {pixels}
+- `http://www.eyeem.com/thumb/w/{pixels}/filename` will return the image scaled to have a max width of {pixels}
 - `http://www.eyeem.com/thumb/{width}/{height}/filename` will return the image scaled to fit into {width} and {height}
 - `http://www.eyeem.com/thumb/sq/{pixels}/filename` will return the image cropped into a square with length {pixels}
 
