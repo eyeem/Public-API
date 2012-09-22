@@ -14,7 +14,7 @@ The API is in private beta at the moment. You can register an app by going to [Y
 
 Our API is RESTful, which means that requests are defined using the HTTP verbs `GET`, `PUT`, `DELETE` and `POST`. 
 
-To play around with the api calls, hop over to APIGee: `https://apigee.com/eyeem/embed/console/eyeem?v=2`
+To play around with the api calls, hop over to APIGee: [`https://apigee.com/eyeem/embed/console/eyeem?v=2`](https://apigee.com/eyeem/embed/console/eyeem?v=2)
 
 All API calls are SSL encrypted, and the API responses are in JSON. The base API url is `https://www.eyeem.com/api/v2`
 
