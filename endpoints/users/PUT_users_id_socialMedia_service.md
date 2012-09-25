@@ -4,7 +4,8 @@
 
 ### Description
 ***
-Only available for the authenticated user, this call disconnects a service.
+Only available for the authenticated user, this call edits a service (only applicable for facebook at the moment).
+
 
 ### Parameters
 ***
