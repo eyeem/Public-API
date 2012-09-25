@@ -7,7 +7,7 @@ To be completed.
 ***
 
 * `/venues`, GET (not implemented)
-* `/venues`, [POST](venuues/POST_venues.md#files)
+* `/venues`, [POST](venues/POST_venues.md#files)
 * `/venues/foursquareToken`, [GET](venues/POST_venues.md#files)
 
 
