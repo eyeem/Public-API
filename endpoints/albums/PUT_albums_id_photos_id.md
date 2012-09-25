@@ -1,4 +1,4 @@
-../../# PUT /albums/#{id}/photos/#{photo_id} 
+# PUT /albums/#{id}/photos/#{photo_id} 
 ***
 `/albums/#{id}/photos/#{photo_id} `
 
