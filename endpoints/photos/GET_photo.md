@@ -11,7 +11,7 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 
 |parameter| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
-|**type**|"popular" returns popular photos, else defaults to the user's photos|string|||
+|**type**|"popular" returns popular photos|string|||
 |**ids**| comma-separated list of ids to return (if type not specified)|string|||
 |**limit**|num of photos to return|integer||20|
 |**offset**|offset of photos to start at|integer||0|
