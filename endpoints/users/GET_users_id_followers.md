@@ -12,7 +12,6 @@ Get a user's followers.
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|the user id to get information from|integer|x||
-|**friend_id**|the user id of the friend|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
 |**limit**|num of users to return|integer||20|
 |**offset**|offset of users to start at|integer||0|
