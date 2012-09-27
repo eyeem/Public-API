@@ -211,7 +211,12 @@
 					if true, returns only the photo ids
                 </doc>
             </param>
+			<param name="detailed" required="false" type="xsd:integer" style="query">
+                <doc>
+					returns a simple or detailed photo object
 
+                </doc>
+            </param>
 			
 			<param name="includeComments" required="false" type="xsd:boolean" style="query" default="0">
                 <doc>
@@ -1506,12 +1511,12 @@
                      the user id retrieve information from
                 </doc>
             </param>
-			<param name="X-GEO-closestVenueFsIds" required="false" type="xsd:string" style="header">
+			<param name="X-GEO-closestVenueFsIds" required="false" type="xsd:string" style="query">
                 <doc>
                      should contain a comma-separated list of foursquare venue ids
                 </doc>
             </param>
-			<param name="X-GEO-cityName" required="false" type="xsd:string" style="header">
+			<param name="X-GEO-cityName" required="false" type="xsd:string" style="query">
                 <doc>
                      should contain the name of the city the device "thinks" it's in
                 </doc>
