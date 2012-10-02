@@ -50,6 +50,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
       "facebook": {
         "status": "active"
         "id": 12341231235
+        "third_party_id": "asdfaew5sdgsadfgaw35"        
         "primary": true
         "status": "active"
         "status": "active"
