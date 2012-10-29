@@ -371,7 +371,7 @@ In such a request, the number of inline photos to return, whether to include the
               "id": "36038",
               "photoId": "215058",
               "message": "i realized @gen was at the exact same place at the exact same moment on 11:11 - same for @lorenz, had to do it :)",
-              "extendedMessage": "i realized @gen[user:1015] was at the exact same place at the exact same moment on 11:11 - same for @lorenz[user:1019], had to do it :)",
+              "extendedMessage": "i realized [user:1015] was at the exact same place at the exact same moment on 11:11 - same for [user:1019], had to do it :)",
               "user": {
                 "id": "1013",
                 "fullname": "ramz",
