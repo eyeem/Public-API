@@ -28,7 +28,7 @@ Checks whether a user likes a photo.
 `https://www.eyeem.com/api/v2/photos/939584/likers/3346`
 
 
-```javascript
+```json
 
 {
   "message": "User has favorited this photo."

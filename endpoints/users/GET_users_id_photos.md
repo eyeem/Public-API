@@ -31,7 +31,7 @@ Get the given user's photos.
 `https://www.eyeem.com/api/v2/users/1013/photos?limit=10`
 
 
-```javascript
+```json
 
 
 {

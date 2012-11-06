@@ -13,7 +13,7 @@ Adds a new comment to a photo.
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|The id of the photo we want post a comment.|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
-|**message**| the body of the comment (the message can optionally contain @mentioned users in the form @{nickname}[user:{id}]) |string|x||
+|**message**| the body of the comment (the message can optionally contain @mentioned users in the form @{nickname}) |string|x||
 |**albumId**|the ID of the album that the user was in when commenting|integer|||
 
 ### Response

@@ -7,15 +7,16 @@ To be completed.
 ***
 
 * `/venues`, GET (not implemented)
+* `/venues/search`, [GET](venues/GET_venues_share.md#files)
 * `/venues`, [POST](venues/POST_venues.md#files)
-* `/venues/foursquareToken`, [GET](venues/GET_venues_foursquareToken.md#files)
-
+* `/venues/foursquareToken`, [GET](venues/POST_venues.md#files)
 
 
 ##GET
 ***
 
-* [`/venues/foursquareToken`](venues/GET_venues_foursquareToken.md#files)
+* [`/venues/foursquareToken`](venues/POST_venues.md#files)
+* [`/venues/search`](venues/GET_venues_share.md#files)
 
 ##POST
 ***

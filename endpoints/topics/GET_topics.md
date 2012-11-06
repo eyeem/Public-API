@@ -27,7 +27,7 @@ Retrieves an array containing a users and an albums dictionary.
 `http://www.eyeem.com/api/v2/topics?autoComplete=be`
 
 
-```javascript
+```json
 
 
 {

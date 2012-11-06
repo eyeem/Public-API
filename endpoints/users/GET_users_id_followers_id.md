@@ -29,7 +29,7 @@ Check if a user follows the given user.
 `https://www.eyeem.com/api/v2/users/1013/followers/1015`
 
 
-```javascript
+```json
 
 
 {

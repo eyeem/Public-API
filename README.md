@@ -1,6 +1,6 @@
 #EyeEm API
 ***
- **[Introduction](#introduction) | [Basics](#basics) | [OAuth](#oauth) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [API Documentation](#api-documentation) | [Contact](#contact)**
+ **[Introduction](#introduction) | [API Documentation](#api-documentation) | [Basics](#basics) | [OAuth](#oauth) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [Contact](#contact)**
 
 ##Introduction
 ***
@@ -9,12 +9,30 @@ The EyeEm API is read-only for now, and covers most of the EyeEm functionality. 
 
 The API is in private beta at the moment. You can register an app by going to [Your apps on EyeEm](http://eyeem.com/developers), we'll ping you as soon as it's been approved.
 
+##API Documentation
+***
+
+###Endpoints
+
+* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md#files)** 
+* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md#files)**
+* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md#files)**
+* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md#files)**
+* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md#files)**
+* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md#files)**
+* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md#files)**
+  
+###Rescourses
+* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md#files)**
+* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md#files)**
+
+
 ##Basics
 ***
 
 Our API is RESTful, which means that requests are defined using the HTTP verbs `GET`, `PUT`, `DELETE` and `POST`. 
 
-To play around with the api calls, hop over to APIGee: [`https://apigee.com/eyeem/embed/console/eyeem?v=2`](https://apigee.com/eyeem/embed/console/eyeem?v=2)
+To play around with the api calls, hop over to APIGee: `https://apigee.com/eyeem/embed/console/eyeem?v=2`
 
 All API calls are SSL encrypted, and the API responses are in JSON. The base API url is `https://www.eyeem.com/api/v2`
 
@@ -37,7 +55,7 @@ A basic request using curl can look like this:
 
 `$ curl https://www.eyeem.com/api/v2/users/1013?access_token=ACCESS_TOKEN`
 
-```javascript
+```json
 {
   "user": {
     "id": "1013",
@@ -74,7 +92,7 @@ From your backend call
  `curl -X POST "http://www.eyeem.com/api/v2/oauth/token?grant_type=authorization_code&client_id=Chi6ae5sLes9beCinae5sohM&client_secret=IeBai4eeloRoiw3e&redirect_uri=http://example.com/callback&code=Yeenie1H"`
 
 The answer will look like:
-```javascript
+```json
  {
  "access_token":"2b9b0ef6065e60f3cc81646f3a7622af68295afb",
  "expires_in":315360000,
@@ -105,26 +123,10 @@ Both urls have the format `http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d
 
 In case you want to display photos in a different resolution you can use the same filename and change the two middle parts of the url like so:
 - `http://www.eyeem.com/thumb/h/{pixels}/filename` will return the image scaled to have a max height of {pixels}
-- `http://www.eyeem.com/thumb/w/{pixels}/filename` will return the image scaled to have a max width of {pixels}
 - `http://www.eyeem.com/thumb/{width}/{height}/filename` will return the image scaled to fit into {width} and {height}
 - `http://www.eyeem.com/thumb/sq/{pixels}/filename` will return the image cropped into a square with length {pixels}
 
-##API Documentation
-***
-###Rescourses
-* **[Model](https://github.com/eyeem/public-API/tree/master/resources/model.md#files)**
-* **[Errors](https://github.com/eyeem/public-API/tree/master/resources/errors.md#files)**
 
-###Endpoints
-
-* **[Users](https://github.com/eyeem/public-API/tree/master/endpoints/users.md#files)** 
-* **[Photos](https://github.com/eyeem/public-API/tree/master/endpoints/photos.md#files)**
-* **[Albums](https://github.com/eyeem/public-API/tree/master/endpoints/albums.md#files)**
-* **[News](https://github.com/eyeem/public-API/tree/master/endpoints/news.md#files)**
-* **[Topics](https://github.com/eyeem/public-API/tree/master/endpoints/topics.md#files)**
-* **[Search](https://github.com/eyeem/public-API/tree/master/endpoints/search.md#files)**
-* **[Venues](https://github.com/eyeem/public-API/tree/master/endpoints/venues.md#files)**
-  
 ##Contact
 ***
 

@@ -31,7 +31,7 @@ Get a user's friends (users that they follow)
 
 `https://www.eyeem.com/api/v2/users/1013/friends`
 
-```javascript
+```json
 
 
 {

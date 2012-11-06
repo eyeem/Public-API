@@ -15,8 +15,8 @@ Only available for the authenticated user, this call adds a service to the user'
 |**service**|the service name|string|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
 |**keys**|to simply store the access_token/access_secret for a specific service|boolean|||
-|**oauth_token**|the token provided by a service|string|||
-|**oauth_token_secret**|the secret provided by a service, applies for tumblr and twitter at the moment|string|||
+|**oauth_token**|the token provided by a service|integer|||
+|**oauth_token_secret**|the secret provided by a service, applies for tumblr and twitter at the moment|integer|||
 |**service_user_id**|the user's id on the chosen service, applies for facebook and twitter|integer||0|
 |**service_screen_name**|the user's nickname on the chosen service, applies for twitter onlyt|string||0|
 |**follow**|whether to follow EyeEm on twitter|boolean|||

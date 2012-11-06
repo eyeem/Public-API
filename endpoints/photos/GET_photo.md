@@ -32,7 +32,7 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 
 
 
-```javascript
+```json
 
 {
   "photos": {

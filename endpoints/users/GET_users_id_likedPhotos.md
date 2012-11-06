@@ -31,7 +31,7 @@ Get all the photos that a user has liked.
 
 `https://www.eyeem.com/api/v2/users/1013/likedPhotos`
 
-```javascript
+```json
 
 
 {

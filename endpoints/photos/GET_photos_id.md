@@ -32,7 +32,7 @@ Retrieves a photo by id.
 
 `https://www.eyeem.com/api/v2/photos/939584?detailed=1&includeAlbums=1&includeComments=1&numComment=5`
 
-```javascript
+```json
 
 {
   "photo": {

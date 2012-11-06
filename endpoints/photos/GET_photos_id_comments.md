@@ -29,7 +29,7 @@ Retrieves an array of a photo's comments.
 
 `https://www.eyeem.com/api/v2/photos/1234/comments?offset=0&limit=5`
 
-```javascript
+```json
 
 {
   "comments": {
