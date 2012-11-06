@@ -27,7 +27,7 @@ Retrieves a specific comment on a photo.
 
 `https://www.eyeem.com/api/v2/photos/939584/comments/408870`
 
-```javascript
+```json
 
 {
   "comment": {

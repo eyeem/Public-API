@@ -23,6 +23,7 @@ These are the API calls that you can use to retrieve users, their photos, friend
 * `/users/#{id}/topics`, [GET](users/GET_users_id_topics.md#files)
 * `/users/#{id}/socialMedia`, [GET](users/GET_users_id_socialMedia.md#files)
 * `/users/#{id}/socialMedia/{service}`, [POST](users/POST_users_id_socialMedia_service.md#files), [PUT](users/PUT_users_id_socialMedia_service.md#files), [DELETE](users/DELETE_users_id_socialMedia_service.md#files)
+* `/users/#{id}/facebookPage`, [POST](users/POST_users_id_facebookPage.md#files) 
 * `/users/#{id}/newsSettings`, [GET](users/GET_users_id_newsSettings.md#files), [POST](users/POST_users_id_newsSettings.md#files)
 * `/users/#{id}/share`, [POST](users/POST_users_id_share.md#files)
 * `/users/#{id}/smContacts`, GET
@@ -70,6 +71,8 @@ The various possible representations of a user (simple,detailed) are presented a
 * [`/users/#{id}/socialMedia/{service}`](users/POST_users_id_socialMedia_service.md#files) 
 * [`/users/#{id}/newsSettings`](users/POST_users_id_newsSettings.md#files) 
 * [`/users/#{id}/share`](users/POST_users_id_share.md#files) 
+* [`/users/#{id}/facebookPage`](users/POST_users_id_facebookPage.md#files) 
+
 
 ##DELETE
 ***

@@ -35,7 +35,7 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 
 `http://www.eyeem.com/api/v2/albums?ids=35,3352`
 
-```javascript
+```json
 {
   "albums": {
     "offset": 0,

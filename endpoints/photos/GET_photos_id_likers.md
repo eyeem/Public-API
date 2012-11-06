@@ -31,7 +31,7 @@ Retrieves an array of the users who like the photo.
 
 `https://www.eyeem.com/api/v2/photos/939584/likers?offset=0&limit=5`
 
-```javascript
+```json
 
 {
   "likers": {

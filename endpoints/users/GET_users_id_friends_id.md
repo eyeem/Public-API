@@ -32,7 +32,7 @@ Check if the given user is friends with (follows) another user.
 `https://www.eyeem.com/api/v2/users/1013/friends/1015`
 
 
-```javascript
+```json
 
 
 {

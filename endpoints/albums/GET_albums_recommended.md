@@ -28,7 +28,7 @@ Retrieves albums recommended by the EyeEm community team.
 
 `https://www.eyeem.com/api/v2/albums/recommended?limit=10`
 
-```javascript
+```json
 
 {
   "albums": {

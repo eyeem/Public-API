@@ -1,6 +1,6 @@
 #EyeEm API
 ***
- **[Introduction](#introduction) | [Basics](#basics) | [OAuth](#oauth) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [API Documentation](#api-documentation) | [Contact](#contact)**
+ **[Introduction](#introduction) | [API Documentation](#api-documentation) | [Basics](#basics) | [OAuth](#oauth) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [Contact](#contact)**
 
 ##Introduction
 ***
@@ -8,6 +8,25 @@
 The EyeEm API is read-only for now, and covers most of the EyeEm functionality. We use the API ourselves for our mobile apps, and we will be constantly opening up new filters and features between now and the public release of the API.
 
 The API is in private beta at the moment. You can register an app by going to [Your apps on EyeEm](http://eyeem.com/developers), we'll ping you as soon as it's been approved.
+
+##API Documentation
+***
+
+###Endpoints
+
+* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md#files)** 
+* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md#files)**
+* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md#files)**
+* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md#files)**
+* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md#files)**
+* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md#files)**
+* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md#files)**
+* **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md#files)**
+  
+###Rescourses
+* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md#files)**
+* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md#files)**
+
 
 ##Basics
 ***
@@ -37,7 +56,7 @@ A basic request using curl can look like this:
 
 `$ curl https://www.eyeem.com/api/v2/users/1013?access_token=ACCESS_TOKEN`
 
-```javascript
+```json
 {
   "user": {
     "id": "1013",
@@ -74,7 +93,7 @@ From your backend call
  `curl -X POST "http://www.eyeem.com/api/v2/oauth/token?grant_type=authorization_code&client_id=Chi6ae5sLes9beCinae5sohM&client_secret=IeBai4eeloRoiw3e&redirect_uri=http://example.com/callback&code=Yeenie1H"`
 
 The answer will look like:
-```javascript
+```json
  {
  "access_token":"2b9b0ef6065e60f3cc81646f3a7622af68295afb",
  "expires_in":315360000,
@@ -108,23 +127,7 @@ In case you want to display photos in a different resolution you can use the sam
 - `http://www.eyeem.com/thumb/{width}/{height}/filename` will return the image scaled to fit into {width} and {height}
 - `http://www.eyeem.com/thumb/sq/{pixels}/filename` will return the image cropped into a square with length {pixels}
 
-##API Documentation
-***
-###Rescourses
-* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md#files)**
-* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md#files)**
 
-###Endpoints
-
-* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md#files)** 
-* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md#files)**
-* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md#files)**
-* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md#files)**
-* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md#files)**
-* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md#files)**
-* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md#files)**
-* **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md#files)**
-  
 ##Contact
 ***
 

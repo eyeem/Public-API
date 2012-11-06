@@ -18,6 +18,7 @@ Search for users or retrieve suggested users.
 |**friends**|used when getting users from a search query, searches only among friends|boolean||0|
 |**limit**|num of search results to return|integer||30|
 |**offset**|offset of search results to start at|integer||0|
+|**action_id**|action id of the facebook action; returns the user who created that action|string|||
 
 
 ### Response
@@ -32,7 +33,7 @@ Search for users or retrieve suggested users.
 `https://www.eyeem.com/api/v2/users?q=ramzi&limit=25`
 
 
-```javascript
+```json
 
 
 {

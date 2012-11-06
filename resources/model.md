@@ -9,7 +9,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 ##Users
 ***
 #### Minimum valid object
-```javascript
+```json
       {
         "id": "1013",
         "fullname": "Ramzi Rizk",
@@ -18,63 +18,73 @@ For users, albums and photos, we will also provide the simplest valid object tha
       }
 ```
 #### Extended Object
-```javascript
+```json
 {
   "user": {
-    "id": "1013",
-    "fullname": "ramz",
-    "nickname": "ramz",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
-    "description": "EyeEm Ramz. EyeEm Happy! Srsly. Choo choo!!",
-    "photoUrl": "http://www.eyeem.com/thumb/sq/200/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
-    "totalPhotos": 1040,
-    "totalFollowers": 283,
-    "totalFriends": 478,
-    "totalLikedAlbums": 58,
-    "email": "ramz@eyeem.com",
+    "id": "174921",
+    "nickname": "sb",
+    "fullname": "Sebastian",
+    "webUrl": "http://www.eyeem.com/u/sb",
+    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
+    "photoUrl": "http://www.eyeem.com/thumb/sq/200/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
+    "totalPhotos": 89,
+    "totalFollowers": 171,
+    "totalFriends": 69,
+    "totalLikedAlbums": 10,
+    "totalLikedPhotos": 4427,
+    "description": " @EyeEm",
+    "email": "sebastian@eyeem.com",
     "emailNotifications": true,
     "pushNotifications": true,
+    "services": {
+      "facebook": {
+        "third_party_id": "4Ci6GTRNyX8vIWfBBM1n09m9JdQ",
+        "id": "100000492297860",
+        "upload": false,
+        "photolike": true,
+        "photodiscover": false,
+        "photocomment": false,
+        "albumlike": false,
+        "userfollow": false,
+        "timelinepopup": true,
+        "managedPages": [
+          {
+            "id": "154793581210614",
+            "name": "Halö",
+            "posting": 0
+          }
+        ],
+        "status": "active"
+      },
+      "twitter": {
+        "id": "19140455",
+        "nickname": "ksslng",
+        "status": "active"
+      },
+      "tumblr": {
+        "status": "inactive"
+      },
+      "foursquare": {
+        "status": "active"
+      },
+      "flickr": {
+        "status": "inactive"
+      }
+    },
     "newsSettings": {
       "push_photo_like": true,
       "push_photo_comment": true,
       "push_user_follower": true,
       "push_user_joined": true,
       "push_album_contributor": true,
-      "email_photo_like": true,
-      "email_photo_comment": true,
-      "email_user_follower": true,
-      "email_user_joined": true,
-      "email_album_contributor": true
-    },
-    "services": {
-      "facebook": {
-        "status": "active"
-        "id": 12341231235
-        "third_party_id": "asdfaew5sdgsadfgaw35"
-        "primary": true
-        "status": "active"
-        "status": "active"
-        "status": "active"
-        "status": "active"
-        "status": "active"
-
-      },
-      "twitter": {
-        "status": "active"
-        "id": 12341231235
-        "nickname": "ramz"
-      },
-      "foursquare": {
-        "status": "active"
-      },
-      "tumblr": {
-        "status": "active"
-      },
-      "flickr": {
-        "status": "inactive"
-        "id": 12341231235
-        "nickname": "letempest"
-      }
+      "push_photo_comment_mention": true,
+      "email_photo_like": false,
+      "email_photo_comment": false,
+      "email_user_follower": false,
+      "email_user_joined": false,
+      "email_album_contributor": false,
+      "email_photo_comment_mention": false,
+      "email_weekly_newsletter": true
     }
   }
 }
@@ -86,7 +96,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 ##Albums
 ***
 #### Minimum valid object
-```javascript
+```json
 {
     "id": "17",
     "name": "Berlin",
@@ -95,7 +105,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
   }
 ```
 #### Extended Object
-```javascript
+```json
 {
   "album": {
     "id": "17",
@@ -245,7 +255,7 @@ In such a request, the number of inline photos to return, whether to include the
 ##Photos
 ***
 #### Minimum valid object
-```javascript
+```json
       {
         "id": "215058",
         "thumbUrl": "http://www.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
@@ -256,7 +266,7 @@ In such a request, the number of inline photos to return, whether to include the
       }
 ```
 #### Extended Object
-```javascript
+```json
 {
   "photo": {
     "id": "215058",
@@ -366,7 +376,7 @@ In such a request, the number of inline photos to return, whether to include the
 
 ##Comments
 ***
-```javascript
+```json
           {
               "id": "36038",
               "photoId": "215058",
@@ -404,7 +414,7 @@ In such a request, the number of inline photos to return, whether to include the
 
 ##Topics
 ***
-```javascript
+```json
      {
         "name": "Waiting for the bell",
         "totalPhotos": "4"
@@ -415,7 +425,7 @@ In such a request, the number of inline photos to return, whether to include the
 
 ##News
 ***
-```javascript
+```json
       {
         "id": "19588",
         "itemType": "photo",
@@ -431,7 +441,7 @@ In such a request, the number of inline photos to return, whether to include the
 
 alternatively, if it's a blog post:
 
-```javascript
+```json
       {
         "id": "19588",
         "itemType": "url",
@@ -451,7 +461,7 @@ alternatively, if it's a blog post:
 
 ##Services
 ***
-```javascript
+```json
 {
   "services": {
     "facebook": {
@@ -485,7 +495,7 @@ alternatively, if it's a blog post:
 ##Contacts
 ***
 
-```javascript
+```json
 {
     "serviceType": "twitter",
     "serviceId": 105133786,
@@ -497,7 +507,7 @@ alternatively, if it's a blog post:
 
 Or with a matching user:
 
-```javascript
+```json
 {
     "serviceType": "twitter",
     "serviceId": 105133786,
@@ -522,7 +532,7 @@ The location object always contains at least latitude and longitude, and dependi
 * city: has a simple country album
 * country: only has latitude and longitude
 
-```javascript
+```json
 location:{
     "latitude": 52.5031436,
     "longitude": 13.40083313,
@@ -542,7 +552,7 @@ location:{
 ***
 Additional meta-data for venue albums
 
-```javascript
+```json
 venueService:{
     "name": "foursquare",
     "id": 123512oino1958123047235,
@@ -562,7 +572,7 @@ venueService:{
 Collections are ad-hoc sets of photos that are related to each other, but not necessarily albums. For now, collections are primarily used in the discover feed.
 
 #### Object Format
-```javascript
+```json
 {
   "collection": {
     "title": "Black and White photos in Berlin",

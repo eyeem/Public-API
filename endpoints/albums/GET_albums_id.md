@@ -37,7 +37,7 @@ Retrieves album specified in the id URL query parameter.
 
 `http://www.eyeem.com/api/v2/albums/1234?`
 
-```javascript
+```json
 
 {
   "album": {

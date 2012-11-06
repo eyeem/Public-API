@@ -23,7 +23,7 @@ Get a user's followers.
 ***
 
 
-200 and and a dictionary containing limit, offset, total and an array of followers (users)
+200 and a dictionary containing limit, offset, total and an array of followers (users)
 
 [Errors](../../resources/errors.md#files)
 
@@ -33,7 +33,7 @@ Get a user's followers.
 `https://www.eyeem.com/api/v2/users/me/friends/1015`
 
 
-```javascript
+```json
 
 
 {

@@ -29,7 +29,7 @@ Checks whether a user has contributed a photo to the album.
 `http://www.eyeem.com/api/v2/albums/17/contributors/1013`
 
 
-```javascript
+```json
 
 
 {

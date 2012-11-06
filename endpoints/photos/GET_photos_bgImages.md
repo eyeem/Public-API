@@ -20,7 +20,7 @@ Get a selection of images that is used in the existing apps as a start screen ba
 
 `https://www.eyeem.com/api/v2/photos/bgImages`
 
-```javascript
+```json
 
 {
   "bgImages": [

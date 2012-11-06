@@ -30,7 +30,7 @@ Retrieves an array of the users who have added photos to the album.
 
 `http://www.eyeem.com/api/v2/albums/1234/contributors?offset=0&limit=5`
 
-```javascript
+```json
 
 
 {

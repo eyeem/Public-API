@@ -38,7 +38,7 @@ Retrieves photos of an album specified in the id URL query parameter.
 `http://www.eyeem.com/api/v2/albums/12/photos?offset=0&limit=5`
 
 
-```javascript
+```json
 {
   "photos": {
     "offset": 0,

@@ -30,7 +30,7 @@ Get all the photos by users that the given user follows (ordered chronologically
 `https://www.eyeem.com/api/v2/users/1013/friendsPhotos?limit=5`
 
 
-```javascript
+```json
 
 
 {
