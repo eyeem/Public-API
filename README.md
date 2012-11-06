@@ -23,7 +23,7 @@ The API is in private beta at the moment. You can register an app by going to [Y
 * **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md#files)**
 * **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md#files)**
   
-###Rescourses
+###Resources
 * **[Model](https://github.com/eyeem/API/tree/master/resources/model.md#files)**
 * **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md#files)**
 
