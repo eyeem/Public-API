@@ -1,0 +1,2445 @@
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:apigee="http://api.apigee.com/wadl/2010/07/"
+             xmlns="http://wadl.dev.java.net/2009/02"
+             xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
+
+    <!-- Base defines the domain and base path of the endpoint -->
+    <resources base="https://eyeem.com/api/v2">
+
+        <!-- A simple resource with a GET method -->
+        <resource path="/albums">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="ids" required="false" type="xsd:string" style="query">
+                <doc>
+                     a comma-separated list of album ids to retrieve
+                </doc>
+            </param>
+			<param name="q" required="false" type="xsd:string" style="query">
+                <doc>
+                     the string to search albums by (renders the ids parameter invalid)
+                </doc>
+            </param>
+			<param name="trending" required="false" type="xsd:boolean" style="query">
+                <doc>
+                     returns 30 new and growing topical albums
+                </doc>
+            </param>
+			<param name="geoSearch" required="false" type="xsd:string" style="query">
+                <doc>
+                     city and nearbyVenues requires latitude and longitude
+					 foursquareVenue requires foursquareId
+                </doc>
+                <option value="city" />
+                <option value="nearbyVenues" />
+                <option value="foursquareVenue" />
+				
+            </param>
+			<param name="lat" required="false" type="xsd:integer" style="query">
+                <doc>
+                     latitude (required for "city" and "nearbyVenues" geoSearch)
+                </doc>
+            </param>
+			<param name="lng" required="false" type="xsd:integer" style="query">
+                <doc>
+                     longitude (required for "city" and "nearbyVenues" geoSearch)
+                </doc>
+            </param>
+			<param name="foursquareId" required="false" type="xsd:string" style="query">
+                <doc>
+                     required for "foursquareVenue" geoSearch
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="30">
+                <doc>
+                     number of search results to return
+                </doc>
+            </param>
+			<param name="minPhotos" required="false" type="xsd:integer" style="query">
+                <doc>
+                      return albums only with at least the specified number of photos (works when "q" is specified)
+                </doc>
+            </param>
+			<param name="type" required="false" type="xsd:string" style="query">
+                <doc>
+                       only returns albums of a specific type (city,country,event,venue,tag) (works when "q" is specified)
+                </doc>
+                <option value="city" />
+                <option value="country" />
+                <option value="event" />
+                <option value="venue" />
+                <option value="tag" />
+            </param>
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+                       offset of search results to start at
+                </doc>
+            </param>
+            <method id="albums" name="GET" apigee:displayName="/albums">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/GET_albums.md#files">
+                    Retrieves albums specified in the id URL query parameter, or searches for albums based on their names
+                </doc>
+            </method>
+        </resource>
+
+        <resource path="/albums/recommended">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="limit" required="false" type="xsd:integer" style="query" default="60">
+                <doc>
+                     number of search results to return
+                </doc>
+            </param>
+            <method id="albumsRecommended" name="GET" apigee:displayName="/albums/recommended">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/GET_albums_recommended.md#files">
+                    Retrieves albums recommended by the eyeem community team
+                </doc>
+            </method>
+        </resource>
+        <resource path="/albums/{id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="17">
+                <doc>
+                     Represents the ID of the album.
+                </doc>
+            </param>
+			<param name="detailed" required="false" type="xsd:boolean" style="query" default="1">
+                <doc>
+                     returns a simple or detailed album object
+                </doc>
+            </param>
+			
+			<param name="includePhotos" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     if true it returns some of the album's photos
+                </doc>
+            </param>
+			<param name="numPhotos" required="false" type="xsd:integer" style="query" default="10">
+                <doc>
+                     the number of album photos to return
+                </doc>
+            </param>
+			<param name="photoDetails" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     whether to return the photo details (comments, likes, albums)
+                </doc>
+            </param>
+			<param name="includeContributors" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     if true, returns the album contributors
+                </doc>
+            </param>
+			<param name="includeLikers" required="false" type="xsd:boolean" style="query" default ="0">
+                <doc>
+                      if true, returns the album likers
+                </doc>
+            </param>
+            <method id="albumsId" name="GET" apigee:displayName="/albums/{id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/GET_albums_id.md#files">
+                    Retrieves album specified in the id URL query parameter
+                </doc>
+            </method>
+        </resource>
+        <resource path="/albums/{id}/photos">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="17">
+                <doc>
+                     Represents the ID of the album.
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+					
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:integer" style="query">
+                <doc>
+					if true, returns only the photo ids
+                </doc>
+            </param>
+			<param name="detailed" required="false" type="xsd:integer" style="query">
+                <doc>
+					returns a simple or detailed photo object
+
+                </doc>
+            </param>
+			
+			<param name="includeComments" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     If true, returns the latest two comments of a photo inline
+                </doc>
+            </param>
+			<param name="numComments" required="false" type="xsd:integer" style="query" default="2">
+                <doc>
+                     the number of comments to include in the response
+                </doc>
+            </param>
+			<param name="includeLikers" required="false" type="xsd:boolean" style="query" default ="0">
+                <doc>
+                      If true, returns the latest two likers of a photo
+                </doc>
+            </param>
+			<param name="numLikers" required="false" type="xsd:integer" style="query" default="">
+                <doc>
+                     the number of likers to include in the response
+                </doc>
+            </param>
+			<param name="includeAlbums" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     If true, includes the albums this photo is part of
+                </doc>
+            </param>
+			
+            <method id="albumsPhotos" name="GET" apigee:displayName="/albums/{id}/photos">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/GET_albums_id_photos.md#files">
+                    Retrieves photos of an album specified in the id URL query parameter
+                </doc>
+            </method>
+        </resource>
+        <resource path="/album/{id}/photos/{photo_id}">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     the album id to interact with
+                </doc>
+            </param>
+			<param name="photo_id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     the photo id to interact with
+                </doc>
+            </param>
+
+            <method id="albumIdPhotosPhotoIdPut" name="PUT" apigee:displayName="/album/{id}/photos/{photo_id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/album/{id}/photos/{photo_id}"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/PUT_albums_id_photos_id.md#files">
+						add an existing photo to an album               
+				</doc>
+
+            </method>
+            <method id="albumIdPhotosPhotoIdDelete" name="DELETE" apigee:displayName="/album/{id}/photos/{photo_id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/album/{id}/photos/{photo_id}"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/DELETE_albums_id_photos_id.md#files">
+						remove an existing photo from an album              
+				</doc>
+
+            </method>
+        </resource>
+		<!--
+        <resource path="/album/{id}/likers/{user_id}">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     the album id to interact with
+                </doc>
+            </param>
+			<param name="user_id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     the user id to interact with
+                </doc>
+            </param>
+
+            <method id="albumIdPhotosLikersIdPut" name="PUT" apigee:displayName="/album/{id}/likers/{photo_id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/album/{id}/photos/{photo_id}"/>
+
+                <doc apigee:url="http://api.mydomain.com/doc/resource5/method1">
+						Like an album  
+				</doc>
+
+            </method>
+            <method id="albumIdPhotosLikersIdDelete" name="DELETE" apigee:displayName="/album/{id}/likers/{photo_id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/album/{id}/photos/{photo_id}"/>
+
+                <doc apigee:url="http://api.mydomain.com/doc/resource5/method1">
+						Unlike an album  
+				</doc>
+
+            </method>
+        </resource>
+		-->
+        <resource path="/albums/{id}/contributors">
+
+			<param name="id" required="true" type="xsd:integer" style="header" default="17">
+                <doc>
+                     Represents the ID of the album.
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+					
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:integer" style="query">
+                <doc>
+					if true, returns only the users ids
+                </doc>
+            </param>
+
+			
+			
+            <method id="albumsContributors" name="GET" apigee:displayName="/albums/{id}/contributors">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/GET_albums_id_contributors.md#files">
+					Retrieves an array of the users who have added photos to the album                
+				</doc>
+            </method>
+        </resource>
+		
+        <resource path="/albums/{id}/contributors/{user_id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="17">
+                <doc>
+                     Represents the ID of the album.
+                </doc>
+            </param>
+			<param name="user_id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+                     Represents the ID of the user.
+                </doc>
+            </param>
+
+			
+			
+            <method id="albumsContributorsCheck" name="GET" apigee:displayName="/albums/{id}/contributors/{user_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/GET_albums_id_contributors_id.md#files">
+					Checks whether a user has contributed a photo to the album              
+				</doc>
+            </method>
+        </resource>
+        <resource path="/album/{id}/share">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     the album id you want to share
+                </doc>
+            </param>
+
+			<param name="services" required="true" type="xsd:string" style="query">
+                <doc>
+                    comma-separated list of services (twitter,facebook,tumblr)
+                </doc>
+            </param>
+			<param name="message" required="false" type="xsd:string" style="query">
+                <doc>
+                    user-entered message to be shared with the album
+                </doc>
+            </param>
+
+            <method id="albumIdShare" name="POST" apigee:displayName="/album/{id}/share">
+                <apigee:tags>
+                    <apigee:tag primary="true">Albums</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/album/{id}/photos/{photo_id}"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/albums/POST_albums_id_share.md#files">
+						Share an album to the user's connected social media services
+				</doc>
+
+            </method>
+        </resource>
+		
+		
+		
+        <resource path="/photos">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="type" required="false" type="xsd:string" style="query" default="user"> 
+                <doc>
+                     popular (optional, returns popular photos, else defaults to the user's photos)
+                </doc>
+            </param>
+			<param name="ids" required="false" type="xsd:string" style="query">
+                <doc>
+                     comma-separated list of ids to return (if type not specified)
+                </doc>
+            </param>
+			
+			<param name="limit" required="false" type="xsd:integer" style="query" default="30">
+                <doc>
+                     number of search results to return
+                </doc>
+            </param>
+			
+
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+                       offset of search results to start at
+                </doc>
+            </param>
+			
+			<param name="includeComments" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                      If true, returns the latest two comments of a photo inline
+                </doc>
+            </param>
+			<param name="includeLikers" required="false" type="xsd:boolean" style="query" default ="0">
+                <doc>
+                       If true, returns the latest two likers of a photo
+                </doc>
+            </param>
+            <method id="photos" name="GET" apigee:displayName="/photos">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photo.md#files">
+                    Retrieves the authenticated user's latest twenty photos or popular photos (collection)
+                </doc>
+            </method>
+        </resource>
+        <resource path="/photos/">
+
+
+			<param name="filename" required="false" type="xsd:string" style="query">
+                <doc>
+                    required if no photo is sent with the request
+                </doc>
+            </param>
+			<param name="caption" required="false" type="xsd:string" style="query">
+                <doc>
+                   a string created, client-side, from "topic" at "venue" or "topic" in "city"
+                </doc>
+            </param>
+			<param name="topic" required="false" type="xsd:string" style="query">
+                <doc>
+                   the user's chosen topic(s), comma-separated
+                </doc>
+            </param>
+			<param name="city" required="false" type="xsd:string" style="query">
+                <doc>
+                   the city name where the photo was taken
+                </doc>
+            </param>
+			<param name="country" required="false" type="xsd:string" style="query">
+                <doc>
+                   the country name where the photo was taken
+                </doc>
+            </param>
+			<param name="filter" required="false" type="xsd:string" style="query">
+                <doc>
+                   the eyeem filter that the user chose to use
+                </doc>
+            </param>
+			<param name="venueId" required="false" type="xsd:integer" style="query">
+                <doc>
+                   the foursquare venue ID that the user selected
+                </doc>
+            </param>
+			<param name="venueServiceName" required="false" type="xsd:string" style="query">
+                <doc>
+                   required if venueId provided, "foursquare"
+                </doc>
+            </param>
+			<param name="albumIds" required="false" type="xsd:string" style="query">
+                <doc>
+                   the IDs of albums we want to automatically add the photo to, comma-separated
+                </doc>
+            </param>
+			<param name="noLocation" required="false" type="xsd:boolean" style="query">
+                <doc>
+                   tells the server not to save the photo's geodata.
+                </doc>
+            </param>
+            <method id="photosPost" name="POST" apigee:displayName="/photos">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/POST_photo.md#files">
+						Create a photo object, either by uploading a file or passing a filename (the result of a POST on /photos/upload)
+				</doc>
+
+                <request>
+                    <!-- This section contains the body representation, e.g. form-encoded parameters, an XML/JSON payload, an attachment etc. -->
+                    <representation>
+                        <!-- This section describes the attachments for a method. Currently, the Console only supports one attachment. -->
+                        <apigee:attachments>
+                            <!-- The name attribute, which is mandatory, determines the name populated in the Console and also the MIME part name. -->
+                            <!-- The required attribute, which is optional, is set to true to indicate the attachment as mandatory in the Console. -->
+                            <!-- The contentDisposition attribute, which is optional, sets the Content-Disposition header in the generated MIME request.
+                                 Some MIME request processors expect the Content-Disposition to be "attachment", while some expect it to be "form-data". -->
+                            <apigee:attachment name="photo" required="false" contentDisposition="form-data">
+                                <doc>required if no filename is sent with the request</doc>
+                            </apigee:attachment>
+                        </apigee:attachments>
+                    </representation>
+                </request>
+            </method>
+        </resource>
+        <resource path="/photos/upload">
+
+
+            <method id="photosUploadPost" name="POST" apigee:displayName="/photos/upload">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/POST_photo_upload.md#files">
+						Upload a photo file and send back a filename that can then be use to call POST /photos and create a photo object.
+				</doc>
+
+                <request>
+                    <!-- This section contains the body representation, e.g. form-encoded parameters, an XML/JSON payload, an attachment etc. -->
+                    <representation>
+                        <!-- This section describes the attachments for a method. Currently, the Console only supports one attachment. -->
+                        <apigee:attachments>
+                            <!-- The name attribute, which is mandatory, determines the name populated in the Console and also the MIME part name. -->
+                            <!-- The required attribute, which is optional, is set to true to indicate the attachment as mandatory in the Console. -->
+                            <!-- The contentDisposition attribute, which is optional, sets the Content-Disposition header in the generated MIME request.
+                                 Some MIME request processors expect the Content-Disposition to be "attachment", while some expect it to be "form-data". -->
+                            <apigee:attachment name="photo" required="true" contentDisposition="form-data">
+                                <doc>The photo you want to upload</doc>
+                            </apigee:attachment>
+                        </apigee:attachments>
+                    </representation>
+                </request>
+            </method>
+        </resource>
+        <resource path="/photos/{id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="939584">
+                <doc>
+                     The id of the photo we want to retrieve information about.
+                </doc>
+            </param>
+			<param name="detailed" required="false" type="xsd:boolean" style="query" default="1">
+                <doc>
+                     returns a simple or detailed album object
+                </doc>
+            </param>
+			
+			<param name="includeComments" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     If true, returns the latest two comments of a photo inline
+                </doc>
+            </param>
+			<param name="numComments" required="false" type="xsd:integer" style="query" default="2">
+                <doc>
+                     the number of comments to include in the response
+                </doc>
+            </param>
+			<param name="includeLikers" required="false" type="xsd:boolean" style="query" default ="2">
+                <doc>
+                      if true, returns the album likers
+                </doc>
+            </param>
+			<param name="numLikers" required="false" type="xsd:integer" style="query" default="2">
+                <doc>
+                     the number of likers to include in the response
+                </doc>
+            </param>
+			<param name="includeAlbums" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                     If true, includes the albums this photo is part of
+                </doc>
+            </param>
+            <method id="photosId" name="GET" apigee:displayName="/photos/{id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photos_id.md#files">
+                    Retrieves a photo by id
+                </doc>
+            </method>
+        </resource>
+        <resource path="/photos/{id}">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The photo id
+				</doc>
+            </param>
+
+            <method id="photosIdPost" name="DELETE" apigee:displayName="/photos/{id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/DELETE_photos_id.md#files">
+						Deletes a photo by id (has to be a photo belonging to the authenticated user)
+				</doc>
+
+
+            </method>
+            <method id="photosIdPut" name="PUT" apigee:displayName="/photos/{id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+					
+				
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/PUT_photos_id.md#files">
+						Edits a photo by id (has to be a photo belonging to the authenticated user or admin)
+				</doc>
+				<request>
+					<param name="caption" required="false" type="xsd:string" style="query">
+		                <doc>
+								The new caption of the photo.
+						</doc>
+		            </param>
+					<param name="title" required="false" type="xsd:string" style="query">
+		                <doc>
+								The new title of the photo.
+						</doc>
+		            </param>
+					<param name="hide" required="false" type="xsd:boolean" style="query">
+		                <doc>
+								 Removes photo from popular album.
+						</doc>
+		            </param>
+				</request>
+
+            </method>
+        </resource>	
+		
+        <resource path="/photos/{id}/likers">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="939584">
+                <doc>
+                     The id of the photo we want to retrieve information about.
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:boolean" style="query">
+                <doc>
+					if true, returns only the likers ids
+                </doc>
+            </param>
+            <method id="photosIdLikers" name="GET" apigee:displayName="/photos/{id}/likers">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photos_id_likers.md#files">
+                    Retrieves an array of the users who like the photo
+                </doc>
+            </method>
+        </resource>
+		
+		
+		
+        <resource path="/photos/{id}/likers/{user_id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="939584">
+                <doc>
+                     The id of the photo we want to retrieve information about.
+                </doc>
+            </param>
+			<param name="user_id" required="true" type="xsd:integer" style="header" default="3346">
+                <doc>
+                    Represents the ID of the user.
+                </doc>
+            </param>
+			
+			
+            <method id="photosIdLikersCheck" name="GET" apigee:displayName="/photos/{id}/likers/{user_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photos_id_likers.md#files">
+                    Checks whether a user likes a photo
+                </doc>
+            </method>
+            <method id="photosIdLikersCheckPut" name="PUT" apigee:displayName="/photos/{id}/likers/{user_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos.md#PUTphotosIdLikersId">
+                    Like a photo
+                </doc>
+				<request>
+					<param name="albumId" required="false" type="xsd:integer" style="header">
+		                <doc>
+		                    the ID of the album that the user was in when liking
+		                </doc>
+		            </param>
+				</request>
+            </method>
+            <method id="photosIdLikersCheckDelete" name="DELETE" apigee:displayName="/photos/{id}/likers/{user_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/PUT_photos_id_likers_id.md#files">
+                    Unlike a photo
+                </doc>
+            </method>
+        </resource>	
+		
+        <resource path="/photos/{id}/comments">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="939584">
+                <doc>
+                     The id of the photo we want to retrieve information about.
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:boolean" style="query" >
+                <doc>
+					if true, returns a comma separated list of comment ids
+                </doc>
+            </param>
+            <method id="photosIdComments" name="GET" apigee:displayName="/photos/{id}/comments">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photos_id_comments.md#files">
+                    Retrieves an array of a photo's comments
+                </doc>
+            </method>
+        </resource>		
+        <resource path="/photos/{id}/comments">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The photo id
+				</doc>
+            </param>
+			<param name="message" required="true" type="xsd:string" style="query">
+                <doc>
+						the body of the comment (the message can optionally contain @mentioned users in the form @{nickname}[user:{id}]) 
+				</doc>
+            </param>
+			<param name="albumId" required="false" type="xsd:integer" style="query">
+                <doc>
+						tthe ID of the album that the user was in when commenting (optional)
+				</doc>
+            </param>
+            <method id="photosIdCommentsPost" name="POST" apigee:displayName="/photos/{id}/comments">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/POST_photos_id_comments.md#files">
+						Adds a new comment to a photo
+				</doc>
+
+
+            </method>
+        </resource>	
+		
+        <resource path="/photos/{id}/comments/{comment_id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="939584">
+                <doc>
+                     The id of the photo we want to retrieve information about.
+                </doc>
+            </param>
+			<param name="comment_id" required="true" type="xsd:integer" style="header" default="939584">
+                <doc>
+                     The id of the comment we want to retrieve.
+                </doc>
+            </param>
+            <method id="photosIdCommentsIdGet" name="GET" apigee:displayName="/photos/{id}/comments/{comment_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photos_id_comments_id.md#files">
+                   Retrieves a specific comment on a photo
+                </doc>
+            </method>
+            <method id="photosIdCommentsIdDelete" name="DELETE" apigee:displayName="/photos/{id}/comments/{comment_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/DELETE_photos_id_comments_id.md#files">
+                   delete a specific comment on a photo (users can only delete their own comments)
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/photos/{id}/albums/{album_id}">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The photo id
+				</doc>
+            </param>
+			<param name="album_id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The album id
+				</doc>
+            </param>
+            <method id="photosIdAlbumsIdPut" name="PUT" apigee:displayName="/photos/{id}/albums/{album_id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/PUT_photos_id_albums_id.md#files">
+						add an existing photo to an album
+				</doc>
+
+
+            </method>
+            <method id="photosIdAlbumsIdDelete" name="DELETE" apigee:displayName="/photos/{id}/albums/{album_id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/DELETE_photos_id_albums_id.md#files">
+						remove an existing photo from an album
+				</doc>
+
+
+            </method>
+        </resource>				
+			
+        <resource path="/photos/{id}/topics">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The photo id
+				</doc>
+            </param>
+			<param name="name" required="true" type="xsd:string" style="query">
+                <doc>
+						 the name of the topic 
+				</doc>
+            </param>
+            <method id="photosIdATopicsPost" name="POST" apigee:displayName="/photos/{id}/topics">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/POST_photos_id_topics.md#files">
+						add a photo to a new topic (which automatically adds it to the album associated with that topic)
+				</doc>
+
+
+            </method>
+        </resource>			
+			
+        <resource path="/photos/{id}/flag">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The photo id
+				</doc>
+            </param>
+			<param name="offense" required="true" type="xsd:string" style="query">
+                <doc>
+						 the reason for flagging the photo
+				</doc>
+                <option value="Pornographic" />
+                <option value="Terms of Service" />
+                <option value="Copyright" />
+            </param>
+            <method id="photosIdFlagPost" name="POST" apigee:displayName="/photos/{id}/flag">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/POST_photos_id_flag.md#files">
+						Report a photo to EyeEm moderators
+				</doc>
+
+
+            </method>
+        </resource>			
+			
+        <resource path="/photos/{id}/share">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						The photo id
+				</doc>
+            </param>
+			<param name="services" required="true" type="xsd:string" style="query">
+                <doc>
+						 comma-separated list of services (twitter,facebook,tumblr,flickr,foursquare)
+				</doc>
+            </param>
+			<param name="message" required="false" type="xsd:string" style="query">
+                <doc>
+						 user-entered message to be shared with the photo
+				</doc>
+            </param>
+			<param name="upload" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+						 if true, this photo is being shared right after uploading (leads to an actual upload of the photo to flickr and facebook as well as a potential foursquare checkin)
+				</doc>
+            </param>
+            <method id="photosIdSharePost" name="POST" apigee:displayName="/photos/{id}/share">
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/POST_photos_id_share.md#files">
+						Share a photo to the user's connected social media services
+				</doc>
+
+
+            </method>
+        </resource>	
+        <resource path="/photos/bgImages">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			
+            <method id="photosBG" name="GET" apigee:displayName="/photos/bgImages">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Photos</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photos_bgImages.md#files">
+                    Get a selection of images that is used in the existing apps as a start screen background
+                </doc>
+            </method>
+        </resource>
+
+   
+
+			
+	
+			
+	
+		
+
+		
+        <resource path="/users">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="ids" required="false" type="xsd:string" style="query">
+                <doc>
+                     a comma-separated list of user ids to retrieve
+                </doc>
+            </param>
+			<param name="q" required="false" type="xsd:string" style="query">
+                <doc>
+                    the string to search users by
+                </doc>
+            </param>
+			<param name="suggested" required="false" type="xsd:boolean" style="query">
+                <doc>
+                     replaces parameter "q" (returns suggested users)
+                </doc>
+            </param>
+
+			<param name="detailed" required="false" type="xsd:boolean" style="query" default="1">
+                <doc>
+                     returns a more detailed user object
+                </doc>
+            </param>
+			<param name="friends" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+                     used when getting users from a search query, searches only among friends
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="30">
+                <doc>
+                     number of search results to return
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+                       offset of search results to start at
+                </doc>
+            </param>
+            <method id="users" name="GET" apigee:displayName="/users">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users.md#files">
+                    Search for users or retrieve suggested users
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+						the user id retrieve information from
+				</doc>
+            </param>
+
+
+            <method id="usersIdPut" name="POST" apigee:displayName="/users/{id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/POST_users_id.md#files">
+                   Edit (parts of) a user's own profile, if sending a new profile photo, the request should become a POST
+                </doc>
+				<request>
+					<param name="fullname" required="false" type="xsd:string" style="query">
+		                <doc>
+		                      the user's full name
+		                </doc>
+		            </param>
+					<param name="nickname" required="false" type="xsd:string" style="query">
+		                <doc>
+		                      the user's full name
+		                </doc>
+		            </param>
+					<param name="username" required="false" type="xsd:string" style="query">
+		                <doc>
+		                      the user's full name
+		                </doc>
+		            </param>
+					<param name="password" required="false" type="xsd:string" style="query">
+		                <doc>
+		                      the user's full name
+		                </doc>
+		            </param>
+					<param name="description" required="false" type="xsd:string" style="query">
+		                <doc>
+		                      the user's full name
+		                </doc>
+		            </param>
+					<param name="emailNotifications" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                      decides whether the user wants to receive email notifications
+		                </doc>
+		            </param>
+					<param name="pushNotifications" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                     decides whether the user wants to receive push notifications
+		                </doc>
+		            </param>
+					<param name="facebookTimeline" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                      this basically sets all the facebook activity stuff to true
+		                </doc>
+		            </param>
+					<representation>
+                        <!-- This section describes the attachments for a method. Currently, the Console only supports one attachment. -->
+                        <apigee:attachments>
+                            <!-- The name attribute, which is mandatory, determines the name populated in the Console and also the MIME part name. -->
+                            <!-- The required attribute, which is optional, is set to true to indicate the attachment as mandatory in the Console. -->
+                            <!-- The contentDisposition attribute, which is optional, sets the Content-Disposition header in the generated MIME request.
+                                 Some MIME request processors expect the Content-Disposition to be "attachment", while some expect it to be "form-data". -->
+                            <apigee:attachment name="photo" required="false" contentDisposition="form-data">
+                                <doc>a user's profile photo</doc>
+                            </apigee:attachment>
+                        </apigee:attachments>
+                    </representation>
+				</request>	
+            </method>
+            <method id="usersIdGet" name="GET" apigee:displayName="/users/{id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id.md#files">
+                    Get a user's profile information
+                </doc>
+				<request>
+					<param name="detailed" required="false" type="xsd:boolean" style="query" default="0">
+		                <doc>
+		                      returns further user details
+		                </doc>
+		            </param>
+				</request>	
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/photos">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+
+			<param name="limit" required="false" type="xsd:integer" style="query" default="30">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:boolean" style="query">
+                <doc>
+					if true, returns only the likers ids
+                </doc>
+            </param>
+            <method id="usersIdPhotos" name="GET" apigee:displayName="/users/{id}/photos">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_photos.md#files">
+                    Get the given user's photos
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/likedPhotos">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:boolean" style="query">
+                <doc>
+					sending onlyId=1 in request url returns a json array userIds containing just the ids
+                </doc>
+            </param>
+            <method id="usersIdlikedPhotos" name="GET" apigee:displayName="/users/{id}/likedPhotos">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_likedPhotos.md#files">
+                    Get all the photos that a user has liked 
+                </doc>
+            </method>
+        </resource>
+        <resource path="/users/{id}/friendsPhotos">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+
+            <method id="usersIdFriendsPhtoso" name="GET" apigee:displayName="/users/{id}/friendsPhotos">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_friendsPhotos.md#files">
+                   Get all the photos by users that the given user follows (ordered chronologically)
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/feed">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+			<param name="X-GEO-closestVenueFsIds" required="false" type="xsd:string" style="query">
+                <doc>
+                     should contain a comma-separated list of foursquare venue ids
+                </doc>
+            </param>
+			<param name="X-GEO-cityName" required="false" type="xsd:string" style="query">
+                <doc>
+                     should contain the name of the city the device "thinks" it's in
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+
+            <method id="usersIdFeed" name="GET" apigee:displayName="/users/{id}/feed">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_feed.md#files">
+					Gets albums relevant to a user (selection happens server side, includes albums they like, albums they contributed to, trending, recommended and nearby albums)
+
+					If requested from a user other than the authenticated one, only the user's liked albums are returned
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/friends">
+			<param name="id" required="true" type="xsd:integer" style="header" default="1013" >
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+
+            <method id="usersIdFriendsGet" name="GET" apigee:displayName="/users/{id}/friends">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_friends.md#files">
+					Get a user's friends (users that they follow)
+                </doc>
+				<request>
+
+					<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+		                <doc>
+					
+		                </doc>
+		            </param>
+			
+					<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+		                <doc>
+
+		                </doc>
+		            </param>
+					<param name="onlyId" required="false" type="xsd:boolean" style="query">
+		                <doc>
+							request url returns a json array userIds containing just the ids
+		                </doc>
+		            </param>
+					<param name="detailed" required="false" type="xsd:boolean" style="query" default="0">
+		                <doc>
+							returns the details for every user >> num photos, num followers, etc
+		                </doc>
+		            </param>
+				</request>
+            </method>
+            <method id="usersIdFriendsPost" name="POST" apigee:displayName="/users/{id}/friends">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_friends.md#files">
+					Add users to the friends list (follow)
+                </doc>
+				<request>
+
+					<param name="friend_id" required="true" type="xsd:string" style="query">
+		                <doc>
+							 comma-separated list of user_ids
+		                </doc>
+		            </param>
+					
+				</request>
+            </method>
+        </resource>		
+		
+        <resource path="/users/{id}/friends/{friend_id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user (id) to interact with
+                </doc>
+            </param>
+			<param name="friend_id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+					the other user (friend_id) to interact with
+                </doc>
+            </param>
+			
+
+            <method id="usersIdFriendCheckGet" name="GET" apigee:displayName="/users/{id}/friend/{friend_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_friends_id.md#files">
+					Check if the given user is friends with (follows) another user
+                </doc>
+            </method>
+            <method id="usersIdFriendCheckDelete" name="DELETE" apigee:displayName="/users/{id}/friend/{friend_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/DELETE_users_id_friends_id.md#files">
+					Remove a user from the friends list (unfollow)
+                </doc>
+            </method>
+        </resource>		
+		
+        <resource path="/users/{id}/followers">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+			<param name="onlyId" required="false" type="xsd:boolean" style="query">
+                <doc>
+					request url returns a json array userIds containing just the ids
+                </doc>
+            </param>
+			<param name="detailed" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+					returns the details for every user >> num photos, num followers, etc
+                </doc>
+            </param>
+            <method id="usersIdFollowers" name="GET" apigee:displayName="/users/{id}/followers">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_followers.md#files">
+					Get a user's followers
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/followers/{friend_id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+			<param name="friend_id" required="true" type="xsd:integer" style="header" default="1013">
+                <doc>
+					Check if a user follows the given user
+                </doc>
+            </param>
+            <method id="usersIdFollowersCheck" name="GET" apigee:displayName="/users/{id}/followers/{friend_id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/DELETE_users_id_friends_id.md#files">
+					Check if a user follows the given user
+                </doc>
+            </method>
+        </resource>		
+		
+		
+        <resource path="/users/{id}/topics">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+					
+                </doc>
+            </param>
+			
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+
+                </doc>
+            </param>
+            <method id="usersIdTopics" name="GET" apigee:displayName="/users/{id}/topics">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_topics.md#files">
+					Get a list of topics the user has contributed to (the topics correlate to tag albums)
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/socialMedia">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+
+            <method id="usersIdSocialMedia" name="GET" apigee:displayName="/users/{id}/socialMedia">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_socialMedia.md#files">
+					Only available for the authenticated user, this call returns the status of the various connected social media accounts
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/users/{id}/socialMedia/{service}">
+
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+			<param name="service" required="true" type="xsd:string" style="header">
+                <doc>
+                     the service to connect with
+                </doc>
+            </param>
+            <method id="usersIdSocialMediaServicePost" name="POST" apigee:displayName="/users/{id}/socialMedia/{service}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/POST_users_id_socialMedia_service.md#files">
+					Only available for the authenticated user, this call adds a service to the user's connected services
+                </doc>
+				<request>
+					<param name="keys" required="true" type="xsd:boolean" style="query">
+		                <doc>
+		                     to simply store the access_token/access_secret for a specific service
+		                </doc>
+		            </param>
+					<param name="oauth_token" required="true" type="xsd:string" style="query">
+		                <doc>
+		                     the token provided by a service
+		                </doc>
+		            </param>
+					<param name="oauth_token_secret" required="true" type="xsd:string" style="query">
+		                <doc>
+		                     the secret provided by a service, applies for tumblr and twitter at the moment
+		                </doc>
+		            </param>
+					<param name="service_user_id" required="true" type="xsd:integer" style="query">
+		                <doc>
+		                     the user's id on the chosen service, applies for facebook and twitter
+		                </doc>
+		            </param>
+					<param name="service_screen_name" required="true" type="xsd:string" style="query">
+		                <doc>
+		                     the user's nickname on the chosen service, applies for twitter only
+		                </doc>
+		            </param>
+					<param name="follow" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                     whether to follow EyeEm on twitter
+		                </doc>
+		            </param>
+					<param name="upload" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                     whether to upload the whole photo or just share a link on facebook
+		                </doc>
+		            </param>
+				</request>
+            </method>
+            <method id="usersIdSocialMediaServiceDelete" name="DELETE" apigee:displayName="/users/{id}/socialMedia/{service}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/DELETE_users_id_socialMedia_service.md#files">
+					Only available for the authenticated user, this call disconnects a service
+                </doc>
+
+            </method>
+            <method id="usersIdSocialMediaServicePut" name="PUT" apigee:displayName="/users/{id}/socialMedia/{service}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/PUT_users_id_socialMedia_service.md#files">
+					Only available for the authenticated user, this call disconnects a service
+                </doc>
+				<request>
+					<param name="upload" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                     whether to upload the whole photo or just share a link on facebook
+		                </doc>
+		            </param>
+					<param name="photolike" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                      whether to share photo likes on facebook
+		                </doc>
+		            </param>
+					<param name="photocomment" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                      whether to share photo comments on facebook
+		                </doc>
+		            </param>
+					<param name="albumlike" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                      whether to share album likes on facebook
+		                </doc>
+		            </param>
+					<param name="userfollow" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                     whether to share user follows on facebook
+		                </doc>
+		            </param>
+					<param name="timelinepopup" required="false" type="xsd:boolean" style="query">
+		                <doc>
+		                     a flag for us to track which users have been notified about facebook timeline
+		                </doc>
+		            </param>
+					
+				</request>
+				
+            </method>
+        </resource>
+		
+
+        <resource path="/users/{id}/newsSettings">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+			<param name="push_photo_like" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="push_photo_comment" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="push_user_follower" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="push_user_joined" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="push_album_contributor" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="push_photo_comment_mention" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="email_photo_like" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="email_photo_comment" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="email_user_follower" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="email_user_joined" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="email_album_contributor" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			<param name="email_photo_comment_mention" required="false" type="xsd:boolean" style="query">
+                <doc>
+                </doc>
+            </param>
+			
+            <method id="usersIdNewsSettings" name="POST" apigee:displayName="/users/{id}/newsSettings">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/POST_users_id_newsSettings.md#files">
+					Only available for the authenticated user, this call edits a user's push and email notification settings
+                </doc>
+            </method>
+        </resource>
+        <resource path="/users/{id}/newsSettings">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user id retrieve information from
+                </doc>
+            </param>
+
+			
+            <method id="usersIdNewsSettingsGet" name="GET" apigee:displayName="/users/{id}/newsSettings">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/GET_users_id_newsSettings.md#files">
+					Only available for the authenticated user, this call returns the user's chosen notification settings
+                </doc>
+            </method>
+        </resource>		
+
+        <resource path="/users/{id}/share">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="id" required="true" type="xsd:integer" style="header" default="me">
+                <doc>
+                     the user (id) to be shared
+                </doc>
+            </param>
+			<param name="services" required="true" type="xsd:string" style="query">
+                <doc>
+					comma-separated list of services (twitter,facebook,tumblr)
+                </doc>
+            </param>
+			<param name="message" required="false" type="xsd:string" style="query">
+                <doc>
+					 user-entered message to be shared with the user
+                </doc>
+            </param>
+
+			
+            <method id="usersIdShare" name="POST" apigee:displayName="/users/{id}/share">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Users</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/users/POST_users_id_share.md#files">
+					Share a user to the user's connected social media services
+                </doc>
+            </method>
+        </resource>	
+
+
+	
+			
+			
+        <resource path="/venues">
+			<param name="id" required="true" type="xsd:integer" style="query">
+                <doc>
+						 the id of the venue on the external service
+				</doc>
+            </param>
+			<param name="service" required="true" type="xsd:string" style="query">
+                <doc>
+						 the name of the service this venue is retrieved from (for now: foursquare)
+				</doc>
+            </param>
+			<param name="name" required="true" type="xsd:string" style="query">
+                <doc>
+						  the name of the venue
+				</doc>
+            </param>
+			<param name="location" required="true" type="xsd:array" style="query">
+                <doc>
+						 key/value array of various location related info (lat,lng,city,country, etc...)
+				</doc>
+            </param>
+
+            <method id="venuesPost" name="POST" apigee:displayName="/venues">
+                <apigee:tags>
+                    <apigee:tag primary="true">Venues</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/venues/POST_venues.md#files">
+						Create a venue on EyeEm
+				</doc>
+
+
+            </method>
+        </resource>			
+			
+			
+        <resource path="/venues/foursquareToken">
+
+            <method id="venuesFoursquareTokenGET" name="GET" apigee:displayName="/venues/foursquareToken">
+                <apigee:tags>
+                    <apigee:tag primary="true">Venues</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/venues/POST_venues.md#files">
+						Retrieve the eyeem foursquare token (needed to create a venue)
+				</doc>
+
+
+            </method>
+        </resource>			
+        <resource path="/search">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+			<param name="q" required="true" type="xsd:string" style="query"> 
+                <doc>
+                     the string to search for
+                </doc>
+            </param>
+
+			<param name="includeUsers" required="false" type="xsd:boolean" style="query">
+                <doc>
+                      whether to include results in the users dictionary
+                </doc>
+            </param>
+			<param name="includeAlbums" required="false" type="xsd:boolean" style="query">
+                <doc>
+                       whether to include results in the albums dictionary
+                </doc>
+            </param>
+            <method id="search" name="GET" apigee:displayName="/search">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Search</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/search/GET_search.md#files">
+                    Retrieves an array containing a users and an albums dictionary.
+                </doc>
+            </method>
+        </resource>		
+		
+		
+        <resource path="/news">
+
+			
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+                     number of search results to return
+                </doc>
+            </param>
+			
+
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+                       offset of search results to start at
+                </doc>
+            </param>
+			
+			<param name="aggregated" required="false" type="xsd:boolean" style="query" default="0">
+                <doc>
+                      Returns aggregated news if set
+                </doc>
+            </param>
+			<param name="countUnseen" required="false" type="xsd:boolean" style="query" default ="0">
+                <doc>
+                        returns only the number of unread news
+                </doc>
+            </param>
+            <method id="news" name="GET" apigee:displayName="/news">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">News</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/news/GET_news.mds">
+                    Retrieves the authenticated user's latest twenty news items
+                </doc>
+            </method>
+        </resource>
+		
+        <resource path="/news/{id}">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+
+			
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+                     The id of the news we want to retrieve information about.
+                </doc>
+            </param>
+			
+
+            <method id="newsId" name="GET" apigee:displayName="/news/{id}">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">News</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/news/GET_news_id.md#files">
+                    Retrieves a news item by id
+                </doc>
+            </method>
+        </resource>
+		
+
+        <resource path="/news">
+			<param name="markAsRead" required="true" type="xsd:string" style="query">
+                <doc>
+						 comma separated ids of news to be marked
+				</doc>
+            </param>
+
+
+            <method id="newsPost" name="POST" apigee:displayName="/news">
+                <apigee:tags>
+                    <apigee:tag primary="true">News</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/news/POST_news.md#files">
+						Marks multiple news items as read
+				</doc>
+
+
+            </method>
+        </resource>	
+			
+        <resource path="/news/{id}">
+			<param name="id" required="true" type="xsd:integer" style="header">
+                <doc>
+						 The id of the news we want to modify
+				</doc>
+            </param>
+			<param name="id" required="false" type="xsd:boolean" style="header" default="0">
+                <doc>
+						 if true, marks all older news items as "seen".
+				</doc>
+            </param>
+
+            <method id="newsIdPut" name="PUT" apigee:displayName="/news/{id}">
+                <apigee:tags>
+                    <apigee:tag primary="true">News</apigee:tag>
+                </apigee:tags>
+
+                <apigee:authentication required="true"/>
+
+                <apigee:example url="/photos"/>
+
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/news/PUT_news_id.md#files">
+						Updates a news item and sets it (and optionally, all items older than it) to "seen"
+				</doc>
+
+
+            </method>
+        </resource>		
+			
+        <resource path="/topics">
+            <!-- Resources that are the same but have multiple verbs can have multiple method items in the WADL. -->
+            <!-- Methods should each have a unique id. -->
+            <!-- The attribute displayName can be used to control the name that appears in the list in the Console. -->
+
+			<param name="autoComplete" required="true" type="xsd:string" style="query">
+                <doc>
+                     
+                </doc>
+            </param>
+			
+			<param name="limit" required="false" type="xsd:integer" style="query" default="20">
+                <doc>
+                     number of search results to return
+                </doc>
+            </param>
+			
+
+			<param name="offset" required="false" type="xsd:integer" style="query" default="0">
+                <doc>
+                       offset of search results to start at
+                </doc>
+            </param>
+			
+
+            <method id="topics" name="GET" apigee:displayName="/topics">
+
+                <!-- Tags are used to organize the list of methods. Primary tag will list the default placement. -->
+                <apigee:tags>
+                    <apigee:tag primary="true">Topics</apigee:tag>
+                </apigee:tags>
+
+                <!-- Is authentication required for this method? -->
+                <apigee:authentication required="true"/>
+
+                <!-- Example element is used to specify the sample URL to display in the Console's request URL field. -->
+                <!-- Note: This is not used by the new Console -->
+                <apigee:example url="/albums"/>
+
+                <!-- The content of the doc element is shown as a tooltip in the Console's method list. -->
+                <doc apigee:url="https://github.com/eyeem/Public-API/blob/master/endpoints/topics/GET_topics.md#files">
+                     
+                </doc>
+            </method>
+        </resource>			
+			
+			
+
+
+
+
+
+
+    </resources>
+
+</application>
