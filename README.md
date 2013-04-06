@@ -14,24 +14,24 @@ The API is in private beta at the moment. You can register an app by going to [Y
 
 ###Endpoints
 
-* **[Users](https://github.com/eyeem/API/tree/master/endpoints/users.md#files)** 
-* **[Photos](https://github.com/eyeem/API/tree/master/endpoints/photos.md#files)**
-* **[Albums](https://github.com/eyeem/API/tree/master/endpoints/albums.md#files)**
-* **[News](https://github.com/eyeem/API/tree/master/endpoints/news.md#files)**
-* **[Topics](https://github.com/eyeem/API/tree/master/endpoints/topics.md#files)**
-* **[Search](https://github.com/eyeem/API/tree/master/endpoints/search.md#files)**
-* **[Venues](https://github.com/eyeem/API/tree/master/endpoints/venues.md#files)**
-* **[Auth](https://github.com/eyeem/API/tree/master/endpoints/auth.md#files)**
-  
+* **[Users](https://github.com/eyeem/public-API/tree/master/endpoints/users.md#files)**
+* **[Photos](https://github.com/eyeem/public-API/tree/master/endpoints/photos.md#files)**
+* **[Albums](https://github.com/eyeem/public-API/tree/master/endpoints/albums.md#files)**
+* **[News](https://github.com/eyeem/public-API/tree/master/endpoints/news.md#files)**
+* **[Topics](https://github.com/eyeem/public-API/tree/master/endpoints/topics.md#files)**
+* **[Search](https://github.com/eyeem/public-API/tree/master/endpoints/search.md#files)**
+* **[Venues](https://github.com/eyeem/public-API/tree/master/endpoints/venues.md#files)**
+* **[Auth](https://github.com/eyeem/public-API/tree/master/endpoints/auth.md#files)**
+
 ###Resources
-* **[Model](https://github.com/eyeem/API/tree/master/resources/model.md#files)**
-* **[Errors](https://github.com/eyeem/API/tree/master/resources/errors.md#files)**
+* **[Model](https://github.com/eyeem/public-API/tree/master/resources/model.md#files)**
+* **[Errors](https://github.com/eyeem/public-API/tree/master/resources/errors.md#files)**
 
 
 ##Basics
 ***
 
-Our API is RESTful, which means that requests are defined using the HTTP verbs `GET`, `PUT`, `DELETE` and `POST`. 
+Our API is RESTful, which means that requests are defined using the HTTP verbs `GET`, `PUT`, `DELETE` and `POST`.
 
 To play around with the api calls, hop over to APIGee: `https://apigee.com/eyeem/embed/console/eyeem?v=2`
 
@@ -42,7 +42,7 @@ All API calls are SSL encrypted, and the API responses are in JSON. The base API
     * requests:  `application/x-www-form-urlencoded` or `application/json`
     * responses:  `application/json` or `image/*`
   * string encoding: you MUST use [utf-8](http://tools.ietf.org/html/rfc3629) everywhere
-  * date and time encoding:  
+  * date and time encoding:
     * [RFC822 date format](http://tools.ietf.org/html/rfc822) as a string (for now)
     * unix timesstamp as a float (in the future)
   * error handling:
@@ -120,7 +120,7 @@ Some endpoints in the api return arrays of photos, users, or albums. Those endpo
 ***
 
 You can request EyeEm photos in various sizes and formats. The default API endpoints return a `thumbUrl` and (optionally) a `photoUrl`
-Both urls have the format `http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg` and return different size photos that you can simply plug into your app. 
+Both urls have the format `http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg` and return different size photos that you can simply plug into your app.
 
 In case you want to display photos in a different resolution you can use the same filename and change the two middle parts of the url like so:
 - `http://www.eyeem.com/thumb/h/{pixels}/filename` will return the image scaled to have a max height of {pixels}
