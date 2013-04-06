@@ -17,7 +17,13 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 |**offset**|offset of photos to start at|integer||0|
 |**includeComments**| If true, returns the latest two comments of a photo inline|boolean||0|
 |**includeLikers**|If true, returns the latest two likers of a photo|boolean| |0|
+|**date**|returns photos taken on a specific date (YYYY-MM-DD)|date||0|
+|**frame**|returns photos taken using a particular frame |string||0|
+|**filter**|returns photos taken using a particular filter |string||0|
 
+### TODO
+***
+List Filter/Frame names.
 
 ### Response
 ***
@@ -437,4 +443,3 @@ Retrieves the authenticated user's latest twenty photos or popular photos (colle
 
 ```
 
- 

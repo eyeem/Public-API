@@ -1,10 +1,10 @@
-# GET /users/#{id}/photos 
+# GET /users/#{id}/photos
 ***
 `/users/#{id}/photos`
 
 ### Description
 ***
-Get the given user's photos.
+Get the given user's photos, sorted chronologically (default).
 
 ### Parameters
 ***
@@ -16,6 +16,7 @@ Get the given user's photos.
 |**limit**|num of photos to return|integer||30|
 |**offset**|offset of photos to start at|integer||0|
 |**onlyId**|if true, returns only the user id|boolean||0|
+|**top**|if true, sorts photos by popularity|boolean||0|
 
 
 ### Response

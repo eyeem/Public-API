@@ -1,4 +1,4 @@
-#Endpoint: Albums
+ #Endpoint: Albums
 ***
 
 These are the API calls that you can use to retrieve albums, the photos in those albums, and further details
@@ -50,6 +50,8 @@ The various possible representations of an album (simple,detailed) are presented
 * [`/albums/#{id}/likers/#{user_id}`](albums/GET_albums_id_likers_id.md#files)
 * [`/albums/#{id}/contributors`](albums/GET_albums_id_contributors.md#files)
 * [`/albums/#{id}/contributors/#{user_id}`](albums/GET_albums_id_contributors_id.md#files)
+* [`/albums/#{id}/relatedAlbums`](albums/GET_albums_id_related_albums.md#files)
+* [`/albums/#{id}/venueCategories`](albums/GET_albums_id_venue_categories.md#files)
 
 
 ##PUT
