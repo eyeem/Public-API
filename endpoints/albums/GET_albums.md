@@ -22,7 +22,8 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 |**offset**|offset of search results to start at|integer||0|
 |**minPhotos**|return albums only with at least the specified number of photos (works when "q" is specified)|integer|||
 |**type**|only returns albums of a specific type (city,country,event,venue,tag) (works when "q" is specified)|string|||
-
+|**venueCategory**|search for venues that belong to a particular Foursquare venue category|string||0|
+|**top**|used in combination w/ the type parameter to return the most popular cities, countries, etc... |boolean||0|
 
 ### Response
 ***
@@ -689,4 +690,3 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 }
 ```
 
- 

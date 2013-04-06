@@ -4,7 +4,7 @@
 
 ### Description
 ***
-Retrieves photos of an album specified in the id URL query parameter.
+Retrieves photos of an album specified in the id URL query parameter, sorted chronologically.
 
 ### Parameters
 ***
@@ -20,6 +20,7 @@ Retrieves photos of an album specified in the id URL query parameter.
 |**numComments**|the number of comments to include in the response|integer||2|
 |**numLikers**|the number of likers to include in the response|integer||2|
 |**includeAlbums**|If true, includes the albums this photo is part of|boolean||0|
+|**top**|if true, sorts photos by popularity|boolean||0|
 
 
 
@@ -91,4 +92,3 @@ Retrieves photos of an album specified in the id URL query parameter.
 
 ```
 
- 
