@@ -1,81 +1,327 @@
-#Endpoint: Users
-***
+User
+----
 
-These are the API calls that you can use to retrieve users, their photos, friends and other data
+GET http://api.eyeem.com/api/v3/users/2ue88m HTTP/1.1
 
-**Note: #{id} can be replaced by "me" or by the user's vanity url ex: "ramz" - this applies to all user endpoints.**
+If Existing:
 
-##Available endpoints
-***
+HTTP/1.1 200 OK
+{
+    "user": {
+        "id": "2ue88m",
+        "nickname": "znarf",
+        "fullname": "François Hodierne"
+    }
+}
 
-* `/users`, [GET](users/GET_users.md#files), POST (not available here)
-* `/users/#{id}`, [GET](users/GET_users_id.md#files), [POST](users/POST_users_id.md#files), DELETE (not available yet)
-* `/users/#{id}/photos`, [GET](users/GET_users_id_photos.md#files)
-* `/users/#{id}/likedPhotos`, [GET](users/GET_users_id_likedPhotos.md#files), PUT/POST/DELETE (via [photos](https://github.com/eyeem/API/blob/master/endpoints/photos.md#files) endpoint)
-* `/users/#{id}/friendsPhotos`, [GET](users/GET_users_id_friendsPhotos.md#files)
-* `/users/#{id}/likedAlbums`, GET
-* `/users/#{id}/feed`, [GET](users/GET_users_id_feed.md#files)
-* `/users/#{id}/discover`, GET
-* `/users/#{id}/friends`, [GET](users/GET_users_id_friends.md#files), [POST](users/POST_users_id_friends.md#files)
-* `/users/#{id}/friends/#{friend_id}`, [GET](users/GET_users_id_friends_id.md#files),  [DELETE](users/DELETE_users_id_friends_id.md#files)
-* `/users/#{id}/followers`, [GET](users/GET_users_id_followers.md#files)
-* `/users/#{id}/followers/#{friend_id}`, [GET](users/GET_users_id_followers_id.md#files)
-* `/users/#{id}/topics`, [GET](users/GET_users_id_topics.md#files)
-* `/users/#{id}/socialMedia`, [GET](users/GET_users_id_socialMedia.md#files)
-* `/users/#{id}/socialMedia/{service}`, [POST](users/POST_users_id_socialMedia_service.md#files), [PUT](users/PUT_users_id_socialMedia_service.md#files), [DELETE](users/DELETE_users_id_socialMedia_service.md#files)
-* `/users/#{id}/facebookPage`, [POST](users/POST_users_id_facebookPage.md#files) 
-* `/users/#{id}/newsSettings`, [GET](users/GET_users_id_newsSettings.md#files), [POST](users/POST_users_id_newsSettings.md#files)
-* `/users/#{id}/share`, [POST](users/POST_users_id_share.md#files)
-* `/users/#{id}/smContacts`, GET
-* `/users/#{id}/emailContacts`, GET, POST
-* `/users/#{id}/hide`, POST
+If Not:
 
-##Representation
-***
+HTTP/1.1 404 Not Found
+{
+    "code": 404,
+    "message": "User Not Found"
+}
 
-The various possible representations of a user (simple,detailed) are presented and described in the [model](../resources/model.md#files) page.
+User Photos
+-----------
 
+GET http://api.eyeem.com/api/v3/users/2ue88m/photos?limit=2 HTTP/1.1
 
+Supported parameters: offset, limit
 
-##GET
-***
+HTTP/1.1 200 OK
+{
+    "photos": {
+        "jtt7qz": {
+            "user_id": "2ue88m",
+            "title": "", << either title or caption. also @mentions.
+            "caption": "",
+            "filename": "59c5d970bc182306edb57e6a84b98efb4346bf02-1365243713",
+            "width": 1296,
+            "height": 972,
+            "albums": {
+                "total": 5,
+                "ids": [
+                    "9ybug2",
+                    "72t7b8",
+                    "1ewz4k",
+                    "ecco7z",
+                    "ts7jzj"
+                ]
+            },
+            "likers": {
+                "total": 8,
+                "ids": [
+                    "loz92",
+                    "wjtuxu",
+                    "wdjn4q",
+                    "nj5lhk",
+                    "l9606r",
+                    "bjd1p4",
+                    "psuiko",
+                    "jg8t"
+                ]
+            },
+            "comments": {
+                "total": 0,
+                "ids": [ ]
+            },
+            "created": 1365243764
+        },
+        "ed33je": {
+            "user_id": "2ue88m",
+            "title": "New Toy",
+            "caption": "",
+            "filename": "0fb5ebc6fb3a288c193c50943bf44bcae85e55cb-1365089523",
+            "width": 1224,
+            "height": 1225,
+            "albums": {
+                "total": 4,
+                "ids": [
+                    "9ybug2",
+                    "72t7b8",
+                    "68i7c3",
+                    "ecco7z"
+                ]
+            },
+            "likers": {
+                "total": 14,
+                "ids": [
+                    "nj5lhk",
+                    "7k6dn0",
+                    "zf49pl",
+                    "nhrjkj",
+                    "rmhpy8",
+                    "v5j3s4",
+                    "hhf3fw",
+                    "2nw3eq",
+                    "1m08jn",
+                    "wdjn4q",
+                    "bjd1p4",
+                    "wjtuxu",
+                    "xjbk6",
+                    "jg8t"
+                ]
+            },
+            "comments": {
+                "total": 0,
+                "ids": [ ]
+            },
+            "created": 1365089542
+        }
+    },
+    "users": {
+        "2ue88m": { << why are we now using json objects instead of arrays?
+            "nickname": "znarf",
+            "fullname": "François Hodierne"
+        },
+        "loz92": {
+            "nickname": "Frasier",
+            "fullname": "Frasier"
+        },
+        "wjtuxu": {
+            "nickname": "baststock",
+            "fullname": "Basti"
+        },
+        "wdjn4q": {
+            "nickname": "boardwaxed",
+            "fullname": "Mark Bordeaux"
+        },
+        "nj5lhk": {
+            "nickname": "GiovanniBarbisan",
+            "fullname": "Giovanni"
+        },
+        "l9606r": {
+            "nickname": "mixher",
+            "fullname": "Marine "
+        },
+        "bjd1p4": {
+            "nickname": "cobras_frogs_bears",
+            "fullname": "cobras_frogs_bears"
+        },
+        "psuiko": {
+            "nickname": "inutri",
+            "fullname": "inu tri"
+        },
+        "jg8t": {
+            "nickname": "imatias",
+            "fullname": "matias"
+        },
+        "7k6dn0": {
+            "nickname": "SiXunderground",
+            "fullname": "SixAxiS"
+        },
+        "zf49pl": {
+            "nickname": "Miluna",
+            "fullname": "Miluna"
+        },
+        "nhrjkj": {
+            "nickname": "nasser6333",
+            "fullname": "alain00009"
+        },
+        "rmhpy8": {
+            "nickname": "gluff",
+            "fullname": "G Luff"
+        },
+        "v5j3s4": {
+            "nickname": "julie",
+            "fullname": "Julie Landry"
+        },
+        "hhf3fw": {
+            "nickname": "LarsFronius",
+            "fullname": "Lars "
+        },
+        "2nw3eq": {
+            "nickname": "Gen",
+            "fullname": "Gen Sadakane"
+        },
+        "1m08jn": {
+            "nickname": "spiegeleule",
+            "fullname": "Spiegel Eule"
+        },
+        "xjbk6": {
+            "nickname": "tobitos",
+            "fullname": "Tobi Poel"
+        }
+    },
+    "comments": [ ],
+    "albums": {
+        "9ybug2": {
+            "type": "country",
+            "name": "Germany"
+        },
+        "72t7b8": {
+            "type": "city",
+            "name": "Berlin"
+        },
+        "1ewz4k": {
+            "type": "event",
+            "name": "Being a hacker at Hasenheide"
+        },
+        "ecco7z": {
+            "type": "venue",
+            "name": "Hasenheide"
+        },
+        "ts7jzj": {
+            "type": "tag",
+            "name": "Being a hacker"
+        },
+        "68i7c3": {
+            "type": "event",
+            "name": "at Hasenheide"
+        }
+    }
+}
 
-* [`/users`](users/GET_users.md#files)
-* [`/users/#{id}`](users/GET_users_id.md#files)
-* [`/users/#{id}/photos`](users/GET_users_id_photos.md#files)
-* [`/users/#{id}/likedPhotos`](users/GET_users_id_photos.md#files)
-* [`/users/#{id}/friendsPhotos`](users/GET_users_id_friendsPhotos.md#files)
-* `/users/#{id}/likedAlbums`
-* [`/users/#{id}/feed`](users/GET_users_id_feed.md#files)
-* `/users/#{id}/discover`
-* [`/users/#{id}/friends`](users/GET_users_id_friends.md#files) 
-* [`/users/#{id}/friends/#{friend_id}`](users/GET_users_id_friends_id.md#files) 
-* [`/users/#{id}/followers`](users/GET_users_id_followers.md#files) 
-* [`/users/#{id}/followers/#{friend_id}`](users/GET_users_id_followers_id.md#files) 
-* [`/users/#{id}/topics`](users/GET_users_id_topics.md#files) 
-* [`/users/#{id}/socialMedia`](users/GET_users_id_socialMedia.md#files) 
-* [`/users/#{id}/socialMedia`](users/GET_users_id_socialMedia.md#files) 
-* [`/users/#{id}/newsSettings`](users/GET_users_id_newsSettings.md#files) 
+User Friends Photos
+-------------------
 
+GET http://api.eyeem.com/api/v3/users/2ue88m/friendsPhotos?limit=2 HTTP/1.1
 
-##PUT
-***
+Supported parameters: offset, limit, after, before
 
-* [`/users/#{id}/socialMedia/{service}`](users/PUT_users_id_socialMedia_service.md#files)
-
-##POST
-***
-
-* [`/users/#{id}`](users/POST_users_id.md#files)
-* [`/users/#{id}/friends`](users/POST_users_id_friend.md#files) 
-* [`/users/#{id}/socialMedia/{service}`](users/POST_users_id_socialMedia_service.md#files) 
-* [`/users/#{id}/newsSettings`](users/POST_users_id_newsSettings.md#files) 
-* [`/users/#{id}/share`](users/POST_users_id_share.md#files) 
-* [`/users/#{id}/facebookPage`](users/POST_users_id_facebookPage.md#files) 
-
-
-##DELETE
-***
-
-* [`/users/#{id}/friends/#{friend_id}`](users/DELETE_users_id_friends_id.md#files) 
-* [`/users/#{id}/socialMedia/{service}`](users/DELETE_users_id_socialMedia_service.md#files) 
+HTTP/1.1 200 OK
+{
+    "photos": {
+        "mrnyx9": {
+            "user_id": "loz92",
+            "title": "",
+            "caption": "",
+            "filename": "07de562ed56d4f0d1d802b480ba61a7fb92eb911-1365605183",
+            "width": 1117,
+            "height": 1296,
+            "albums": {
+                "total": 5,
+                "ids": [
+                    "9ybug2",
+                    "72t7b8",
+                    "u1xho",
+                    "nabqno",
+                    "t6o219"
+                ]
+            },
+            "likers": {
+                "total": 0,
+                "ids": [ ]
+            },
+            "comments": {
+                "total": 0,
+                "ids": [ ]
+            },
+            "created": 1365605184
+        },
+        "lm27pf": {
+            "user_id": "wxghzy",
+            "title": "",
+            "caption": "",
+            "filename": "ce00e7f81858a9e7eb6837a9c42ded65a926cb3f-1365604012",
+            "width": 1152,
+            "height": 1152,
+            "albums": {
+                "total": 3,
+                "ids": [
+                    "9ybug2",
+                    "72t7b8",
+                    "i2l0um"
+                ]
+            },
+            "likers": {
+                "total": 2,
+                "ids": [
+                    "k23yah",
+                    "ql1ycd"
+                ]
+            },
+            "comments": {
+                "total": 0,
+                "ids": [ ]
+            },
+            "created": 1365604027
+        }
+    },
+    "users": {
+        "loz92": {
+            "nickname": "Frasier",
+            "fullname": "Frasier"
+        },
+        "wxghzy": {
+            "nickname": "abelle",
+            "fullname": "A-belle"
+        },
+        "k23yah": {
+            "nickname": "iamluys",
+            "fullname": "Luys Miguel"
+        },
+        "ql1ycd": {
+            "nickname": "Flo",
+            "fullname": "Flo Meissner"
+        }
+    },
+    "comments": [ ],
+    "albums": {
+        "9ybug2": {
+            "type": "country",
+            "name": "Germany"
+        },
+        "72t7b8": {
+            "type": "city",
+            "name": "Berlin"
+        },
+        "u1xho": {
+            "type": "event",
+            "name": "Taking Photos at Berlin"
+        },
+        "nabqno": {
+            "type": "venue",
+            "name": "Berlin"
+        },
+        "t6o219": {
+            "type": "tag",
+            "name": "Taking Photos"
+        },
+        "i2l0um": {
+            "type": "tag",
+            "name": "Shopping"
+        }
+    }
+}
