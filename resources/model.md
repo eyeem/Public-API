@@ -387,8 +387,28 @@ Or with a matching user:
 
 ##Missions
 ***
+A mission is at the moment simply a wrapper around a tag album. (also called lightweight mission)
 
 ```json
+{
+  "id": 5944775,
+  "description": "We’re celebrating our brand new friends tagging feature and are looking for the funniest, most awesome group shots! The only condition: everyone who's on the photo must be tagged. Prize: EyeEm T-Shirts for the whole crew! Deadline: July 15.",
+  "title": "NEW WEEKLY MISSION",
+  "url": "http://blog.eyeem.com/?p=19552",
+  "thumbUrl": "http://www.eyeem.com/thumb/sq/200/57d8bc1767541562c2d5520ca19396a2ad42f1c8-1369588977",
+  "album": {
+    "id": "5944775",
+    "name": "Tag your friends",
+    "type": "tag",
+    "thumbUrl": "http://www.eyeem.com/thumb/sq/200/86d6613f864e37344c213dab7eded77d912c3967-1367494482",
+    "webUrl": "http://www.eyeem.com/a/5944775",
+    "updated": "2013-07-12T21:30:32+0200",
+    "totalPhotos": 261,
+    "totalLikers": 85,
+    "totalContributors": 155,
+    "hidden": false
+  }
+}
 ``` 
 
 ##Location (sub-object attached to location-based albums at the moment)
