@@ -27,7 +27,7 @@ Share an album to the user's connected social media services.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/1234/share`
+`http://api.eyeem.com/v2/albums/1234/share`
 
 
 

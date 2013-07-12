@@ -35,7 +35,7 @@ Retrieves album specified in the id URL query parameter.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/1234?`
+`http://api.eyeem.com/v2/albums/1234?`
 
 ```json
 
@@ -44,7 +44,7 @@ Retrieves album specified in the id URL query parameter.
     "id": "1234",
     "name": "M41 Erkstraße",
     "type": "venue",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/200/4bc10409624629ebe33699ee8c00bd8b93539051-1333387979",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/4bc10409624629ebe33699ee8c00bd8b93539051-1333387979",
     "updated": "2012-04-02T17:33:11+0200",
     "location": {
       "latitude": "52.48172760",
@@ -53,14 +53,14 @@ Retrieves album specified in the id URL query parameter.
         "id": "17",
         "name": "Berlin",
         "type": "city",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/aced33f0969ffd6a64cb301fed92d9c52f18df81-1347618272",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/aced33f0969ffd6a64cb301fed92d9c52f18df81-1347618272",
         "updated": "2012-09-14T12:24:34+0200"
       },
       "countryAlbum": {
         "id": "23",
         "name": "Germany",
         "type": "country",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/aced33f0969ffd6a64cb301fed92d9c52f18df81-1347618272",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/aced33f0969ffd6a64cb301fed92d9c52f18df81-1347618272",
         "updated": "2012-09-14T12:24:34+0200"
       },
       "venueService": {

@@ -28,7 +28,7 @@ Get a list of topics the user has contributed to (the topics correlate to tag al
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/topics`
+`https://api.eyeem.com/v2/users/me/topics`
 
 
 

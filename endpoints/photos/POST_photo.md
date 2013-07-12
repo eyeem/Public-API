@@ -34,7 +34,7 @@ Create a photo object, either by uploading a file or passing a filename (the res
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos`
+`https://api.eyeem.com/v2/photos`
 
 
 

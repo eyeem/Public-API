@@ -36,6 +36,6 @@ Only available for the authenticated user, this call adds a service to the user'
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/socialMedia/twitter`
+`https://api.eyeem.com/v2/users/me/socialMedia/twitter`
 
 

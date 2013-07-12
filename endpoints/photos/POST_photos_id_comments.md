@@ -27,5 +27,5 @@ Adds a new comment to a photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/comments?message=Love_it`
+`https://api.eyeem.com/v2/photos/1234/comments?message=Love_it`
 

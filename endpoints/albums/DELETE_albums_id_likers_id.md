@@ -25,7 +25,7 @@ Unlike an album.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/1234/likers/1013`
+`http://api.eyeem.com/v2/albums/1234/likers/1013`
 
 
 

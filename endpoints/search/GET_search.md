@@ -27,7 +27,7 @@ Retrieves an array containing a users and an albums dictionary.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/search?q=berlin&includeAlbums=1`
+`http://api.eyeem.com/v2/search?q=berlin&includeAlbums=1`
 
 ```json
 
@@ -43,7 +43,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "17",
         "name": "Berlin",
         "type": "city",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
         "updated": "2012-09-14T12:56:01+0200",
         "location": {
           "latitude": "52.52437",
@@ -52,7 +52,7 @@ Retrieves an array containing a users and an albums dictionary.
             "id": "23",
             "name": "Germany",
             "type": "country",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           }
         },
@@ -65,7 +65,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "626",
         "name": "Berlin",
         "type": "tag",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/39843d26436fa1e4bac5768f566f809a651ba28c-1347616663",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/39843d26436fa1e4bac5768f566f809a651ba28c-1347616663",
         "updated": "2012-09-14T11:58:00+0200",
         "webUrl": "http://www.eyeem.com/a/626",
         "totalPhotos": 887,
@@ -76,7 +76,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "378520",
         "name": "EyeEm Berlin Meetup",
         "type": "tag",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/fd5c86ba46e49b470ba50f5c1430e2d2d3d965e7-1344709646",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/fd5c86ba46e49b470ba50f5c1430e2d2d3d965e7-1344709646",
         "updated": "2012-08-31T20:38:46+0200",
         "webUrl": "http://www.eyeem.com/a/378520",
         "totalPhotos": 276,
@@ -87,7 +87,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "368520",
         "name": "Berlin Wilmersdorf",
         "type": "city",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/61d0e17b9d98071af36b5d0b4812bbc89324b535-1347608390",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/61d0e17b9d98071af36b5d0b4812bbc89324b535-1347608390",
         "updated": "2012-09-14T09:40:56+0200",
         "location": {
           "latitude": "52.50097",
@@ -96,7 +96,7 @@ Retrieves an array containing a users and an albums dictionary.
             "id": "23",
             "name": "Germany",
             "type": "country",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           }
         },
@@ -109,7 +109,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "30201",
         "name": "Berlin Festival 2011",
         "type": "venue",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/21d270cd4b6dfaec756c00c4d9873bef700c2068-1315831129",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/21d270cd4b6dfaec756c00c4d9873bef700c2068-1315831129",
         "updated": "2012-06-01T00:30:53+0200",
         "location": {
           "latitude": "52.48030090",
@@ -118,14 +118,14 @@ Retrieves an array containing a users and an albums dictionary.
             "id": "17",
             "name": "Berlin",
             "type": "city",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           },
           "countryAlbum": {
             "id": "23",
             "name": "Germany",
             "type": "country",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           },
           "venueService": {
@@ -144,7 +144,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "409410",
         "name": "Startupbootcamp Berlin 2012",
         "type": "tag",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/625c914e5d778e2131a20401614ae8bd50442100-1347611567",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/625c914e5d778e2131a20401614ae8bd50442100-1347611567",
         "updated": "2012-09-14T10:33:00+0200",
         "webUrl": "http://www.eyeem.com/a/409410",
         "totalPhotos": 135,
@@ -155,7 +155,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "355",
         "name": "Berlin Tegel Airport (TXL)",
         "type": "venue",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/4e13e714b10ec3b9db5a4df17f68fb8590623251-1347612087",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/4e13e714b10ec3b9db5a4df17f68fb8590623251-1347612087",
         "updated": "2012-09-14T10:42:33+0200",
         "location": {
           "latitude": "52.55437088",
@@ -164,14 +164,14 @@ Retrieves an array containing a users and an albums dictionary.
             "id": "17",
             "name": "Berlin",
             "type": "city",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           },
           "countryAlbum": {
             "id": "23",
             "name": "Germany",
             "type": "country",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           },
           "venueService": {
@@ -190,7 +190,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "1",
         "name": "Berlin Award 2010",
         "type": "special",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/1274143464Kill_da_Wabbit.JPG",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/1274143464Kill_da_Wabbit.JPG",
         "updated": "2012-05-07T12:13:32+0200",
         "webUrl": "http://www.eyeem.com/a/1",
         "totalPhotos": 117,
@@ -201,7 +201,7 @@ Retrieves an array containing a users and an albums dictionary.
         "id": "352",
         "name": "Berlin Hauptbahnhof",
         "type": "venue",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/7bb407e8e39b9e82ed67bf67f5c6453a1ddff9e8-1347417088",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/7bb407e8e39b9e82ed67bf67f5c6453a1ddff9e8-1347417088",
         "updated": "2012-09-12T04:31:31+0200",
         "location": {
           "latitude": "52.52515030",
@@ -210,14 +210,14 @@ Retrieves an array containing a users and an albums dictionary.
             "id": "17",
             "name": "Berlin",
             "type": "city",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           },
           "countryAlbum": {
             "id": "23",
             "name": "Germany",
             "type": "country",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2d08ade2c4553c67f7a7a00a58f34cfb0957f094-1347620145",
             "updated": "2012-09-14T12:56:01+0200"
           },
           "venueService": {

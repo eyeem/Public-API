@@ -31,7 +31,7 @@ If requested from a user other than the authenticated one, only the user's liked
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/feed`
+`https://api.eyeem.com/v2/users/me/feed`
 
 
 

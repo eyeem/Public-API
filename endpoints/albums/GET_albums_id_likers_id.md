@@ -27,7 +27,7 @@ Checks whether a user likes an album.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/1234/likers?offset=0&limit=5`
+`http://api.eyeem.com/v2/albums/1234/likers?offset=0&limit=5`
 
 
 

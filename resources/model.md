@@ -14,78 +14,153 @@ For users, albums and photos, we will also provide the simplest valid object tha
         "id": "1013",
         "fullname": "Ramzi Rizk",
         "nickname": "ramz",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/50/9c24eab725f8aa03b99c396dd4d45f2b9asdf3.jpg"
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/9c24eab725f8aa03b99c396dd4d45f2b9asdf3.jpg"
       }
 ```
 #### Extended Object
 ```json
 {
   "user": {
-    "id": "174921",
-    "nickname": "sb",
-    "fullname": "Sebastian",
-    "webUrl": "http://www.eyeem.com/u/sb",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
-    "photoUrl": "http://www.eyeem.com/thumb/sq/200/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
-    "totalPhotos": 89,
-    "totalFollowers": 171,
-    "totalFriends": 69,
-    "totalLikedAlbums": 10,
-    "totalLikedPhotos": 4427,
-    "description": " @EyeEm",
-    "email": "sebastian@eyeem.com",
+    "id": "1013",
+    "nickname": "ramz",
+    "fullname": "Ramzi Rizk",
+    "webUrl": "http://www.eyeem.com/u/ramz",
+    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/ad12f89204332f639524a3c4c7b14d8d02bbab67-1357734675",
+    "photoUrl": "http://www.eyeem.com/thumb/sq/200/ad12f89204332f639524a3c4c7b14d8d02bbab67-1357734675",
+    "totalPhotos": 1993,
+    "totalFollowers": 1714,
+    "totalFriends": 1907,
+    "totalLikedAlbums": 139,
+    "totalLikedPhotos": 9502,
+    "description": "EyeEm Ramz. EyeEm Happy! Srsly. Choo choo!!",
+    "email": "ramz@eyeem.com",
     "emailNotifications": true,
     "pushNotifications": true,
     "services": {
       "facebook": {
-        "third_party_id": "4Ci6GTRNyX8vIWfBBM1n09m9JdQ",
-        "id": "100000492297860",
+        "third_party_id": "j7ABpetM5kn1D2TwsHv-OW1tuTM",
+        "id": "642412756",
+        "access_token": "CAAB9pKooVA4BAJHJ9OZCej289LwrbIDw06x1rjn1eZAPiaZBJWEL4vdwAMG9ZAgmszDrkA5RvNG4YBeDjC3H8wFZCLShnBwpSEPpUQxQyZC9hl9BLmJZBAtROZBpZCec7Vrt7PduoAj5kPH5X3gfxXowaGB4ZAAeJ434AZD",
+        "publish_actions": true,
         "upload": false,
         "photolike": true,
         "photodiscover": false,
-        "photocomment": false,
+        "photocomment": true,
         "albumlike": false,
-        "userfollow": false,
+        "albumfavorite": true,
+        "albumcontribution": false,
+        "userfollow": true,
         "timelinepopup": true,
         "managedPages": [
           {
-            "id": "154793581210614",
-            "name": "Halö",
-            "posting": 0
+          "id": "150458201636928",
+          "name": "I Am Rambo",
+          "posting": 0
+          },
+          {
+          "id": "369311466483832",
+          "name": "EyeEm",
+          "posting": 0
+          },
+          {
+          "id": "168014246580820",
+          "name": "Photo Hack Day",
+          "posting": 0
+          },
+          {
+          "id": "329045503624",
+          "name": "sudanvotes",
+          "posting": 0
+          },
+          {
+          "id": "182029908477190",
+          "name": "PoppupUp",
+          "posting": 0
+          },
+          {
+          "id": "22972653688",
+          "name": "Cancer Research UK Race for Life",
+          "posting": 0
+          },
+          {
+          "id": "136689719690381",
+          "name": "Pancäke",
+          "posting": 0
+          },
+          {
+          "id": "115244968563450",
+          "name": "Berlin Startup Basketball League",
+          "posting": 0
+          },
+          {
+          "id": "165272473499096",
+          "name": "Qualitocracy",
+          "posting": 0
+          },
+          {
+          "id": "170111226353716",
+          "name": "Popped Up",
+          "posting": 0
+          },
+          {
+          "id": "175348109151117",
+          "name": "PoppedUp",
+          "posting": 0
           }
         ],
         "status": "active"
       },
       "twitter": {
-        "id": "19140455",
-        "nickname": "ksslng",
+        "id": "1742581",
+        "nickname": "ramz",
         "status": "active"
       },
       "tumblr": {
-        "status": "inactive"
-      },
-      "foursquare": {
         "status": "active"
       },
+      "foursquare": {
+       "status": "active"
+      },
       "flickr": {
-        "status": "inactive"
+        "id": "18615422@N00",
+        "nickname": "LeRamz",
+        "status": "active"
       }
     },
     "newsSettings": {
-      "push_photo_like": true,
-      "push_photo_comment": true,
-      "push_user_follower": true,
-      "push_user_joined": true,
-      "push_album_contributor": true,
-      "push_photo_comment_mention": true,
-      "email_photo_like": false,
-      "email_photo_comment": false,
-      "email_user_follower": false,
-      "email_user_joined": false,
-      "email_album_contributor": false,
-      "email_photo_comment_mention": false,
-      "email_weekly_newsletter": true
-    }
+    "push_photo_like": true,
+    "push_photo_comment": true,
+    "push_user_follower": true,
+    "push_user_joined": true,
+    "push_album_contributor": true,
+    "push_photo_comment_mention": true,
+    "email_photo_like": true,
+    "email_photo_comment": true,
+    "email_user_follower": true,
+    "email_user_joined": true,
+    "email_album_contributor": true,
+    "email_photo_comment_mention": true,
+    "email_weekly_newsletter": true,
+    "push_album_invite": true,
+    "email_album_invite": true,
+    "facebook_upload": false,
+    "facebook_photolike": true,
+    "facebook_photodiscover": false,
+    "facebook_photocomment": true,
+    "facebook_albumlike": false,
+    "facebook_albumfavorite": true,
+    "facebook_userfollow": true,
+    "facebook_timeline_popup": true,
+    "facebook_albumcontribution": false,
+    "email_newsletter": true,
+    "web_onboarded": true,
+    "web_banner_shown": true,
+    "push_photo_tagged_person": true,
+    "email_photo_tagged_person": true,
+    "web_onboarding_step": 0
+    },
+    "admin": true,
+    "hidden": false
   }
 }
 ```
@@ -100,7 +175,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 {
     "id": "17",
     "name": "Berlin",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
     "updated": "2012-02-03T18:06:08+0000"
   }
 ```
@@ -110,7 +185,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
   "album": {
     "id": "17",
     "name": "Berlin",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
     "updated": "2012-02-03T18:06:08+0000",
     "type": "city",
     "location": {
@@ -120,7 +195,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
         "id": "23",
         "name": "Germany",
         "type": "country",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/2645e5292c071481368030259ca6102dce273435-1347878975",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2645e5292c071481368030259ca6102dce273435-1347878975",
         "updated": "2012-09-17T12:50:00+0200"
       }
     },
@@ -133,8 +208,8 @@ For users, albums and photos, we will also provide the simplest valid object tha
       "items": [
         {
           "id": "216365",
-          "thumbUrl": "http://www.eyeem.com/thumb/h/100/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
-          "photoUrl": "http://www.eyeem.com/thumb/640/480/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
+          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
           "width": 1024,
           "height": 768,
           "updated": "2012-02-03T18:06:08+0000",
@@ -156,8 +231,8 @@ For users, albums and photos, we will also provide the simplest valid object tha
         },
         {
           "id": "216313",
-          "thumbUrl": "http://www.eyeem.com/thumb/h/100/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
-          "photoUrl": "http://www.eyeem.com/thumb/640/480/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
+          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
           "width": 1224,
           "height": 1632,
           "updated": "2012-02-03T17:33:07+0000",
@@ -165,7 +240,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
             "id": "60534",
             "fullname": "666",
             "nickname": null,
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/b9101e64f89be9c65bb6f4d9ee1dee66f4d43ad1.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/b9101e64f89be9c65bb6f4d9ee1dee66f4d43ad1.jpg"
           },
           "caption": "table at Marietta",
           "totalLikes": 2,
@@ -179,7 +254,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
                 "id": "11697",
                 "fullname": "steve",
                 "nickname": "psoneeleven",
-                "thumbUrl": "http://www.eyeem.com/thumb/sq/50/c08e8382817585604405e70813cf650ab20b7577.jpg"
+                "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/c08e8382817585604405e70813cf650ab20b7577.jpg"
               }
             ]
           }
@@ -201,7 +276,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
           "id": "1013",
           "fullname": "ramz",
           "nickname": "ramz",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
         },
         {
           "id": "1038",
@@ -220,7 +295,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
           "id": "7801",
           "fullname": "Sandro Günther",
           "nickname": null,
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/50/ab999ad7e0ac73a7a01cdffcfd5f89b5ce853594.jpg"
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/ab999ad7e0ac73a7a01cdffcfd5f89b5ce853594.jpg"
         },
         {
           "id": "59083",
@@ -249,7 +324,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 * Arrays of album items can have the following dictionary names as wrappers: `albums`, `likedAlbums`, `feedAlbums`
 * Albums can have the following type: `tag`,`venue`,`event`,`city`,`country`,`live`,`popular`,`radius`,`special`
 * The extended album object above is an example based on the following request:
-`https://www.eyeem.com/api/v2/albums/17?detailed=1&includePhotos=1&numPhotos=2&photoDetails=1&includeContributors=1&includeLikers=1`
+`https://api.eyeem.com/v2/albums/17?detailed=1&includePhotos=1&numPhotos=2&photoDetails=1&includeContributors=1&includeLikers=1`
 In such a request, the number of inline photos to return, whether to include the photo details (comments, likes, etc) is of course optional, typically, the photos, contributors and likers should be retrieved using additional calls to the respective endpoints. Such calls also offer the option to request more details (such as the other albums to which a photo belongs)
 
 ##Photos
@@ -258,8 +333,8 @@ In such a request, the number of inline photos to return, whether to include the
 ```json
       {
         "id": "215058",
-        "thumbUrl": "http://www.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-        "photoUrl": "http://www.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+        "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+        "photoUrl": "http://cdn.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
         "width": 1530,
         "height": 2048,
         "updated": "2012-02-02T10:16:33+0000"
@@ -270,8 +345,8 @@ In such a request, the number of inline photos to return, whether to include the
 {
   "photo": {
     "id": "215058",
-    "thumbUrl": "http://www.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-    "photoUrl": "http://www.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+    "photoUrl": "http://cdn.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
     "width": 1530,
     "height": 2048,
     "updated": "2012-02-02T10:16:33+0000",
@@ -281,8 +356,8 @@ In such a request, the number of inline photos to return, whether to include the
       "fullname": "ramz",
       "nickname": "ramz",
       "webUrl": "http://www.eyeem.com/u/ramz",
-      "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
-      "photoUrl": "http://www.eyeem.com/thumb/sq/200/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg"
+      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
+      "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg"
     },
     "title": "11:11 at Coffee to go",
     "caption": "11:11 at Coffee to go",
@@ -300,7 +375,7 @@ In such a request, the number of inline photos to return, whether to include the
             "id": "1013",
             "fullname": "ramz",
             "nickname": "ramz",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
           },
           "updated": "2012-02-02T10:36:03+0000"
         },
@@ -312,7 +387,7 @@ In such a request, the number of inline photos to return, whether to include the
             "id": "1923",
             "fullname": "Stephen Mohammed",
             "nickname": "stephenmohammed",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/2e9fe28f92959b9b07ac4ad1cb91534c5ee657e6.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/2e9fe28f92959b9b07ac4ad1cb91534c5ee657e6.jpg"
           },
           "updated": "2012-02-02T10:32:35+0000"
         }
@@ -333,35 +408,35 @@ In such a request, the number of inline photos to return, whether to include the
         {
           "id": "17",
           "name": "Berlin",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
           "updated": "2012-02-03T18:06:08+0000",
           "type": "city"
         },
         {
           "id": "23",
           "name": "Germany",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/17662e8dfa7d912c649220f29a85672024fa3d01-1321811964",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/17662e8dfa7d912c649220f29a85672024fa3d01-1321811964",
           "updated": "2012-02-03T18:31:28+0000",
           "type": "country"
         },
         {
           "id": "10521",
           "name": "Coffee to go",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
           "updated": "2012-02-02T10:16:33+0000",
           "type": "venue"
         },
         {
           "id": "55744",
           "name": "11:11",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/86dce608a49b919c5ee07658e503f5c5d0d8d899-1321956886",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/86dce608a49b919c5ee07658e503f5c5d0d8d899-1321956886",
           "updated": "2012-02-03T10:20:08+0000",
           "type": "tag"
         },
         {
           "id": "112649",
           "name": "11:11 at Coffee to go",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
           "updated": "2012-02-02T10:16:38+0000",
           "type": "event"
         }
@@ -386,7 +461,7 @@ In such a request, the number of inline photos to return, whether to include the
                 "id": "1013",
                 "fullname": "ramz",
                 "nickname": "ramz",
-                "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
+                "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
               },
 			"mentionedUsers": [
 			  {
@@ -581,7 +656,7 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
     "album": {
       "id": "17",
       "name": "Berlin",
-      "thumbUrl": "http://www.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
+      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
       "updated": "2012-02-03T18:06:08+0000"
     },
     "photos": {
@@ -591,8 +666,8 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
       "items": [
         {
           "id": "216365",
-          "thumbUrl": "http://www.eyeem.com/thumb/h/100/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
-          "photoUrl": "http://www.eyeem.com/thumb/640/480/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
+          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
           "width": 1024,
           "height": 768,
           "updated": "2012-02-03T18:06:08+0000",
@@ -608,8 +683,8 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
         },
         {
           "id": "216313",
-          "thumbUrl": "http://www.eyeem.com/thumb/h/100/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
-          "photoUrl": "http://www.eyeem.com/thumb/640/480/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
+          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
           "width": 1224,
           "height": 1632,
           "updated": "2012-02-03T17:33:07+0000",
@@ -617,7 +692,7 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
             "id": "60534",
             "fullname": "666",
             "nickname": null,
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/b9101e64f89be9c65bb6f4d9ee1dee66f4d43ad1.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/b9101e64f89be9c65bb6f4d9ee1dee66f4d43ad1.jpg"
           },
           "caption": "table at Marietta",
           "totalLikes": 2,

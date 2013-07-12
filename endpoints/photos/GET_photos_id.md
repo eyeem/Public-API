@@ -30,15 +30,15 @@ Retrieves a photo by id.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/939584?detailed=1&includeAlbums=1&includeComments=1&numComment=5`
+`https://api.eyeem.com/v2/photos/939584?detailed=1&includeAlbums=1&includeComments=1&numComment=5`
 
 ```json
 
 {
   "photo": {
     "id": 939584,
-    "thumbUrl": "http://www.eyeem.com/thumb/h/100/3e6683d12d88ac5c4b256fc01000181a0c24a9e4-1347402279",
-    "photoUrl": "http://www.eyeem.com/thumb/640/480/3e6683d12d88ac5c4b256fc01000181a0c24a9e4-1347402279",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/3e6683d12d88ac5c4b256fc01000181a0c24a9e4-1347402279",
+    "photoUrl": "http://cdn.eyeem.com/thumb/640/480/3e6683d12d88ac5c4b256fc01000181a0c24a9e4-1347402279",
     "width": 1297,
     "height": 1297,
     "updated": "2012-09-12T00:24:52+0200",
@@ -48,8 +48,8 @@ Retrieves a photo by id.
       "nickname": "Jason",
       "fullname": "jasonmpeterson",
       "webUrl": "http://www.eyeem.com/u/Jason",
-      "thumbUrl": "http://www.eyeem.com/thumb/sq/50/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg",
-      "photoUrl": "http://www.eyeem.com/thumb/sq/200/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg"
+      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg",
+      "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg"
     },
     "title": "",
     "caption": "blackandwhite at Bike Trail Lake Michigan",
@@ -88,8 +88,8 @@ Retrieves a photo by id.
             "nickname": "severin",
             "fullname": "Severin",
             "webUrl": "http://www.eyeem.com/u/severin",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/b9c94f9b2aaa2e0445816f21593035cdc997f53e.jpg",
-            "photoUrl": "http://www.eyeem.com/thumb/sq/200/b9c94f9b2aaa2e0445816f21593035cdc997f53e.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/b9c94f9b2aaa2e0445816f21593035cdc997f53e.jpg",
+            "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/b9c94f9b2aaa2e0445816f21593035cdc997f53e.jpg"
           },
           "mentionedUsers": [
             {
@@ -97,8 +97,8 @@ Retrieves a photo by id.
               "nickname": "Jason",
               "fullname": "jasonmpeterson",
               "webUrl": "http://www.eyeem.com/u/Jason",
-              "thumbUrl": "http://www.eyeem.com/thumb/sq/50/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg",
-              "photoUrl": "http://www.eyeem.com/thumb/sq/200/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg"
+              "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg",
+              "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/34250df54b171c0a3e7ff5b7b2baca9a6f91878c.jpg"
             }
           ],
           "updated": "2012-09-12T17:51:54+0200"
@@ -113,8 +113,8 @@ Retrieves a photo by id.
             "nickname": "david60439",
             "fullname": "David Oesterreicher",
             "webUrl": "http://www.eyeem.com/u/david60439",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/a02c018e582b054280466f97045e9fb35746f82f.jpg",
-            "photoUrl": "http://www.eyeem.com/thumb/sq/200/a02c018e582b054280466f97045e9fb35746f82f.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/a02c018e582b054280466f97045e9fb35746f82f.jpg",
+            "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/a02c018e582b054280466f97045e9fb35746f82f.jpg"
           },
           "mentionedUsers": [],
           "updated": "2012-09-12T17:44:48+0200"
@@ -129,8 +129,8 @@ Retrieves a photo by id.
             "nickname": "yammay",
             "fullname": "yammay",
             "webUrl": "http://www.eyeem.com/u/yammay",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/3f4e7207826e012c99c9945c61621961975c317a.jpg",
-            "photoUrl": "http://www.eyeem.com/thumb/sq/200/3f4e7207826e012c99c9945c61621961975c317a.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/3f4e7207826e012c99c9945c61621961975c317a.jpg",
+            "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/3f4e7207826e012c99c9945c61621961975c317a.jpg"
           },
           "mentionedUsers": [],
           "updated": "2012-09-12T06:24:46+0200"
@@ -145,8 +145,8 @@ Retrieves a photo by id.
             "nickname": "n_cruz",
             "fullname": "n_cruz",
             "webUrl": "http://www.eyeem.com/u/n_cruz",
-            "thumbUrl": "http://www.eyeem.com/thumb/sq/50/caf3628a3b53b94596dcee724a5eb142414e498f.jpg",
-            "photoUrl": "http://www.eyeem.com/thumb/sq/200/caf3628a3b53b94596dcee724a5eb142414e498f.jpg"
+            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/caf3628a3b53b94596dcee724a5eb142414e498f.jpg",
+            "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/caf3628a3b53b94596dcee724a5eb142414e498f.jpg"
           },
           "mentionedUsers": [],
           "updated": "2012-09-12T05:40:30+0200"
@@ -163,8 +163,8 @@ Retrieves a photo by id.
           "nickname": "wiljonesjr",
           "fullname": "Wil Jones",
           "webUrl": "http://www.eyeem.com/u/wiljonesjr",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0b303096d5269a0c1560f6f410079edba00fa116.jpg",
-          "photoUrl": "http://www.eyeem.com/thumb/sq/200/0b303096d5269a0c1560f6f410079edba00fa116.jpg"
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0b303096d5269a0c1560f6f410079edba00fa116.jpg",
+          "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/0b303096d5269a0c1560f6f410079edba00fa116.jpg"
         }
       ]
     },
@@ -177,7 +177,7 @@ Retrieves a photo by id.
           "id": "1702",
           "name": "United States",
           "type": "country",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/1762e9039140b7589e8371d471cc5191b2ba0630-1347618089",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/1762e9039140b7589e8371d471cc5191b2ba0630-1347618089",
           "updated": "2012-09-14T12:21:51+0200",
           "location": {
             "latitude": "37.13054",
@@ -192,7 +192,7 @@ Retrieves a photo by id.
           "id": "2364",
           "name": "Chicago",
           "type": "city",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/b50cc13c430f99d3f012558a624fde4b4b414931-1347596066",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/b50cc13c430f99d3f012558a624fde4b4b414931-1347596066",
           "updated": "2012-09-14T06:14:27+0200",
           "location": {
             "latitude": "41.85003",
@@ -201,7 +201,7 @@ Retrieves a photo by id.
               "id": "1702",
               "name": "United States",
               "type": "country",
-              "thumbUrl": "http://www.eyeem.com/thumb/sq/200/1762e9039140b7589e8371d471cc5191b2ba0630-1347618089",
+              "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/1762e9039140b7589e8371d471cc5191b2ba0630-1347618089",
               "updated": "2012-09-14T12:21:51+0200"
             }
           },
@@ -214,7 +214,7 @@ Retrieves a photo by id.
           "id": "242549",
           "name": "Bike Trail Lake Michigan",
           "type": "venue",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/3e6683d12d88ac5c4b256fc01000181a0c24a9e4-1347402279",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/3e6683d12d88ac5c4b256fc01000181a0c24a9e4-1347402279",
           "updated": "2012-09-12T00:24:52+0200",
           "location": {
             "latitude": "41.91158676",
@@ -223,14 +223,14 @@ Retrieves a photo by id.
               "id": "2364",
               "name": "Chicago",
               "type": "city",
-              "thumbUrl": "http://www.eyeem.com/thumb/sq/200/b50cc13c430f99d3f012558a624fde4b4b414931-1347596066",
+              "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/b50cc13c430f99d3f012558a624fde4b4b414931-1347596066",
               "updated": "2012-09-14T06:14:27+0200"
             },
             "countryAlbum": {
               "id": "1702",
               "name": "United States",
               "type": "country",
-              "thumbUrl": "http://www.eyeem.com/thumb/sq/200/1762e9039140b7589e8371d471cc5191b2ba0630-1347618089",
+              "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/1762e9039140b7589e8371d471cc5191b2ba0630-1347618089",
               "updated": "2012-09-14T12:21:51+0200"
             },
             "venueService": {
@@ -249,7 +249,7 @@ Retrieves a photo by id.
           "id": "4454",
           "name": "blackandwhite",
           "type": "tag",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/a98feaa594040ad24f4f3616d16e8f6c96ea16d5-1347618315",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/a98feaa594040ad24f4f3616d16e8f6c96ea16d5-1347618315",
           "updated": "2012-09-14T12:25:23+0200",
           "webUrl": "http://www.eyeem.com/a/4454",
           "totalPhotos": 53948,

@@ -26,7 +26,7 @@ Checks whether a user has contributed a photo to the album.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/albums/17/contributors/1013`
+`http://api.eyeem.com/v2/albums/17/contributors/1013`
 
 
 ```json
@@ -40,8 +40,8 @@ Checks whether a user has contributed a photo to the album.
     "nickname": "ramz",
     "fullname": "ramz",
     "webUrl": "http://www.eyeem.com/u/ramz",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg",
-    "photoUrl": "http://www.eyeem.com/thumb/sq/200/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg",
+    "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg",
     "totalPhotosContributed": 1008,
     "latestContribution": "2012-09-13T22:27:31+0200"
   }

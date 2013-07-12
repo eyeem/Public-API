@@ -29,7 +29,7 @@ Retrieves an array of the users who like the photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/939584/likers?offset=0&limit=5`
+`https://api.eyeem.com/v2/photos/939584/likers?offset=0&limit=5`
 
 ```json
 
@@ -44,16 +44,16 @@ Retrieves an array of the users who like the photo.
         "nickname": "wiljonesjr",
         "fullname": "Wil Jones",
         "webUrl": "http://www.eyeem.com/u/wiljonesjr",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0b303096d5269a0c1560f6f410079edba00fa116.jpg",
-        "photoUrl": "http://www.eyeem.com/thumb/sq/200/0b303096d5269a0c1560f6f410079edba00fa116.jpg"
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0b303096d5269a0c1560f6f410079edba00fa116.jpg",
+        "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/0b303096d5269a0c1560f6f410079edba00fa116.jpg"
       },
       {
         "id": "137287",
         "nickname": "binks",
         "fullname": "binks702",
         "webUrl": "http://www.eyeem.com/u/binks",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/50/68111e223275930ea366d080830e01ae552a582e-1347147322",
-        "photoUrl": "http://www.eyeem.com/thumb/sq/200/68111e223275930ea366d080830e01ae552a582e-1347147322"
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/68111e223275930ea366d080830e01ae552a582e-1347147322",
+        "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/68111e223275930ea366d080830e01ae552a582e-1347147322"
       },
       {
         "id": "126415",
@@ -68,16 +68,16 @@ Retrieves an array of the users who like the photo.
         "nickname": "DCR",
         "fullname": "Dana",
         "webUrl": "http://www.eyeem.com/u/DCR",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/50/afc8aa7cd675f2c55adcbdd8b019e26c8c2aab40-1347124196",
-        "photoUrl": "http://www.eyeem.com/thumb/sq/200/afc8aa7cd675f2c55adcbdd8b019e26c8c2aab40-1347124196"
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/afc8aa7cd675f2c55adcbdd8b019e26c8c2aab40-1347124196",
+        "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/afc8aa7cd675f2c55adcbdd8b019e26c8c2aab40-1347124196"
       },
       {
         "id": "133614",
         "nickname": "klacsamana",
         "fullname": "Oceanbreeze",
         "webUrl": "http://www.eyeem.com/u/klacsamana",
-        "thumbUrl": "http://www.eyeem.com/thumb/sq/50/cce8a991ec0603ed323b1379fd58ba53f387de10.jpg",
-        "photoUrl": "http://www.eyeem.com/thumb/sq/200/cce8a991ec0603ed323b1379fd58ba53f387de10.jpg"
+        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/cce8a991ec0603ed323b1379fd58ba53f387de10.jpg",
+        "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/cce8a991ec0603ed323b1379fd58ba53f387de10.jpg"
       }
     ]
   }

@@ -23,6 +23,6 @@ Upload a photo file and send back a filename that can then be use to call POST /
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/upload`
+`https://api.eyeem.com/v2/photos/upload`
 
 

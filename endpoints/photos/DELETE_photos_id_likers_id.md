@@ -24,7 +24,7 @@ Unlike a photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/likers/me`
+`https://api.eyeem.com/v2/photos/1234/likers/me`
 
 
 

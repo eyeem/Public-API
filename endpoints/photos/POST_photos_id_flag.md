@@ -26,7 +26,7 @@ Report a photo to EyeEm moderators.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/flag?offense=Copyright`
+`https://api.eyeem.com/v2/photos/1234/flag?offense=Copyright`
 
 
 

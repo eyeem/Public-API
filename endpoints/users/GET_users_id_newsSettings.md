@@ -28,7 +28,7 @@ Only available for the authenticated user, this call returns the user's chosen n
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/newsSettings`
+`https://api.eyeem.com/v2/users/me/newsSettings`
 
 
 

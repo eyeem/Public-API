@@ -27,7 +27,7 @@ Add users to the friends list (follow)
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/friends?friend_id=1,1230,42325,55351,123425`
+`https://api.eyeem.com/v2/users/me/friends?friend_id=1,1230,42325,55351,123425`
 
 
 

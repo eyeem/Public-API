@@ -19,7 +19,7 @@ Retrieve the eyeem foursquare token (needed to create a venue).
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/venues/foursquareToken?access_token=fdd3e4d7af22895b155c1e7c5b5d88a4`
+`https://api.eyeem.com/v2/venues/foursquareToken?access_token=fdd3e4d7af22895b155c1e7c5b5d88a4`
 
 
 

@@ -30,7 +30,7 @@ Edits a photo by id (has to be a photo belonging to the authenticated user or ad
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234`
+`https://api.eyeem.com/v2/photos/1234`
 
 
 

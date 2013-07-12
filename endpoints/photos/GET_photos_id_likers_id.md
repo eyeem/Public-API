@@ -25,7 +25,7 @@ Checks whether a user likes a photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/939584/likers/3346`
+`https://api.eyeem.com/v2/photos/939584/likers/3346`
 
 
 ```json

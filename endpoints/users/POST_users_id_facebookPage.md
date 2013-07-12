@@ -26,6 +26,6 @@ Only available for the authenticated user, this call sets a default page or his 
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/facebookPage`
+`https://api.eyeem.com/v2/users/me/facebookPage`
 
 

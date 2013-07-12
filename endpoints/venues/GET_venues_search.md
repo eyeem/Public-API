@@ -25,7 +25,7 @@ Retrieves venues for a specific location and topics for each venue.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/venues/search?lat=52.2&lng=14.4`
+`http://api.eyeem.com/v2/venues/search?lat=52.2&lng=14.4`
 
 ```json
 {
@@ -34,7 +34,7 @@ Retrieves venues for a specific location and topics for each venue.
       "id": "53003",
       "name": "Frankfurt (Oder)",
       "type": "city",
-      "thumbUrl": "http://www.eyeem.com/thumb/sq/200/3b8903f12f541f4a79c48e765312308653f1475b-1348416859",
+      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/3b8903f12f541f4a79c48e765312308653f1475b-1348416859",
       "webUrl": "http://www.eyeem.com/a/53003",
       "updated": "2012-09-23T18:15:37+0200",
       "location": {
@@ -45,7 +45,7 @@ Retrieves venues for a specific location and topics for each venue.
           "id": "23",
           "name": "Germany",
           "type": "country",
-          "thumbUrl": "http://www.eyeem.com/thumb/sq/200/6b982ebb7aca0b5578b4cbf3ef83fd830c8fc63e-1351523338",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/6b982ebb7aca0b5578b4cbf3ef83fd830c8fc63e-1351523338",
           "webUrl": "http://www.eyeem.com/a/23",
           "updated": "2012-10-29T16:09:12+0100"
         }

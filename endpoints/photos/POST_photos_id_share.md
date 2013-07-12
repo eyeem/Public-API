@@ -28,7 +28,7 @@ Share a photo to the user's connected social media services.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/share?services=facebook`
+`https://api.eyeem.com/v2/photos/1234/share?services=facebook`
 
 
 

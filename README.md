@@ -1,13 +1,13 @@
 #EyeEm API
 ***
- **[Introduction](#introduction) | [API Documentation](#api-documentation) | [Basics](#basics) | [OAuth](#oauth) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [Contact](#contact)**
+ **[Introduction](#introduction) | [API Documentation](#api-documentation) | [Basics](#basics) | [OAuth](#oauth) | [Request Headers](#request-headers) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [Contact](#contact)**
 
 ##Introduction
 ***
 
-The EyeEm API is read-only for now, and covers most of the EyeEm functionality. We use the API ourselves for our mobile apps, and we will be constantly opening up new filters and features between now and the public release of the API.
+The EyeEm Public API is read-only by default, and covers the complete EyeEm functionality. We do offer write access on a case-by-case basis. We use the API ourselves for our mobile apps, and are actively developing and improving it. The API is currently in version 2.2.0. We are working on v3 and expect to release that soon.
 
-The API is in private beta at the moment. You can register an app by going to [Your apps on EyeEm](http://eyeem.com/developers), we'll ping you as soon as it's been approved.
+You can register an app by going to [Your apps on EyeEm](http://eyeem.com/developers).
 
 ##API Documentation
 ***
@@ -35,7 +35,7 @@ Our API is RESTful, which means that requests are defined using the HTTP verbs `
 
 To play around with the api calls, hop over to APIGee: `https://apigee.com/eyeem/embed/console/eyeem?v=2`
 
-All API calls are SSL encrypted, and the API responses are in JSON. The base API url is `https://www.eyeem.com/api/v2`
+All API calls are SSL encrypted, and the API responses are in JSON. The base API url is `https://api.eyeem.com/v2`
 
   * content encoding: you SHOULD be able to handle gzip and set the `Accept-Encoding: gzip` HTTP header
   * content types:
@@ -43,8 +43,7 @@ All API calls are SSL encrypted, and the API responses are in JSON. The base API
     * responses:  `application/json` or `image/*`
   * string encoding: you MUST use [utf-8](http://tools.ietf.org/html/rfc3629) everywhere
   * date and time encoding:
-    * [RFC822 date format](http://tools.ietf.org/html/rfc822) as a string (for now)
-    * unix timesstamp as a float (in the future)
+    * [ISO 8601](http://www.w3.org/TR/NOTE-datetime) as a string (for now)
   * error handling:
     * error codes: [HTTP status codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
     * error payload: `{"message":"...some human readable error message..."}`
@@ -54,7 +53,7 @@ If you have any issues or any suggestions, please do not hesitate to [get in tou
 
 A basic request using curl can look like this:
 
-`$ curl https://www.eyeem.com/api/v2/users/1013?access_token=ACCESS_TOKEN`
+`$ curl https://api.eyeem.com/v2/users/1013?access_token=ACCESS_TOKEN`
 
 ```json
 {
@@ -62,9 +61,9 @@ A basic request using curl can look like this:
     "id": "1013",
     "fullname": "ramz",
     "nickname": "ramz",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
     "description": "EyeEm Ramz. EyeEm Happy! Srsly. Choo choo!!",
-    "photoUrl": "http://www.eyeem.com/thumb/sq/200/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
+    "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
     "totalPhotos": 1040,
     "totalFollowers": 282,
     "totalFriends": 477,
@@ -77,9 +76,9 @@ A basic request using curl can look like this:
 ***
 To authenticated requests, we use OAuth2, and we try to comply to the [latest draft] (http://tools.ietf.org/html/draft-ietf-oauth-v2-23). Access Tokens do not expire, at the moment, however, that may also change, and we may start sending `refresh_token` and an `expires` parameter with the `access_token`.
 
-For the time being, you may pass a `client_id` instead of an access_token to most public `GET`. That is subject to change however, between now and the public release.
+For the time being, you may pass a `client_id` parameter, or an `X-Client-Id` header instead of an `access_token` to most public `GET`. That is subject to change.
 
-After your registered app is approved, you can use your client_id and client_secret to generate access tokens. Here's the OAuth2 authentication process:
+After your registered app is approved, you can use your `client_id` and `client_secret` to generate access tokens. Here's the OAuth2 authentication process:
 
 1) Authorization code:
 First, point the browser to `http://www.eyeem.com/oauth/authorize?response_type=code&client_id=Chi6ae5sLes9beCinae5sohM&redirect_uri=http://example.com/callback`
@@ -90,7 +89,7 @@ otherwize, the user is redirected with an error message
 
 2) Access token:
 From your backend call
- `curl -X POST "http://www.eyeem.com/api/v2/oauth/token?grant_type=authorization_code&client_id=Chi6ae5sLes9beCinae5sohM&client_secret=IeBai4eeloRoiw3e&redirect_uri=http://example.com/callback&code=Yeenie1H"`
+ `curl -X POST "http://api.eyeem.com/v2/oauth/token?grant_type=authorization_code&client_id=Chi6ae5sLes9beCinae5sohM&client_secret=IeBai4eeloRoiw3e&redirect_uri=http://example.com/callback&code=Yeenie1H"`
 
 The answer will look like:
 ```json
@@ -100,16 +99,25 @@ The answer will look like:
  "token_type":"bearer"
  }
 ```
-For now, EyeEm API access_tokens do not expire, that may change in the future.
+For now, EyeEm API `access_tokens` do not expire, that may change in the future.
 
 3) Making Authenticated Request:
 
  To make authenticated requests you provide your access token as credentials. You should send it as a header:
 ` Authorization: Bearer 2b9b0ef6065e60f3cc81646f3a7622af68295afb`
 however, for the time being, it's also possible to send it as a  URL query param:
-`$ curl https://www.eyeem.com/api/v2/users/12345?access_token=2b9b0ef6065e60f3cc81646f3a7622af68295afb`
+`$ curl https://api.eyeem.com/v2/users/12345?access_token=2b9b0ef6065e60f3cc81646f3a7622af68295afb`
 
 That's all you need to authenticate with EyeEm.
+
+##Request Headers
+***
+
+In addition to your access token, the EyeEm API accepts the following headers (not required)
+- X-Client-Id: Your app's `client_id` can be provided instead of an `access_token`. This is valid for any public `GET` calls, but is subject to change, and therefore not recommended.
+- X-Api-Version: the current API version is 2.2.0, the default is 2.0.0. As indicated on the specific endpoints, the parameters and responses vary between API versions. It is recommended to always use the latest API version
+- X-hourOfDay: Integer between 0 and 24. For venue and location related requests.
+- Accept-Language: Currently, the following languages are supported ('en','de','ru','ar','es','fr','ja','pt','id','zh','nl','pl','th','tr','uk','vi'). The default is 'en'.
 
 ##Pagination
 ***
@@ -120,12 +128,12 @@ Some endpoints in the api return arrays of photos, users, or albums. Those endpo
 ***
 
 You can request EyeEm photos in various sizes and formats. The default API endpoints return a `thumbUrl` and (optionally) a `photoUrl`
-Both urls have the format `http://www.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg` and return different size photos that you can simply plug into your app.
+Both urls have the format `http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg` and return different size photos that you can simply plug into your app.
 
 In case you want to display photos in a different resolution you can use the same filename and change the two middle parts of the url like so:
-- `http://www.eyeem.com/thumb/h/{pixels}/filename` will return the image scaled to have a max height of {pixels}
-- `http://www.eyeem.com/thumb/{width}/{height}/filename` will return the image scaled to fit into {width} and {height}
-- `http://www.eyeem.com/thumb/sq/{pixels}/filename` will return the image cropped into a square with length {pixels}
+- `http://cdn.eyeem.com/thumb/h/{pixels}/filename` will return the image scaled to have a max height of {pixels}
+- `http://cdn.eyeem.com/thumb/{width}/{height}/filename` will return the image scaled to fit into {width} and {height}
+- `http://cdn.eyeem.com/thumb/sq/{pixels}/filename` will return the image cropped into a square with length {pixels}
 
 
 ##Contact

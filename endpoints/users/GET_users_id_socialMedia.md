@@ -25,7 +25,7 @@ Only available for the authenticated user, this call returns the status of the v
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/socialMedia`
+`https://api.eyeem.com/v2/users/me/socialMedia`
 
 
 

@@ -18,7 +18,7 @@ Get a selection of images that is used in the existing apps as a start screen ba
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/bgImages`
+`https://api.eyeem.com/v2/photos/bgImages`
 
 ```json
 

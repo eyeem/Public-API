@@ -26,7 +26,7 @@ Remove an existing photo from an album.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/albums/11234134`
+`https://api.eyeem.com/v2/photos/1234/albums/11234134`
 
 
 

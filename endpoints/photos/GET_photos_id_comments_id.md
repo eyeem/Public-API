@@ -25,7 +25,7 @@ Retrieves a specific comment on a photo.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/939584/comments/408870`
+`https://api.eyeem.com/v2/photos/939584/comments/408870`
 
 ```json
 

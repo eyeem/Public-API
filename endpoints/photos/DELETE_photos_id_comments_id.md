@@ -26,7 +26,7 @@ Delete a specific comment on a photo (users can only delete their own comments).
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/comments/11353`
+`https://api.eyeem.com/v2/photos/1234/comments/11353`
 
 
 

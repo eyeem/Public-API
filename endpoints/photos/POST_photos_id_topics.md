@@ -27,6 +27,6 @@ Add a photo to a new topic (which automatically adds it to the album associated 
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/photos/1234/topics?name=funfunfun`
+`https://api.eyeem.com/v2/photos/1234/topics?name=funfunfun`
 
 

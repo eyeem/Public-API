@@ -26,7 +26,7 @@ Get a user's profile information.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/users/me`
+`http://api.eyeem.com/v2/users/me`
 
 ```json
 {
@@ -35,8 +35,8 @@ Get a user's profile information.
     "nickname": "sb",
     "fullname": "Sebastian",
     "webUrl": "http://www.eyeem.com/u/sb",
-    "thumbUrl": "http://www.eyeem.com/thumb/sq/50/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
-    "photoUrl": "http://www.eyeem.com/thumb/sq/200/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
+    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
+    "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
     "totalPhotos": 89,
     "totalFollowers": 171,
     "totalFriends": 69,

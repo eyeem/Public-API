@@ -28,7 +28,7 @@ Remove a user from the friends list (unfollow).
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/friends/1015`
+`https://api.eyeem.com/v2/users/me/friends/1015`
 
 
 

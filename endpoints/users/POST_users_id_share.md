@@ -27,7 +27,7 @@ Share a user to the user's connected social media services.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/users/1234/share`
+`http://api.eyeem.com/v2/users/1234/share`
 
 
 

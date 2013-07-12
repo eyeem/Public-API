@@ -35,7 +35,7 @@ Edit (parts of) a user's own profile.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/1013?nickname=ramz`
+`https://api.eyeem.com/v2/users/1013?nickname=ramz`
 
 
 

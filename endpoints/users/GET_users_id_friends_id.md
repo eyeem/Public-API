@@ -29,7 +29,7 @@ Check if the given user is friends with (follows) another user.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/1013/friends/1015`
+`https://api.eyeem.com/v2/users/1013/friends/1015`
 
 
 ```json

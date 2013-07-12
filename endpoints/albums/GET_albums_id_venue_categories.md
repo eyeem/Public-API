@@ -27,7 +27,7 @@ Retrieves the venueCategories available for a certain city
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/albums/17/venueCategories`
+`https://api.eyeem.com/v2/albums/17/venueCategories`
 
 ```json
 

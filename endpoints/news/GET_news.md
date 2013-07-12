@@ -28,6 +28,6 @@ Retrieves the authenticated user's latest twenty news items.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/news?offset=0&limit=20`
+`http://api.eyeem.com/v2/news?offset=0&limit=20`
 
  

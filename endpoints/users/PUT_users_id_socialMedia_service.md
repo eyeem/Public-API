@@ -36,6 +36,6 @@ Only available for the authenticated user, this call disconnects a service.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/users/me/socialMedia/facebook`
+`https://api.eyeem.com/v2/users/me/socialMedia/facebook`
 
 

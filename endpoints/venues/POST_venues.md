@@ -28,7 +28,7 @@ Create a venue on EyeEm.
 ### Examples
 ***
 
-`https://www.eyeem.com/api/v2/venues?service=foursquare&id=4adcda7af964a5201a4721e3&location[city]=Berlin&location[country]=Germany`
+`https://api.eyeem.com/v2/venues?service=foursquare&id=4adcda7af964a5201a4721e3&location[city]=Berlin&location[country]=Germany`
 
 
 

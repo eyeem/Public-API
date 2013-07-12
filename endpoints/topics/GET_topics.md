@@ -24,7 +24,7 @@ Retrieves an array containing a users and an albums dictionary.
 ### Examples
 ***
 
-`http://www.eyeem.com/api/v2/topics?autoComplete=be`
+`http://api.eyeem.com/v2/topics?autoComplete=be`
 
 
 ```json
