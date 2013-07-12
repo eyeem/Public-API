@@ -41,13 +41,13 @@ Here's the order which the EyeEm API follows to verify requests and the error co
     * No: Continue
 
 * Is Request a DELETE?
-    * Yes: Has App 'delete' capabilities?
+    * Yes: App has 'delete' capabilities?
         * No: 400 Bad Request {"message':"Insuffisant rights (delete access needed)."}
          * Yes: Continue
     * No: Continue
 
 * Is Request a POST or PUT?
-    * Yes: Has App 'write' capabilities?
+    * Yes: App has 'write' capabilities?
           * No: 400 Bad Request
             {"message':"Insuffisant rights (write access needed)."}
           * Yes: Continue

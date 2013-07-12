@@ -8,16 +8,6 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Users
 ***
-#### Minimum valid object
-```json
-      {
-        "id": "1013",
-        "fullname": "Ramzi Rizk",
-        "nickname": "ramz",
-        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/9c24eab725f8aa03b99c396dd4d45f2b9asdf3.jpg"
-      }
-```
-#### Extended Object
 ```json
 {
   "user": {
@@ -53,59 +43,59 @@ For users, albums and photos, we will also provide the simplest valid object tha
         "timelinepopup": true,
         "managedPages": [
           {
-          "id": "150458201636928",
-          "name": "I Am Rambo",
-          "posting": 0
+            "id": "150458201636928",
+            "name": "I Am Rambo",
+            "posting": 0
           },
           {
-          "id": "369311466483832",
-          "name": "EyeEm",
-          "posting": 0
+            "id": "369311466483832",
+            "name": "EyeEm",
+            "posting": 0
           },
           {
-          "id": "168014246580820",
-          "name": "Photo Hack Day",
-          "posting": 0
+            "id": "168014246580820",
+            "name": "Photo Hack Day",
+            "posting": 0
           },
           {
-          "id": "329045503624",
-          "name": "sudanvotes",
-          "posting": 0
+            "id": "329045503624",
+            "name": "sudanvotes",
+            "posting": 0
           },
           {
-          "id": "182029908477190",
-          "name": "PoppupUp",
-          "posting": 0
+            "id": "182029908477190",
+            "name": "PoppupUp",
+            "posting": 0
           },
           {
-          "id": "22972653688",
-          "name": "Cancer Research UK Race for Life",
-          "posting": 0
+            "id": "22972653688",
+            "name": "Cancer Research UK Race for Life",
+            "posting": 0
           },
           {
-          "id": "136689719690381",
-          "name": "Pancäke",
-          "posting": 0
+            "id": "136689719690381",
+            "name": "Pancäke",
+            "posting": 0
           },
           {
-          "id": "115244968563450",
-          "name": "Berlin Startup Basketball League",
-          "posting": 0
+            "id": "115244968563450",
+            "name": "Berlin Startup Basketball League",
+            "posting": 0
           },
           {
-          "id": "165272473499096",
-          "name": "Qualitocracy",
-          "posting": 0
+            "id": "165272473499096",
+            "name": "Qualitocracy",
+            "posting": 0
           },
           {
-          "id": "170111226353716",
-          "name": "Popped Up",
-          "posting": 0
+            "id": "170111226353716",
+            "name": "Popped Up",
+            "posting": 0
           },
           {
-          "id": "175348109151117",
-          "name": "PoppedUp",
-          "posting": 0
+            "id": "175348109151117",
+            "name": "PoppedUp",
+            "posting": 0
           }
         ],
         "status": "active"
@@ -128,36 +118,36 @@ For users, albums and photos, we will also provide the simplest valid object tha
       }
     },
     "newsSettings": {
-    "push_photo_like": true,
-    "push_photo_comment": true,
-    "push_user_follower": true,
-    "push_user_joined": true,
-    "push_album_contributor": true,
-    "push_photo_comment_mention": true,
-    "email_photo_like": true,
-    "email_photo_comment": true,
-    "email_user_follower": true,
-    "email_user_joined": true,
-    "email_album_contributor": true,
-    "email_photo_comment_mention": true,
-    "email_weekly_newsletter": true,
-    "push_album_invite": true,
-    "email_album_invite": true,
-    "facebook_upload": false,
-    "facebook_photolike": true,
-    "facebook_photodiscover": false,
-    "facebook_photocomment": true,
-    "facebook_albumlike": false,
-    "facebook_albumfavorite": true,
-    "facebook_userfollow": true,
-    "facebook_timeline_popup": true,
-    "facebook_albumcontribution": false,
-    "email_newsletter": true,
-    "web_onboarded": true,
-    "web_banner_shown": true,
-    "push_photo_tagged_person": true,
-    "email_photo_tagged_person": true,
-    "web_onboarding_step": 0
+      "push_photo_like": true,
+      "push_photo_comment": true,
+      "push_user_follower": true,
+      "push_user_joined": true,
+      "push_album_contributor": true,
+      "push_photo_comment_mention": true,
+      "email_photo_like": true,
+      "email_photo_comment": true,
+      "email_user_follower": true,
+      "email_user_joined": true,
+      "email_album_contributor": true,
+      "email_photo_comment_mention": true,
+      "email_weekly_newsletter": true,
+      "push_album_invite": true,
+      "email_album_invite": true,
+      "facebook_upload": false,
+      "facebook_photolike": true,
+      "facebook_photodiscover": false,
+      "facebook_photocomment": true,
+      "facebook_albumlike": false,
+      "facebook_albumfavorite": true,
+      "facebook_userfollow": true,
+      "facebook_timeline_popup": true,
+      "facebook_albumcontribution": false,
+      "email_newsletter": true,
+      "web_onboarded": true,
+      "web_banner_shown": true,
+      "push_photo_tagged_person": true,
+      "email_photo_tagged_person": true,
+      "web_onboarding_step": 0
     },
     "admin": true,
     "hidden": false
@@ -170,322 +160,118 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Albums
 ***
-#### Minimum valid object
-```json
-{
-    "id": "17",
-    "name": "Berlin",
-    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
-    "updated": "2012-02-03T18:06:08+0000"
-  }
-```
-#### Extended Object
 ```json
 {
   "album": {
     "id": "17",
     "name": "Berlin",
-    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
-    "updated": "2012-02-03T18:06:08+0000",
     "type": "city",
+    "thumbUrl": "http://www.eyeem.com/thumb/sq/200/4fbf551231917efbc913d5a689c982f8db2c5f7a-1358438528",
+    "webUrl": "http://www.eyeem.com/a/17",
+    "updated": "2013-07-12T20:03:29+0200",
     "location": {
       "latitude": "52.52437",
       "longitude": "13.41053",
+      "countryCode": "DE",
       "countryAlbum": {
         "id": "23",
         "name": "Germany",
         "type": "country",
-        "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/2645e5292c071481368030259ca6102dce273435-1347878975",
-        "updated": "2012-09-17T12:50:00+0200"
+        "thumbUrl": "http://www.eyeem.com/thumb/sq/200/4fbf551231917efbc913d5a689c982f8db2c5f7a-1358438528",
+        "webUrl": "http://www.eyeem.com/a/23",
+        "updated": "2013-07-12T20:03:29+0200"
+      },
+      "facebookPage": {
+        "id": "344409052313578",
+        "name": "EyeEm Berlin"
       }
     },
-    "webUrl": "http://www.eyeem.com/a/17",
-    "totalPhotos": "10432",
-    "totalLikers": 127,
-    "totalContributors": 814,
-    "hidden": true (depends on user setting)
-    "photos": {
-      "items": [
-        {
-          "id": "216365",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
-          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
-          "width": 1024,
-          "height": 768,
-          "updated": "2012-02-03T18:06:08+0000",
-          "user": {
-            "id": "4463",
-            "fullname": "Fabian-Carlos Guhl",
-            "nickname": null,
-            "thumbUrl": "https://graph.facebook.com/536656083/picture?type=square"
-          },
-          "caption": "Discussing world peace at Oburger 69",
-          "totalLikes": 0,
-          "totalComments": 0,
-          "comments": {
-            "items": []
-          },
-          "likers": {
-            "items": []
-          }
-        },
-        {
-          "id": "216313",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
-          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
-          "width": 1224,
-          "height": 1632,
-          "updated": "2012-02-03T17:33:07+0000",
-          "user": {
-            "id": "60534",
-            "fullname": "666",
-            "nickname": null,
-            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/b9101e64f89be9c65bb6f4d9ee1dee66f4d43ad1.jpg"
-          },
-          "caption": "table at Marietta",
-          "totalLikes": 2,
-          "totalComments": 0,
-          "comments": {
-            "items": []
-          },
-          "likers": {
-            "items": [
-              {
-                "id": "11697",
-                "fullname": "steve",
-                "nickname": "psoneeleven",
-                "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/c08e8382817585604405e70813cf650ab20b7577.jpg"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "contributors": {
-      "offset": 0,
-      "limit": 3,
-      "total": 814,
-      "items": [
-        {
-          "id": "1025",
-          "fullname": "Moritz Otto",
-          "nickname": "moritzotto",
-          "thumbUrl": ""
-        },
-        {
-          "id": "1013",
-          "fullname": "ramz",
-          "nickname": "ramz",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
-        },
-        {
-          "id": "1038",
-          "fullname": "Graf Heldenbrand",
-          "nickname": null,
-          "thumbUrl": ""
-        },
-      ]
-    },
-    "likers": {
-      "offset": 0,
-      "limit": 4,
-      "total": 127,
-      "items": [
-        {
-          "id": "7801",
-          "fullname": "Sandro Günther",
-          "nickname": null,
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/ab999ad7e0ac73a7a01cdffcfd5f89b5ce853594.jpg"
-        },
-        {
-          "id": "59083",
-          "fullname": "Mathias",
-          "nickname": "mathias",
-          "thumbUrl": "https://graph.facebook.com/1087532650/picture?type=square"
-        },
-        {
-          "id": "58649",
-          "fullname": "Diiana Berlin",
-          "nickname": null,
-          "thumbUrl": "https://graph.facebook.com/100000343669388/picture?type=square"
-        },
-        {
-          "id": "11117",
-          "fullname": "Andreas Zeiser",
-          "nickname": null,
-          "thumbUrl": "https://graph.facebook.com/100000020995756/picture?type=square"
-        }
-      ]
-    }
+    "totalPhotos": 116238,
+    "totalLikers": 3367,
+    "totalContributors": 6977,
+    "hidden": false
   }
 }
 ```
+
 #### Remarks
 * Arrays of album items can have the following dictionary names as wrappers: `albums`, `likedAlbums`, `feedAlbums`
-* Albums can have the following type: `tag`,`venue`,`event`,`city`,`country`,`live`,`popular`,`radius`,`special`
-* The extended album object above is an example based on the following request:
-`https://api.eyeem.com/v2/albums/17?detailed=1&includePhotos=1&numPhotos=2&photoDetails=1&includeContributors=1&includeLikers=1`
-In such a request, the number of inline photos to return, whether to include the photo details (comments, likes, etc) is of course optional, typically, the photos, contributors and likers should be retrieved using additional calls to the respective endpoints. Such calls also offer the option to request more details (such as the other albums to which a photo belongs)
+* Albums can have the following type: `tag`,`venue`,`city`,`country`
+* extended album objects can also contain inline arrays of likers, contributors and photos
 
 ##Photos
 ***
-#### Minimum valid object
-```json
-      {
-        "id": "215058",
-        "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-        "photoUrl": "http://cdn.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-        "width": 1530,
-        "height": 2048,
-        "updated": "2012-02-02T10:16:33+0000"
-      }
-```
-#### Extended Object
 ```json
 {
   "photo": {
     "id": "215058",
-    "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-    "photoUrl": "http://cdn.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+    "thumbUrl": "http://www.eyeem.com/thumb/h/100/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+    "photoUrl": "http://www.eyeem.com/thumb/640/480/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
+    "webUrl": "http://www.eyeem.com/p/215058",
     "width": 1530,
     "height": 2048,
-    "updated": "2012-02-02T10:16:33+0000",
-    "webUrl": "http://www.eyeem.com/p/215058",
+    "updated": "2012-02-02T10:16:33+0100",
     "user": {
       "id": "1013",
-      "fullname": "ramz",
       "nickname": "ramz",
+      "fullname": "Ramzi Rizk",
       "webUrl": "http://www.eyeem.com/u/ramz",
-      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg",
-      "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/7c0ff01c33815d65840b1ff9c849786898bad7d4.jpg"
+      "thumbUrl": "http://www.eyeem.com/thumb/sq/50/ad12f89204332f639524a3c4c7b14d8d02bbab67-1357734675",
+      "photoUrl": "http://www.eyeem.com/thumb/sq/200/ad12f89204332f639524a3c4c7b14d8d02bbab67-1357734675",
+      "description": "EyeEm Ramz. EyeEm Happy! Srsly. Choo choo!!"
     },
-    "title": "11:11 at Coffee to go",
-    "caption": "11:11 at Coffee to go",
     "latitude": "52.53499985",
     "longitude": "13.40600014",
-    "totalLikes": 12,
-    "totalComments": 2,
-    "comments": {
-      "items": [
-        {
-          "id": "36038",
-          "photoId": "215058",
-          "message": "i realized i was at the exact same place at the exact same moment on 11:11, had to do it :)",
-          "user": {
-            "id": "1013",
-            "fullname": "ramz",
-            "nickname": "ramz",
-            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
-          },
-          "updated": "2012-02-02T10:36:03+0000"
-        },
-        {
-          "id": "36036",
-          "photoId": "215058",
-          "message": "Simply brilliant!",
-          "user": {
-            "id": "1923",
-            "fullname": "Stephen Mohammed",
-            "nickname": "stephenmohammed",
-            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/2e9fe28f92959b9b07ac4ad1cb91534c5ee657e6.jpg"
-          },
-          "updated": "2012-02-02T10:32:35+0000"
-        }
-      ]
-    },
-    "likers": {
-      "items": [
-        {
-          "id": "4962",
-          "fullname": "Sarah Weinknecht",
-          "nickname": null,
-          "thumbUrl": "https://graph.facebook.com/583303009/picture?type=square"
-        }
-      ]
-    },
-    "albums": {
-      "items": [
-        {
-          "id": "17",
-          "name": "Berlin",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
-          "updated": "2012-02-03T18:06:08+0000",
-          "type": "city"
-        },
-        {
-          "id": "23",
-          "name": "Germany",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/17662e8dfa7d912c649220f29a85672024fa3d01-1321811964",
-          "updated": "2012-02-03T18:31:28+0000",
-          "type": "country"
-        },
-        {
-          "id": "10521",
-          "name": "Coffee to go",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-          "updated": "2012-02-02T10:16:33+0000",
-          "type": "venue"
-        },
-        {
-          "id": "55744",
-          "name": "11:11",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/86dce608a49b919c5ee07658e503f5c5d0d8d899-1321956886",
-          "updated": "2012-02-03T10:20:08+0000",
-          "type": "tag"
-        },
-        {
-          "id": "112649",
-          "name": "11:11 at Coffee to go",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/70b5d5feefc5946bb7b912b8661c3329912fda3d-1328177792",
-          "updated": "2012-02-02T10:16:38+0000",
-          "type": "event"
-        }
-      ]
-    }
+    "totalLikes": 13,
+    "totalPeople": 0,
+    "totalComments": 1,
+    "description": "11:11 at Coffee to go [a:55744]",
+    "hidden": false,
+    "filter": "Magix",
+    "frame": "Bround"
   }
 }
 ```
 #### Remarks
-* `likers` is an array of users
 * Arrays of photo items can have the following dictionary names as wrappers: `photos`, `friendsPhotos`, `likedPhotos`
+* extended photo objects can also contain inline arrays of likers, comments, albums and tagged people
 
 ##Comments
 ***
 ```json
-          {
-              "id": "36038",
-              "photoId": "215058",
-              "message": "i realized @gen was at the exact same place at the exact same moment on 11:11 - same for @lorenz, had to do it :)",
-              "extendedMessage": "i realized [user:1015] was at the exact same place at the exact same moment on 11:11 - same for [user:1019], had to do it :)",
-              "user": {
-                "id": "1013",
-                "fullname": "ramz",
-                "nickname": "ramz",
-                "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg"
-              },
-			"mentionedUsers": [
-			  {
-				"id": "1015",
-				"nickname": null,
-				"fullname": "Gen Sadakane",
-				"webUrl": "http://eyeem.local/frontend_dev.php/u/1015",
-				"thumbUrl": "http://eyeem.local/frontend_dev.php/thumb/sq/50/default_profile.jpg",
-				"photoUrl": "http://eyeem.local/frontend_dev.php/thumb/sq/200/default_profile.jpg"
-			  },
-			  {
-				"id": "1019",
-				"nickname": null,
-				"fullname": "Lorenz Aschoff",
-				"webUrl": "http://eyeem.local/frontend_dev.php/u/1019",
-				"thumbUrl": "http://eyeem.local/frontend_dev.php/thumb/sq/50/fd8cce4ba31831d8bcb918ec6d879935355b726d.jpg",
-				"photoUrl": "http://eyeem.local/frontend_dev.php/thumb/sq/200/fd8cce4ba31831d8bcb918ec6d879935355b726d.jpg"
-			  }
-			],
-              "updated": "2012-02-02T10:36:03+0000"			            
-            }
+{
+  "comment": {
+    "id": "7464179",
+    "photoId": "15962932",
+    "message": "@steph facundo esteban:)",
+    "extendedMessage": "[user:24961] facundo esteban:)",
+    "user": {
+      "id": "341655",
+      "nickname": "olgasteidl",
+      "fullname": "Olga Steidl",
+      "webUrl": "http://www.eyeem.com/u/olgasteidl",
+      "thumbUrl": "http://www.eyeem.com/thumb/sq/50/4c5a57e62a74932ff1023b20edbb15d9281d6506-1368126732",
+      "photoUrl": "http://www.eyeem.com/thumb/sq/200/4c5a57e62a74932ff1023b20edbb15d9281d6506-1368126732",
+      "description": "I live. I shoot. I post. #startupgirl"
+    },
+    "mentionedUsers": [
+      {
+        "id": "24961",
+        "nickname": "steph",
+        "fullname": "Stephanie",
+        "webUrl": "http://www.eyeem.com/u/steph",
+        "thumbUrl": "http://www.eyeem.com/thumb/sq/50/4f3e2914d000952f956e52967f5763d35bd48e6f-1362159353",
+        "photoUrl": "http://www.eyeem.com/thumb/sq/200/4f3e2914d000952f956e52967f5763d35bd48e6f-1362159353",
+        "description": "Oh hai dere! I'm Stephanie and I work as Community Manager at EyeEm. Say hi here: stephanie@eyeem.com"
+      }
+    ],
+    "updated": "2013-07-11T12:37:57+0200"
+  }
+}
 ```
 ### Remarks
 * Comment objects always include a basic user object identifying the comment's author
+* extended message includes the userIds of mentioned users, simple message returns the human-readable version.
 
 ##Topics
 ***
@@ -652,57 +438,22 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
   "collection": {
     "title": "Black and White photos in Berlin",
     "subtitle": "150 photos in this collection",
-    "type": "album",
+    "type": "album" (could also be user, nearbyLive and other collections),
+    "reason": "favorited,contributed,friendsContributed,nearby"
     "album": {
-      "id": "17",
-      "name": "Berlin",
-      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/5993d6f01a18a8fa6a3b13034ca1d8a1e7345edf-1321712288",
-      "updated": "2012-02-03T18:06:08+0000"
+      (basic album description)
     },
     "photos": {
       "offset": 0,
       "limit": 3,
       "total": 3,
       "items": [
-        {
-          "id": "216365",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
-          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/3ca2b83032785f475476e77d20f2c41e230ec7f7-1328292321",
-          "width": 1024,
-          "height": 768,
-          "updated": "2012-02-03T18:06:08+0000",
-          "user": {
-            "id": "4463",
-            "fullname": "Fabian-Carlos Guhl",
-            "nickname": null,
-            "thumbUrl": "https://graph.facebook.com/536656083/picture?type=square"
-          },
-          "caption": "Discussing world peace at Oburger 69",
-          "totalLikes": 0,
-          "totalComments": 0
-        },
-        {
-          "id": "216313",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/h/100/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
-          "photoUrl": "http://cdn.eyeem.com/thumb/640/480/1ac3d29659fc7bcf65882d66a676bef4acc1ad22-1328290328",
-          "width": 1224,
-          "height": 1632,
-          "updated": "2012-02-03T17:33:07+0000",
-          "user": {
-            "id": "60534",
-            "fullname": "666",
-            "nickname": null,
-            "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/b9101e64f89be9c65bb6f4d9ee1dee66f4d43ad1.jpg"
-          },
-          "caption": "table at Marietta",
-          "totalLikes": 2,
-          "totalComments": 0
-        }
+        (array of photo items)
       ]
     },
   }
 }
 ```
 #### Remarks
-* Collections can have the following type: `album`,`nearbyLive`,`popular`,`userFavorites`,`nearby`
-* based on the type, collections can additionally contain a simple `album` or `user` object
+* Collections can have the following type: `album`,`user`,`nearbyLive`,`popular`,`userFavorites`,`nearby`
+* based on the type, collections can additionally contain a simple `album` or `user` object, as well as a photo array

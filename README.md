@@ -17,11 +17,15 @@ You can register an app by going to [Your apps on EyeEm](http://eyeem.com/develo
 * **[Users](https://github.com/eyeem/public-API/tree/master/endpoints/users.md#files)**
 * **[Photos](https://github.com/eyeem/public-API/tree/master/endpoints/photos.md#files)**
 * **[Albums](https://github.com/eyeem/public-API/tree/master/endpoints/albums.md#files)**
+* **[Discover](https://github.com/eyeem/public-API/tree/master/endpoints/discover.md#files)**
+* **[Missions](https://github.com/eyeem/public-API/tree/master/endpoints/missions.md#files)**
+* **[Invitations](https://github.com/eyeem/public-API/tree/master/endpoints/invitations.md#files)**
 * **[News](https://github.com/eyeem/public-API/tree/master/endpoints/news.md#files)**
 * **[Topics](https://github.com/eyeem/public-API/tree/master/endpoints/topics.md#files)**
 * **[Search](https://github.com/eyeem/public-API/tree/master/endpoints/search.md#files)**
 * **[Venues](https://github.com/eyeem/public-API/tree/master/endpoints/venues.md#files)**
 * **[Auth](https://github.com/eyeem/public-API/tree/master/endpoints/auth.md#files)**
+* **[Apps](https://github.com/eyeem/public-API/tree/master/endpoints/apps.md#files)**
 
 ###Resources
 * **[Model](https://github.com/eyeem/public-API/tree/master/resources/model.md#files)**
