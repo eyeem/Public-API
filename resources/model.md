@@ -389,7 +389,7 @@ Or with a matching user:
 ***
 
 ```json
-```
+``` 
 
 ##Location (sub-object attached to location-based albums at the moment)
 ***
