@@ -292,6 +292,22 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##News
 ***
+Single news items are still available from the API, but the recommended approach is to require aggregated news. Here's a sample news response:
+The response header contains 
+
+```json
+{
+  "news": {
+    "limit": 30,
+    "unseen": 8,
+    "oldestId": "225774223",
+    "newestId": "228852686",
+    "total": 610
+    "items" : { ARRAY of NEWS ITEMS }
+  }
+}
+
+Every news item contains the following:
 
 ```json
       {
@@ -302,8 +318,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
         "user":{ USER Object if available}
         "album":{ ALBUM Object if available}
         "comment":{ COMMENT Object if available}        
-        "updated": "2012-02-03T15:11:20+0000",
-        "seen": true
+        "updated": "2012-02-03T15:11:20+0000"
       }
 ```
 
@@ -319,13 +334,30 @@ alternatively, if it's a blog post:
         "thumbUrl": "http://blog.eyeem.com/coolimage.jpg",
         "url": "http://blog.eyeem.com/blogpostID",        
         "updated": "2012-02-03T15:11:20+0000",
-        "seen": true
       }
 ```
 
+In case the news item is an aggregation, it additionally contains an `aggregation` object, that item specifies whether the aggregation was on a photo or on a user, and contains an array of photos/users respectively. In that case, the news item also contains an array of the aggregated news Ids:
+
+```json
+{
+  "item": {the regular item},
+  "aggregation": {
+    "aggregated": true,
+    "total": 2,
+    "type": "photo",
+    "photos": [ ARRAY OF PHOTOS ],
+    "users": [ ARRAY OF USERS ]
+  },
+  "ids": [
+    "225870335",
+    "225870328"
+  ]
+}
+```
 ### Remarks:
 * itemType dictates what type of object the news item links to. Possible values: `photo`, `user`, `album`
-* newsType dictates what type of notification this is. Possible values: `like`, `comment`, `follow`, `commentAfter`
+* newsType dictates what type of notification this is. Possible values: `like`, `comment`, `follow`, `commentAfter`, `albumContributor`, `albumInvite`, `taggedPerson`, `fbFriend`, `twFriend`
 
 ##Services
 ***
