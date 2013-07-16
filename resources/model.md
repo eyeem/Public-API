@@ -8,6 +8,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Users
 ***
+
 ```json
 {
   "user": {
@@ -160,6 +161,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Albums
 ***
+
 ```json
 {
   "album": {
@@ -201,6 +203,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Photos
 ***
+
 ```json
 {
   "photo": {
@@ -238,6 +241,7 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Comments
 ***
+
 ```json
 {
   "comment": {
@@ -275,17 +279,20 @@ For users, albums and photos, we will also provide the simplest valid object tha
 
 ##Topics
 ***
+
 ```json
      {
         "name": "Waiting for the bell",
         "totalPhotos": "4"
       }
 ```
+
 ### Remarks
 * Topics share the same ids as their respective albums.
 
 ##News
 ***
+
 ```json
       {
         "id": "19588",
@@ -322,6 +329,7 @@ alternatively, if it's a blog post:
 
 ##Services
 ***
+
 ```json
 {
   "services": {
@@ -454,11 +462,12 @@ venueService:{
 * id: the venue object's id (not the albumID), reflects either a valid foursquare id (can be used to query the FQ API) or an eyeem one.
 * category and categoryName: only valid for foursquare venues, ids/names come from foursquare
 
-##Collections
+##Discover Collections
 ***
 Collections are ad-hoc sets of photos that are related to each other, but not necessarily albums. For now, collections are primarily used in the discover feed.
 
 #### Object Format
+
 ```json
 {
   "collection": {
@@ -469,6 +478,8 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
     "album": {
       (basic album description)
     },
+    "numPhotos": 6,
+    "weight": 10,
     "photos": {
       "offset": 0,
       "limit": 3,
@@ -479,6 +490,106 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
     },
   }
 }
+```
+
+##Discover Header
+***
+Calls to discover return various useful infos in the header, here's a sample discover header:
+
+#### Object Format
+
+```json
+{
+  "discover": {
+    "offset": 0,
+    "limit": 30,
+    "lat": "52.53",
+    "lng": "13.42",
+    "weather": {
+      "temp_c": "14",
+      "temp_f": "57",
+      "weather_code": "116",
+      "weather_icon": "http://cdn.eyeem.com/thumb/sq/50/ad12f89204332f639524a3c4c7b14d8d02bbab67-1357734675"
+    },
+    "header": {
+      "city": {
+        "name": "Berlin",
+        "lat": "52.52437",
+        "lon": "13.41053"
+      },
+      "venue": {
+        "name": "Soho House Berlin"
+      },
+      "greeting": "Boa noite",
+      "image_url": "http://cdn.eyeem.com/thumb/640/480/f7924d7120505e35d1b24c34719c96e191818f42-1371041030"
+    },
+    "total": 17,
+    "items": array of collections
+  }
+}
+```
+##Apps
+***
+Apps build on top of the EyeEm API:
+
+#### Object Format
+
+```json
+{
+  "app": {
+    "id": "236",
+    "name": "FireEm",
+    "icon": "http://www.eyeem.com/images/oauth/default_app.png",
+    "url": "",
+    "access": "write",
+    "redirectUrl": "",
+    "clientId": "qVf4jbaL80e0u2ahrL5yDCzTiQxmA9IX",
+    "clientSecret": "afW8tZTSUKoq93bEvMIm4sT9E1JONFco",
+    "approved": true
+  }
+}
+```
+##Lightweight Mission
+***
+Simple wrappers around albums used for lightweight missions at the moment.
+
+```json
+{
+  "id": 5944775,
+  "description": "We’re celebrating our brand new friends tagging feature and are looking for the funniest, most awesome group shots! The only condition: everyone who's on the photo must be tagged. Prize: EyeEm T-Shirts for the whole crew! Deadline: July 15.",
+  "title": "NEW WEEKLY MISSION",
+  "url": "http://blog.eyeem.com/?p=19552",
+  "thumbUrl": "http://www.eyeem.com/thumb/sq/200/57d8bc1767541562c2d5520ca19396a2ad42f1c8-1369588977",
+  "album": {
+    "id": "5944775",
+    "name": "Tag your friends",
+    "type": "tag",
+    "thumbUrl": "http://www.eyeem.com/thumb/sq/200/86d6613f864e37344c213dab7eded77d912c3967-1367494482",
+    "webUrl": "http://www.eyeem.com/a/5944775",
+    "updated": "2013-07-12T21:30:32+0200",
+    "totalPhotos": 261,
+    "totalLikers": 85,
+    "totalContributors": 155,
+    "hidden": false
+  }
+}
+```
+
+##Person
+***
+A person object is used to tag people from various services (fb, tw, eyeem) on a photo.
+
+```json
+{
+  "serviceType": "eyeem",
+  "serviceId": "1014",
+  "fullname": "Flo Meissner",
+  "nickname": "Flo",
+  "thumbUrl": "http://www.eyeem.com/thumb/sq/50/a60ebe1fdddc4481aed8ac4381bca9ab5990b469-1357068992",
+  "facebook": true,
+  "twitter": true
+}
+
 ```
 #### Remarks
 * Collections can have the following type: `album`,`user`,`nearbyLive`,`popular`,`userFavorites`,`nearby`

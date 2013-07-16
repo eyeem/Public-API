@@ -18,7 +18,6 @@ You can register an app by going to [Your apps on EyeEm](http://eyeem.com/develo
 * **[Apps](https://github.com/eyeem/public-API/tree/master/endpoints/apps.md#files)**
 * **[Auth](https://github.com/eyeem/public-API/tree/master/endpoints/auth.md#files)**
 * **[Discover](https://github.com/eyeem/public-API/tree/master/endpoints/discover.md#files)**
-* **[Invitations](https://github.com/eyeem/public-API/tree/master/endpoints/invitations.md#files)**
 * **[Missions](https://github.com/eyeem/public-API/tree/master/endpoints/missions.md#files)**
 * **[News](https://github.com/eyeem/public-API/tree/master/endpoints/news.md#files)**
 * **[Photos](https://github.com/eyeem/public-API/tree/master/endpoints/photos.md#files)**
@@ -123,6 +122,9 @@ In addition to your access token, the EyeEm API accepts the following headers (n
 - X-Api-Version: the current API version is 2.2.0, the default is 2.0.0. As indicated on the specific endpoints, the parameters and responses vary between API versions. It is recommended to always use the latest API version
 - X-hourOfDay: Integer between 0 and 24. For venue and location related requests.
 - Accept-Language: Currently, the following languages are supported ('en','de','ru','ar','es','fr','ja','pt','id','zh','nl','pl','th','tr','uk','vi'). The default is 'en'.
+- X-clientDevice: client device name
+- X-clientFirmware: client firmware
+- X-buildVersion: client app build version
 
 ##Pagination
 ***
