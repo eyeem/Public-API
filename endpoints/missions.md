@@ -10,7 +10,7 @@ Retrieves current ongoing photo missions
 
 
 
-### GET / <a id="wiki-"></a>  
+### GET / <a id=""></a>  
 
 
 
