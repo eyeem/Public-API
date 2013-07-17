@@ -14,22 +14,22 @@ You can register an app by going to [Your apps on EyeEm](http://eyeem.com/develo
 
 ###Endpoints
 
-* **[Albums](http://cdn.eyeem.com/thumbendpoints/albums.md#files)**
-* **[Apps](http://cdn.eyeem.com/thumbendpoints/apps.md#files)**
-* **[Auth](http://cdn.eyeem.com/thumbendpoints/auth.md#files)**
-* **[Discover](http://cdn.eyeem.com/thumbendpoints/discover.md#files)**
-* **[Missions](http://cdn.eyeem.com/thumbendpoints/missions.md#files)**
-* **[News](http://cdn.eyeem.com/thumbendpoints/news.md#files)**
-* **[Photos](http://cdn.eyeem.com/thumbendpoints/photos.md#files)**
-* **[Search](http://cdn.eyeem.com/thumbendpoints/search.md#files)**
-* **[Topics](http://cdn.eyeem.com/thumbendpoints/topics.md#files)**
-* **[Users](http://cdn.eyeem.com/thumbendpoints/users.md#files)**
-* **[Venues](http://cdn.eyeem.com/thumbendpoints/venues.md#files)**
+* **[Albums](endpoints/albums.md#files)**
+* **[Apps](endpoints/apps.md#files)**
+* **[Auth](endpoints/auth.md#files)**
+* **[Discover](endpoints/discover.md#files)**
+* **[Missions](endpoints/missions.md#files)**
+* **[News](endpoints/news.md#files)**
+* **[Photos](endpoints/photos.md#files)**
+* **[Search](endpoints/search.md#files)**
+* **[Topics](endpoints/topics.md#files)**
+* **[Users](endpoints/users.md#files)**
+* **[Venues](endpoints/venues.md#files)**
 
 
 ###Resources
-* **[Model](http://cdn.eyeem.com/thumbresources/model.md#files)**
-* **[Errors](http://cdn.eyeem.com/thumbresources/errors.md#files)**
+* **[Model](resources/model.md#files)**
+* **[Errors](resources/errors.md#files)**
 
 
 ##Basics

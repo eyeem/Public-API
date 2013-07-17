@@ -1,0 +1,11 @@
+TOPICS
+======
+
+GET /topics
+-----------
+params:
+	- autoComplete = string
+
+todos:
+	- replace by regular album search (now that it's fast enough)
+	- remove "TOPICS" from internal lexicon

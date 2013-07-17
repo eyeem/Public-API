@@ -1,0 +1,42 @@
+NEWS
+====
+
+GET /news
+---------
+params:
+	- aggregated = 1/0 (default = 0)
+		- old = 1/0 (???)
+	- offset = int (default 0)
+	- limit = int (default 30)
+	- oldestId = int
+
+todos:
+	- deprecate old stuff in v3, new GET /news defaults would be the parameters being passed now
+
+notes:
+	- requires authenticated user
+
+GET /news/aggregated
+--------------------
+params:
+	- offset = int (default 0)
+	- limit = int (default 30)
+	- oldestId = int (used for compatibility)
+
+todos:
+	- in v3, this will be moved to the top-level endpoint (GET /news)
+	- better pagination (since/after, etc...)
+
+notes:
+	- requires authenticated user
+
+POST /news/{id}/read
+--------------------
+mark news item(s) as read
+
+params:
+	- include_older = 1/0 (default 0)
+
+notes:
+	- still in use?
+	- requires authenticated user

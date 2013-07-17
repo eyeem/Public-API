@@ -34,7 +34,7 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums?ids=35,3352`
+`https://api.eyeem.com/v2/albums?ids=35,3352`
 
 ```json
 {
@@ -211,7 +211,7 @@ Retrieves albums specified in the id URL query parameter, or searches for albums
 }
 ```
 
-`http://api.eyeem.com/v2/albums?q=berlin&limit=5&offset=20`
+`https://api.eyeem.com/v2/albums?q=berlin&limit=5&offset=20`
 
 ```javascript
 

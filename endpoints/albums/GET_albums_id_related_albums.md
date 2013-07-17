@@ -26,7 +26,7 @@ Retrieves albums related to the one specified in the id URL query parameter. use
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/17/relatedAlbums`
+`https://api.eyeem.com/v2/albums/17/relatedAlbums`
 
 ```json
 

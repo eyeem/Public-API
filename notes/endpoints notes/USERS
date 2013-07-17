@@ -1,0 +1,579 @@
+USERS
+=====
+
+GET /users
+----------
+get "users"
+
+params:
+	- suggested = bool (if true, returns suggested users)
+		- offset = int (default 0)
+		- limit = int (default 30)
+		- onlyId = bool
+		- detailed = bool (default 1)
+	- q = string (min length 3 chars)
+		- offset = int (default 0)
+		- limit = int (default 30)
+		- friends = bool (default false)
+		- followers = bool (default false)
+		- detailed = bool (default 1)
+	- ids = csv of user ids
+		- offset = int (default 0)
+		- limit = int (default 30)	
+		- detailed = bool (default 1)
+	- action_ids = array of fb_action_ids << returns one user
+
+todos:
+	- action_ids needs to be somewhere else
+	- unify params!
+	- introduce fields/subfields
+	- introduce filters
+	- better pagination!
+	- introduce types
+
+
+POST /users
+-----------
+create a user
+
+params:
+	- email = string
+	- password = string
+	- nickname = string
+	- fullname = string
+	- photo = file (in request body)
+	- description = string
+
+notes:
+	- native scope! (or at least it should be!)
+
+todos:
+	- make nickname required!
+
+GET /users/{id}
+---------------
+params:
+	- detailed = 1/0 (default 1)
+	- includePhotos = 1/0 (default 0)
+    - numPhotos = int (default 10)
+	- photoDetails = 1/0 (default 0, requires detailed=1)
+	- photoLikers = 1/0 (default 1, requires photoDetails=1)
+	- photoNumLikers = int (default 1, requires photoDetails=1, photoLikers=1)
+	- photoPeople = 1/0 (default 1, requires photoDetails=1)
+	- photoNumPeople = int (default 1, requires photoDetails=1, photoPeople=1)
+	- photoComments = 1/0 (default 1, requires photoDetails=1)
+	- photoNumComments = int (default 2, requires photoDetails=1, photoPeople=2)
+	- photoAlbums = 1/0 (default 1, requires photoDetails=1)
+	- includeSettings = 1/0 (default 0, requires detailed = 1)
+
+todos:
+ 	- introduce fields (and subfields)
+ 	- introduce filters
+ 	- introduce before/after or better pagination
+
+
+PUT /users/{id}
+PATCH /users/{id}
+POST /users/{id}
+-----------------
+only updates whichever params are actually provided in the request
+
+params:
+	- email = string
+	- password = string
+	- nickname = string
+	- fullname = string
+	- photo = file (in request body)
+	- description = string
+
+notes:
+	- can only edit my own account
+	- authed user
+
+
+DELETE /users/{id}
+------------------
+forwards to auth.deleteUser
+
+
+GET /users/{id}/likedAlbums
+POST /users/{id}/likedAlbums
+----------------------------
+params:
+	- onlyId = 1/0
+	- offset = int (default 0)
+	- limit = int (default 20)
+    - detailed = 1/0 (default 1)
+    - includePhotos = 1/0 (default 0)
+    - numPhotos = int (default 7, requires includePhotos = 1, detailed = 1)
+    - includeContributors = 1/0 (default 0)
+    - includeLikers = 1/0 (default 0)
+    - includeSubtitle = 1/0 (default 1)
+notes:
+	- post requires authed user.
+	- if POST, forwards to users.postLikedAlbums
+	- "favorite" is the proper name of this action, should be the default.
+	- this endpoint is public but can be blocked. strange -- fh
+
+todos:
+	- onlyId should be a separate endpoint
+ 	- introduce fields/filters
+ 	- better pagination
+
+
+GET /users/{id}/favoritedAlbums
+POST /users/{id}/favoritedAlbums
+--------------------------------
+notes:
+	- forwards to users.executeLikedAlbums
+	- "favorite" is the proper name of this action, should be the default.
+
+
+POST /users/{user_id}/likedAlbums (postLikedAlbums)
+---------------------------------------------------
+params:
+	- album_id = csv of albumIds (array)
+
+notes:
+	- requires authed user
+
+todos:
+	- multiple endpoints for the same functionality. limit to one.
+	- (possibly this one?)
+
+GET /users/{id}/feed
+--------------------
+params:
+	- offset = int (default 0)
+	- limit = int (default 20)
+	- detailed = 1
+	- includePhotos = 1
+	- numPhotos = 9
+	- includeContributors = 1/0 (default 0)
+	- includeLikers = 1/0 (default 0)
+
+notes:
+	- requires authed user
+	- is this active or deprecated? where is it used w/in the product?
+
+todos:
+	- better pagination
+	- introduce fields
+	- remove if truly deprecated!
+
+
+POST /users/{id}/share
+----------------------
+params:
+	- services = comma-separated (facebook, twitter, tumblr)
+	- message = string
+
+
+
+GET /users/{id}/followers
+-------------------------
+params:
+	- offset = int (default 0)
+	- limit = int (default 20)
+	- onlyId = 1/0
+	- detailed = 1/0 (default 0)
+
+todos:
+	- better pagination
+	- introduce fields
+	- separate endpoint for onlyId
+
+notes:
+	- this endpoint is public but can be blocked. strange -- fh
+
+
+
+GET /users/{user_id}/suggestions
+--------------------------------
+params:
+	- service = string (optional, default all)
+	- detailed = 1/0 (default 0)
+
+notes:
+	- introduce fields
+
+
+GET /users/{id}/blocked/{blocked_id} 
+------------------------------------
+params:
+	- user_id in url
+	- blocked_id in url
+
+
+
+
+PUT /users/{id}/blocked/{blocked_id} 
+------------------------------------
+params:
+	- user_id in url
+	- blocked in url
+
+notes:
+	- requires authed user
+
+
+DELETE /users/{id}/blocked/{blocked_id}
+---------------------------------------
+params:
+	- user_id in url
+	- blocked_id in url
+
+notes:
+	- requires authed user
+
+
+GET /users/{id}/friends/{follower_id}
+GET /users/{follower_id}/followers/{user_id}
+--------------------------------------------
+params:
+	- user_id in url
+	- follower_id in url
+
+
+todos:
+	- kill this retarded routing: '/*/followers/*' => array('action' => 'follow', 'follower_id' => '$1', 'user_id' => '$2')
+	- one endpoint per fx, remove duplicates!
+
+
+
+PUT /users/{id}/friends/{follower_id}
+PUT /users/{follower_id}/followers/{user_id}
+--------------------------------------------
+params:
+	- user_id in url
+	- follower_id in url
+
+notes:
+	- can't follow blocked/restricted accounts
+	- requires authed user
+
+todos:
+	- kill this retarded routing: '/*/followers/*' => array('action' => 'follow', 'follower_id' => '$1', 'user_id' => '$2')
+	- one endpoint per fx, remove duplicates!
+
+
+
+DELETE /users/{id}/friends/{follower_id}
+DELETE /users/{follower_id}/followers/{user_id}
+-----------------------------------------------
+params:
+	- user_id in url
+	- follower_id in url
+
+notes:
+	- requires authed user
+
+todos:
+	- kill this retarded routing: '/*/followers/*' => array('action' => 'follow', 'follower_id' => '$1', 'user_id' => '$2')
+	- one endpoint per fx, remove duplicates!
+
+
+
+GET /users/{id}/friends
+-----------------------
+params:
+	- offset = int (default 0)
+	- limit = int (default 20)
+	- onlyId = 1/0
+	- detailed = 1/0 (default 0)
+
+todos:
+	- better pagination
+	- introduce fields
+	- separate endpoint for onlyId
+
+notes:
+	- this endpoint is public but can be blocked. strange -- fh
+
+GET /users/{id}/followings
+--------------------------
+notes:
+	- forwards to /users/{id}/friends
+	- duplicate endpoint. kill it.
+
+POST /users/{id}/friends
+------------------------
+follows one or several users
+
+params:
+	- friend_id = user id, or array of user ids (backwards-compatibility support for following_id)
+
+notes:
+	- requires authed user
+
+
+GET /users/{id}/photos
+----------------------
+params:
+    - offset = int (Default 0)
+    - limit = int (Default 30)
+    - after = photo id
+    - before = photo id
+    - order = desc | asc (default: desc)
+	- onlyId = 1/0 (default 0)	
+	- filter = nearby
+  		- lat = latitude (float)
+  		- lng = longitude (float)
+	- sort = top (default/empty = chronological)
+	- detailed = 1/0 (default 0)
+	- includeLikers = 1/0 (default 0, requires detailed=1)
+	- numLikers = int (default 1, requires detailed=1, photoLikers=1)
+	- includePeople = 1/0 (default 0, requires detailed=1)
+	- numPeople = int (default 4, requires detailed=1, photoPeople=1)
+	- includeComments = 1/0 (default 0, requires detailed=1)
+	- numComments = int (default 2, requires detailed=1, photoPeople=2)
+	- includeAlbums = 1/0 (default 0, requires detailed=1)
+
+todos:
+	- separate endpoint for onlyId (photoIds)
+	- introduce fields
+	- remove duplicate pagination (use only before/after?)
+	- merge "order" w/ "sort" params?
+
+
+
+GET /users/{id}/likedPhotos
+---------------------------
+params:
+    - offset = int (Default 0)
+    - limit = int (Default 20)
+    - onlyId = 1/0
+	- detailed = 1/0 (default 1)
+	- includeLikers = 1/0 (default 0, requires detailed=1)
+	- numLikers = int (default 1, requires detailed=1, photoLikers=1)
+	- includePeople = 1/0 (default 1, requires detailed=1)
+	- numPeople = int (default 4, requires detailed=1, photoPeople=1)
+	- includeComments = 1/0 (default 0, requires detailed=1)
+	- numComments = int (default 2, requires detailed=1, photoPeople=2)
+	- includeAlbums = 1/0 (default 0, requires detailed=1)
+	- userDetails = 1/0 (default 0, requires detailed=1)
+
+todos:
+	- separate endpoint for onlyId (photoIds)
+	- introduce fields, eventually filters, sorts.
+	- better pagination
+
+
+POST /users/{id}/likedPhotos
+----------------------------
+notes:
+	- forwards to photos.addLiker
+	- requires authenticated user
+
+todos:
+	- remove duplicate endpoints (either here or in photos.addLiker)
+
+
+GET /users/{id}/friendsPhotos
+-----------------------------
+params:
+    - offset = int (Default 0)
+    - limit = int (Default 30)
+    - after = photo id
+    - before = photo id
+    - order = desc | asc (default: desc)
+	- detailed = 1/0 (default 1)
+	- includeLikers = 1/0 (default 1, requires detailed=1)
+	- numLikers = int (default 1, requires detailed=1, photoLikers=1)
+	- includePeople = 1/0 (default 1, requires detailed=1)
+	- numPeople = int (default 4, requires detailed=1, photoPeople=1)
+	- includeComments = 1/0 (default 1, requires detailed=1)
+	- numComments = int (default 2, requires detailed=1, photoPeople=2)
+	- includeAlbums = 1/0 (default 0, requires detailed=1)
+	- userDetails = 1/0 (default 0, requires detailed=1)
+
+todos:
+	- separate endpoint for onlyId (photoIds)
+	- onlyId is disabled, remove or reactivate	
+	- introduce fields
+	- remove duplicate pagination (use only before/after?)
+	- merge "order" w/ "sort" params?
+
+notes:
+	- this endpoint is public but can be blocked. strange -- fh
+
+
+GET /users/{user_id}/socialMedia
+--------------------------------
+returns a user's social media services object.
+
+notes:
+	- requires authed user w/ native client
+
+
+GET /users/{id}/settings
+------------------------
+returns a user's arbitrary settings (mostly for web banners)
+notes:
+	- requires authed user with native client
+
+todos:
+	- docs say it's deprecated, traffic shows it's still in use. investigate.
+
+POST /users/{id}/settings
+-------------------------
+params:
+	- settings = key/value (possibly array)
+
+notes:
+	- requires authed user with native client
+
+todos:
+	- docs say it's deprecated, traffic shows it's still in use. investigate.
+
+
+
+GET /users/{id}/newsSettings
+PATCH /users/{id}/newsSettings
+POST /users/{id}/newsSettings
+PUT /users/{id}/newsSettings
+------------------------------
+notes:
+	- deprecated, forwards to users.executeFlags
+	- remove from codebase in v3
+	- remove from documentation now.
+
+
+GET /users/{id}/flags
+PATCH /users/{id}/flags
+POST /users/{id}/flags
+PUT /users/{id}/flags
+-----------------------
+returns a user's settings (news, push, email, etc)
+
+notes:
+	- requires authed user
+
+
+
+POST /users/{user_id}/socialMedia/{service}
+PUT /users/{user_id}/socialMedia/{service}
+DELETE /users/{user_id}/socialMedia/{service}
+---------------------------------------------
+params:
+	- user_id (in url)
+	- service (in url)
+	- connect = 1/0 (in case this is the initial step to connect)
+	- callback = 1/0
+		- inputData
+		- requestToken
+		- redirectUrl
+
+
+notes:
+	- requires natively authed user
+	- references users.executeSocialMediaService
+	- forwards to users.socialMediaUpdate (if callback and all good, or if delete)
+	-
+
+todo:
+	- merge with endpoint below, simplify code!
+
+POST /users/{user_id}/socialMedia/{service}
+PUT /users/{user_id}/socialMedia/{service}
+PATCH /users/{user_id}/socialMedia/{service}
+--------------------------------------------
+params:
+	- service = string (in url: facebook,twitter,tumblr, etc...)
+	- service_user_id = string (user id on external service, for flickr)
+	- oauth_token = string (foursquare,flickr,tumblr,twitter)
+	- oauth_token_secret = string (foursquare,flickr,tumblr,twitter)
+	- service_screen_name = string (twitter,flickr)
+	- follow = 1/0 (boolean to followEyeEm --> twitter)
+
+notes:
+	- facebook forwards to users.facebookUpdate
+
+GET /users/{user_id}/facebookPage
+---------------------------------
+gets the facebook pages a user manages
+
+notes:
+	- requires authed user
+
+todos:
+	- move to native scope?
+
+
+POST /users/{user_id}/facebookPage
+----------------------------------
+params:
+	- page_id = string (id of page to start posting to, "me" resets to own timeline)
+
+notes:
+	- requires authed user
+
+todos:
+	- move to native scope?
+
+
+POST /users/{user_id}/socialMedia/facebook
+PUT /users/{user_id}/socialMedia/facebook
+PATCH /users/{user_id}/socialMedia/facebook
+-------------------------------------------
+connects a facebook account to a user, or updates a user's facebook account token and settings
+params:
+	- token = string (optional, for connecting a new fb account) [also called oauth_token]
+	- id = string [also called service_user_id]
+	- expires = (facebook token expiration date)
+    - photo_like = 1/0 (also called photolike)
+    - photo_comment = 1/0 (also called photocomment)
+    - album_like = 1/0 (also called albumlike)
+    - user_follow = 1/0 (also called userfollow)
+    - timelinepopup = 1/0 (also called timeline_popup)
+
+todos:
+	- fucking parameter transformations!
+
+GET /users/{id}/topics
+----------------------
+
+notes:
+	- only for myself
+	- requires authed user
+
+todos:
+	- improve this once we deprecate topics
+	- add albumId as well
+
+GET /users/{id}/smContacts
+POST /users/{id}/smContacts
+---------------------------
+params:
+	- service = string (facebook, twittter)
+	- matchContacts = 1/0 (default 0, returns only those on eyeem)
+	- type = string (default "friends")
+	- detailed = 1/0 (default 1)
+
+notes:
+	- required authed user with a native client
+
+todos:
+	- understand this endpoint and the params!
+
+GET /users/{id}/emailContacts
+POST /users/{id}/emailContacts
+------------------------------
+params:
+	- emails = csv (email addresses to compare)
+	- detailed = 1/0 (default 1)
+
+todo:
+	- introduce fields/filters/pagination
+	- more secure implementation of this
+	- only GET (no need for POST)
+
+POST /users/{user_id}/hide
+--------------------------
+hides a user (and their photos) from popular, etc
+
+params:
+	- hide = 1/0 (default 0)
+
+notes:
+	- requires authed admin

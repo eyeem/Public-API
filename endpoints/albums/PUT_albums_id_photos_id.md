@@ -22,7 +22,7 @@ Add an existing photo to an album.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/1234/photos/11234134`)
+`https://api.eyeem.com/v2/albums/1234/photos/11234134`)
 
 
  

@@ -1,10 +1,12 @@
-# GET /venues/foursquareToken    
+# GET /venues/foursquareToken
 ***
 `/venues/foursquareToken`
 
 ### Description
 ***
-Retrieve the eyeem foursquare token (needed to create a venue).
+Retrieve the eyeem foursquare token for a user (needed to create a venue).
+
+Requires authenticated user with native app access token.
 
 
 ### Response
@@ -19,7 +21,7 @@ Retrieve the eyeem foursquare token (needed to create a venue).
 ### Examples
 ***
 
-`https://api.eyeem.com/v2/venues/foursquareToken?access_token=fdd3e4d7af22895b155c1e7c5b5d88a4`
+`https://api.eyeem.com/v2/venues/foursquareToken`
 
 
 

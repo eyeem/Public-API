@@ -1,0 +1,170 @@
+AUTH
+====
+
+notes:
+	- all these endpoints require NATIVE scope.
+
+POST /auth/login
+POST /auth/signIn
+-----------------
+params:
+	- username/email = string
+	- password = string
+	
+todos:
+	- duplicate endpoints, remove /auth/signin
+
+
+POST /auth/facebookLogin
+------------------------
+params:
+	- username = string (is fbUserId)
+	- password = string (is fbAccessToken)
+
+
+todos:
+	- why the pre-filling of parameters, just let clients send them as we need them!
+
+
+POST /auth/logout
+POST /auth/signOut
+------------------
+todos:
+	- duplicate endpoints, remove /auth/signout
+
+notes:
+	- requires auth user
+	- doesn't require native scope
+
+
+POST /auth/signUp
+-----------------
+params:
+	- email/username = string (email address)
+	- password = string
+
+notes:
+	- forwards to /users
+
+todos:
+	- support for email/username is redundant.
+
+
+GET /auth/checkNickname
+POST /auth/checkNickname
+------------------------
+checks if nickname is valid and if it's in the system already
+
+
+GET /auth/checkEmail
+POST /auth/checkEmail
+---------------------
+checks if email is valid and if it's in the system already
+
+params:
+	- email = string
+
+GET /auth/confirmEmail
+POST /auth/confirmEmail
+-----------------------
+params:
+	- token = string (validation token sent to user in activation mail)
+
+POST /auth/requestPassword
+--------------------------
+creates a password reset code and emails to user
+
+params:
+	- email
+
+GET /auth/resetPassword
+-----------------------
+params:
+	- token
+
+todos:
+	- what does the GET variant do here? signs the user in?!
+
+POST /auth/resetPassword
+------------------------
+resets a user's password and/or activates their account
+
+params:
+	- token
+	- password
+	
+
+POST /auth/deleteUser
+DELETE /auth/deleteUser
+-----------------------
+params:
+	- user_id = user id
+
+notes:
+	- requires authed admin, or own user.
+	- is this safe? getTargetUser returns the active user (if not provided with user_id)
+	- is this in production/use?
+
+GET /auth/ok
+POST /auth/ok
+-------------
+check that server is ok
+
+notes:
+	- requires authed user
+
+todos:
+	- irrelevant, deprecate this. api health should be monitored and reported differently.
+
+
+POST /auth/ping
+---------------
+registers unique devices opening eyeem for the first time
+params:
+	- uuid = string
+	- device = string
+
+POST /auth/error
+----------------
+old endpoint for clients to log errors on server
+
+params:
+	- message = string (error message)
+
+todos:
+	- still in use?
+
+POST /auth/push
+---------------
+params:
+	- device_token = string
+	- uuid = string
+	- device = string
+	- gcm = 1/0 (android only, default 0)
+
+notes:
+	- requires authenticated user
+
+todos:
+	- gcm is default everywhere now? (android)
+	- check logic here (broken notifications for some users?)
+
+DELETE /auth/push
+-----------------
+params:
+	- device_token = string
+	- uuid = string
+	- device = string
+
+notes:
+	- requires authenticated user
+
+GET /auth/socialServiceKeys
+---------------------------
+returns the keys for EyeEm apps on external services.
+
+params:
+	- service_name = string (facebook, twitter, tumblr, foursquare, flickr)
+
+todo:
+	- is this endpoint secure enough? we're sending this stuff to clients!

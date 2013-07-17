@@ -1,7 +1,7 @@
 #Endpoint: Auth
 ***
 
-These are the API calls available to native apps only. Note that all requests require authorization, either by including the access_token in the header, or the client_id and client_secret as a URL query parameter (see [home](https://github.com/eyeem/API/blob/master/README.md#files)).
+These are the API calls available to native apps only. Note that all requests require authorization.
 
 Furthermore, only native apps can access this endpoint, and it's preferable to always include the following headers with every request:
 
@@ -56,7 +56,7 @@ DESCRIPTION
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/login`
+`https://api.eyeem.com/v2/auth/login`
 
 ***
 
@@ -80,7 +80,7 @@ Pings the server whenever the EyeEm app is started for the very first time on a 
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/ping`
+`https://api.eyeem.com/v2/auth/ping`
 
 ***
 
@@ -100,7 +100,7 @@ posts an error message for the devs to look into. typically, this is called afte
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/error`
+`https://api.eyeem.com/v2/auth/error`
 
 ***
 
@@ -124,7 +124,7 @@ description: registers a device for push notification
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/push`
+`https://api.eyeem.com/v2/auth/push`
 
 ***
 
@@ -148,7 +148,7 @@ unregisters a device from push notification
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/push`
+`https://api.eyeem.com/v2/auth/push`
 ***
 
 ### POST /auth/facebookLogin <a id="wiki-POSTfacebookLogin"></a> 
@@ -174,7 +174,7 @@ allow a user to signup OR login with their facebook credentials. This is called 
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/facebookLogin`
+`https://api.eyeem.com/v2/auth/facebookLogin`
 
 ***
 
@@ -201,7 +201,7 @@ create a new account
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/signUp`
+`https://api.eyeem.com/v2/auth/signUp`
 
 ***
 
@@ -221,7 +221,7 @@ logs a user out and deletes their access_token
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/logout`
+`https://api.eyeem.com/v2/auth/logout`
 
 --------------------------------------------------------------------------------
 
@@ -242,7 +242,7 @@ check that the user is still logged in with a valid account
 
 #### Examples
 
-`http://www.eyeem.com/api/v2/auth/ok`
+`https://api.eyeem.com/v2/auth/ok`
 
 ***
 
@@ -264,4 +264,4 @@ get the keys for one of the supported social services
 
 #### Examples
 
-`http://apitest.eyeem.com/api/v2/auth/socialServiceKeys?service_name=foursquare`
+`https://api.eyeem.com/v2/auth/socialServiceKeys?service_name=foursquare`

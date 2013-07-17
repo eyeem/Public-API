@@ -26,7 +26,7 @@ Checks whether a user has contributed a photo to the album.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/17/contributors/1013`
+`https://api.eyeem.com/v2/albums/17/contributors/1013`
 
 
 ```json

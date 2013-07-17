@@ -25,7 +25,7 @@ Retrieves a news item by id.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/news?markAsRead=1,2,3,4,5`
+`https://api.eyeem.com/v2/news?markAsRead=1,2,3,4,5`
 
 
 

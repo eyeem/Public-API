@@ -1,0 +1,16 @@
+SEARCH
+======
+
+GET /search
+-----------
+params:
+	- q = string (search query)
+	- offset = int (default 0)
+	- limit = int (default 10)
+	- includeAlbums = 1/0 (default 0)
+	- includeUsers = 1/0 (default 0)
+
+todos:
+	- introduce fields
+	- introduce filters (see the endpoints GET /albums and GET /users for inspiration)
+	- better pagination

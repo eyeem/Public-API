@@ -1,0 +1,47 @@
+VENUES
+======
+
+POST /venues
+------------
+creates a venue
+
+params:
+	- service = string (eyeem, foursquare)
+	- id = string (new venue id)
+	- location[lat] = latitude
+	- location[lng] = longitude
+	- categories = string (foursquare category id)
+todo:
+	- lat/lng: standardize format for passing those params
+	- categories not used if service=eyeem (which is now always the case!)
+	- can we optimize this?
+	- check for duplicates?
+	- creation no longer allowed on foursquare - in this case the id provided must already be a valid venue on foursquare
+
+GET /venues/search
+------------------
+params:
+  	- lat = latitude (float)
+  	- lng = longitude (float)
+  	- cityName = string (current city [from device])
+  	- cc = string (country code [from device])
+  	- query = string (search string, min 3 characters)
+  	- time  = string (All, Morning, Noon...) *deprecated from 2.2.0 onwards
+
+notes:
+	- Api Version 2.2.0 (needs client time of day)
+
+todos:
+	- endpoint should be only for native clients
+
+POST /venues/foursquare
+-----------------------
+todos:
+	- deprecated: remove from codebase for v3
+
+GET /venues/foursquareToken
+---------------------------
+returns a user's foursquare access_token for EyeEm if available
+
+notes:
+	- requires authenticated user with native app access token

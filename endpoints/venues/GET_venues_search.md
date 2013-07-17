@@ -1,10 +1,10 @@
-# GET /venues/search
+# GET /venues/search    >>X-Api-Version 2.2.0<<
 ***
 `/venues/search`
 
 ### Description
 ***
-Retrieves venues for a specific location and topics for each venue.
+Retrieves venues for a specific location and topics for each venue. Additionally, the current city album is returned. If the X-hourOfDay header is provided, topic suggestions are filtered according to their relevance (ex: breakfast in the morning, dinner at night)
 
 ### Parameters
 ***
@@ -13,8 +13,9 @@ Retrieves venues for a specific location and topics for each venue.
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**lat**|latitude|integer|x||
 |**lng**|longitude|integer|x||
-
-
+|**cityName**|current city name(from device)|String|||
+|**cc**|current country code (from device)|String|||
+|**query**|string to search for|String|||
 
 ### Response
 ***
@@ -25,7 +26,7 @@ Retrieves venues for a specific location and topics for each venue.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/venues/search?lat=52.2&lng=14.4`
+`https://api.eyeem.com/v2/venues/search?lat=52.2&lng=14.4`
 
 ```json
 {
@@ -34,9 +35,9 @@ Retrieves venues for a specific location and topics for each venue.
       "id": "53003",
       "name": "Frankfurt (Oder)",
       "type": "city",
-      "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/3b8903f12f541f4a79c48e765312308653f1475b-1348416859",
+      "thumbUrl": "http://www.eyeem.com/thumb/sq/200/81649975a52da803fa22e4e0aaa656bf5972728d-1359237811",
       "webUrl": "http://www.eyeem.com/a/53003",
-      "updated": "2012-09-23T18:15:37+0200",
+      "updated": "2013-07-15T07:56:55+0200",
       "location": {
         "latitude": "52.34714",
         "longitude": "14.55062",
@@ -45,80 +46,82 @@ Retrieves venues for a specific location and topics for each venue.
           "id": "23",
           "name": "Germany",
           "type": "country",
-          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/6b982ebb7aca0b5578b4cbf3ef83fd830c8fc63e-1351523338",
+          "thumbUrl": "http://cdn.eyeem.com/thumb/sq/200/4fbf551231917efbc913d5a689c982f8db2c5f7a-1358438528",
           "webUrl": "http://www.eyeem.com/a/23",
-          "updated": "2012-10-29T16:09:12+0100"
+          "updated": "2013-07-17T13:42:18+0200"
         }
       },
-      "totalPhotos": 9,
-      "totalLikers": 0,
-      "totalContributors": 7
+      "totalPhotos": 266,
+      "totalLikers": 2,
+      "totalContributors": 57,
+      "hidden": false
     },
-    "defaultTopics": [
-      "Hanging out",
-      "Taking photos",
-      "Photo",
-      "Smile",
-      "Check this out",
-      "That's me",
-      "Hello world",
-      "Cheese!",
-      "Relaxing",
-      "Hi!",
-      "Enjoying life"
+    "defaultTopics": {
+      "16": "hanging out",
+      "12422": "taking photos"
+    },
+    "defaultSentences": [
+      "[a:16] with my friends",
+      "hate [a:12422]"
     ],
     "venues": {
       "offset": 0,
-      "limit": 3,
-      "total": 3,
+      "limit": 30,
+      "total": 30,
       "items": [
+        {
+        "name": "Tor zum Schlaubetal",
+        "serviceId": "4f11a2d0e4b0044a23655beb",
+        "venueServiceName": "foursquare",
+        "topics": [],
+        "category": "4bf58dd8d48988d159941735",
+        "categoryName": "Hiking Trail"
+        },
+        {
+          "name": "Bahnhof Mixdorf",
+          "serviceId": "511ac86da629ec8f68cf4fce",
+          "venueServiceName": "foursquare",
+          "topics": {
+            "851": "sleeping",
+            "911": "subway",
+            "7131": "commuting",
+            "197636": "public transportation"
+          },
+          "category": "4bf58dd8d48988d129951735",
+          "categoryName": "Train Station",
+          "sentences": [
+            "I love [a:197636]",
+            "running to catch the [a:911]",
+            "almost [a:851]",
+            "[a:7131] again?"
+          ]
+        },
         {
           "name": "Mixdorfer Stübchen",
           "serviceId": "4dea111845dd3993a880fa5e",
           "venueServiceName": "foursquare",
-          "topics": [
-            "German food",
-            "Eating",
-            "Schweinshaxe",
-            "Having a beer",
-            "Meat and potatoes",
-            "Overdosing on Sauerkraut"
-          ],
+          "topics": [],
           "category": "4bf58dd8d48988d10d941735",
           "categoryName": "German Restaurant"
         },
         {
-          "name": "Tor zum Schlaubetal",
-          "serviceId": "4f11a2d0e4b0044a23655beb",
+          "name": "Bahnhof Beeskow",
+          "serviceId": "511ac86da629ec8f68cf4f7d",
           "venueServiceName": "foursquare",
-          "topics": [
-            "On a hike",
-            "Mountain goat",
-            "Nature",
-            "My feet hurt",
-            "Walking",
-            "Relaxing",
-            "Enjoying the sights",
-            "Nice views",
-            "Take a break"
-          ],
-          "category": "4bf58dd8d48988d159941735",
-          "categoryName": "Hiking Trail"
-        },
-        {
-          "name": "Ragower Mühle",
-          "serviceId": "50506182e4b0d81e12ee6988",
-          "venueServiceName": "foursquare",
-          "topics": [
-            "Eating",
-            "Great food",
-            "Bangers and mash",
-            "Pub grub",
-            "Fish and chips",
-            "Moules et Frites"
-          ],
-          "category": "4bf58dd8d48988d155941735",
-          "categoryName": "Gastropub"
+          "topics": {
+            "851": "sleeping",
+            "911": "subway",
+            "7131": "commuting",
+            "197636": "public transportation"
+          },
+          "category": "4bf58dd8d48988d129951735",
+          "categoryName": "Train Station",
+          "sentences": [
+            "I love [a:197636]",
+            "running to catch the [a:911]",
+            "almost [a:851]",
+            "[a:7131] again?"
+          ]
         }
       ]
     }

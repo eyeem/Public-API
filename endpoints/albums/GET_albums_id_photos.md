@@ -36,7 +36,7 @@ Retrieves photos of an album specified in the id URL query parameter, sorted chr
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/12/photos?offset=0&limit=5`
+`https://api.eyeem.com/v2/albums/12/photos?offset=0&limit=5`
 
 
 ```json

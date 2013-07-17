@@ -35,7 +35,7 @@ Retrieves album specified in the id URL query parameter.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/1234?`
+`https://api.eyeem.com/v2/albums/1234?`
 
 ```json
 

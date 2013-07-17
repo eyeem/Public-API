@@ -28,7 +28,7 @@ Retrieves an array of the users who have added photos to the album.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/1234/contributors?offset=0&limit=5`
+`https://api.eyeem.com/v2/albums/1234/contributors?offset=0&limit=5`
 
 ```json
 

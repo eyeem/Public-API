@@ -28,7 +28,7 @@ Retrieves an array of the users who like the album.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/albums/1234/likers?offset=0&limit=5`
+`https://api.eyeem.com/v2/albums/1234/likers?offset=0&limit=5`
 
 
 

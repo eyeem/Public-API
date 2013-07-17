@@ -28,10 +28,10 @@ Request parameters need to be standardized. V3 will introduce the following (opt
 - `type`: for endpoints that span multiple result sets - an example would be `/albums`. `type` in that case could be `ids`, `tags`, `city`, `country`. **stupid?**
 - `fields`: This parameter will replace all the stupid `detailed=1,includeAlbums=1,includeLikers=1` etc... it defines what additional object info should be returned. For example, on `GET` `/photos/{id}` `fields=user,albums,likers` would additionally include the photographer object, the album details and the photo's likers. **how can we add more details here? for example, the number of likers to return?**
 - `subFields`: In some endpoints, we can specify the fields required for child objects. For example, in `/albums/{id}` we can request that photos be included with certain fields. At the moment, we pass fields like `includePhotoLikers`. That's stupid. **what should we replace this with?**
+- `lat` & `lng`: Standardized naming for passing latitude and longitude throughout the API.
 
 Additionally, default values need to be normalized across all endpoints. Any endpoint that returns people (photo likers, album contributors, friends) should for example return the same number of people by default, same applies to pagination limits, etc.
 
 ###Pagination parameters
 ***
 Pagination needs a facelift. Offset/Limit doesn't scale, and it can't reliably return all new items. Already in v2.2.0, some endpoints work with `before` and `after`. We should consider switching to either that, or possibly some timestamp based pagination.
-

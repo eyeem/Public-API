@@ -26,7 +26,7 @@ Get a user's profile information.
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/users/me`
+`https://api.eyeem.com/v2/users/me`
 
 ```json
 {

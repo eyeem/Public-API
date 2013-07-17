@@ -30,7 +30,7 @@ Updates a news item by id and sets it (and optionally, all items older than it) 
 ### Examples
 ***
 
-`http://api.eyeem.com/v2/news/1234`
+`https://api.eyeem.com/v2/news/1234`
 
 
 
