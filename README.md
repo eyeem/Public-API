@@ -14,22 +14,22 @@ You can register an app by going to [Your apps on EyeEm](http://eyeem.com/develo
 
 ###Endpoints
 
-* **[Albums](https://github.com/eyeem/public-API/tree/master/endpoints/albums.md#files)**
-* **[Apps](https://github.com/eyeem/public-API/tree/master/endpoints/apps.md#files)**
-* **[Auth](https://github.com/eyeem/public-API/tree/master/endpoints/auth.md#files)**
-* **[Discover](https://github.com/eyeem/public-API/tree/master/endpoints/discover.md#files)**
-* **[Missions](https://github.com/eyeem/public-API/tree/master/endpoints/missions.md#files)**
-* **[News](https://github.com/eyeem/public-API/tree/master/endpoints/news.md#files)**
-* **[Photos](https://github.com/eyeem/public-API/tree/master/endpoints/photos.md#files)**
-* **[Search](https://github.com/eyeem/public-API/tree/master/endpoints/search.md#files)**
-* **[Topics](https://github.com/eyeem/public-API/tree/master/endpoints/topics.md#files)**
-* **[Users](https://github.com/eyeem/public-API/tree/master/endpoints/users.md#files)**
-* **[Venues](https://github.com/eyeem/public-API/tree/master/endpoints/venues.md#files)**
+* **[Albums](http://cdn.eyeem.com/thumbendpoints/albums.md#files)**
+* **[Apps](http://cdn.eyeem.com/thumbendpoints/apps.md#files)**
+* **[Auth](http://cdn.eyeem.com/thumbendpoints/auth.md#files)**
+* **[Discover](http://cdn.eyeem.com/thumbendpoints/discover.md#files)**
+* **[Missions](http://cdn.eyeem.com/thumbendpoints/missions.md#files)**
+* **[News](http://cdn.eyeem.com/thumbendpoints/news.md#files)**
+* **[Photos](http://cdn.eyeem.com/thumbendpoints/photos.md#files)**
+* **[Search](http://cdn.eyeem.com/thumbendpoints/search.md#files)**
+* **[Topics](http://cdn.eyeem.com/thumbendpoints/topics.md#files)**
+* **[Users](http://cdn.eyeem.com/thumbendpoints/users.md#files)**
+* **[Venues](http://cdn.eyeem.com/thumbendpoints/venues.md#files)**
 
 
 ###Resources
-* **[Model](https://github.com/eyeem/public-API/tree/master/resources/model.md#files)**
-* **[Errors](https://github.com/eyeem/public-API/tree/master/resources/errors.md#files)**
+* **[Model](http://cdn.eyeem.com/thumbresources/model.md#files)**
+* **[Errors](http://cdn.eyeem.com/thumbresources/errors.md#files)**
 
 
 ##Basics
