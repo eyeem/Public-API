@@ -19,16 +19,3 @@ Get a list of topics the user has contributed to (the topics correlate to tag al
 
 ### Response
 ***
-
-
-200 and and a dictionary containing limit, offset, total and an array of topic objects
-
-[Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/users/me/topics`
-
-
-

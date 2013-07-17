@@ -13,7 +13,7 @@ Retrieves and creates Apps that use the EyeEm API. **All endpoints below require
 ##API Calls
 ****
 
-### GET /users/{id}/apps <a id="wiki-GETUsersIdApps"></a>  
+### GET /users/{id}/apps <a id="GETUsersIdApps"></a>  
 
 Gets a user's created apps
 
@@ -30,7 +30,7 @@ DESCRIPTION
  
 ***
 
-### POST /users/{id}/apps <a id="wiki-POSTUsersIdApps"></a>  
+### POST /users/{id}/apps <a id="POSTUsersIdApps"></a>  
 
 Creates a new App.
 
@@ -50,7 +50,7 @@ DESCRIPTION
  
 ***
 
-### GET /apps/{id} <a id="wiki-GETAppsId"></a>  
+### GET /apps/{id} <a id="GETAppsId"></a>  
 
 Gets the details of a specific app. **Available to native clients w/out authentication.**
 
@@ -67,7 +67,7 @@ DESCRIPTION
  
 ***
 
-### POST|PATCH|PUT /apps/{id} <a id="wiki-PATCHAppsId"></a>  
+### POST | PATCH | PUT /apps/{id} <a id="PATCHAppsId"></a>  
 
 Updates an app details. Authed user must be app owner. 
 
@@ -87,7 +87,7 @@ DESCRIPTION
  
 ***
 
-### DELETE /apps/{id} <a id="wiki-DELETEAppsId"></a>  
+### DELETE /apps/{id} <a id="DELETEAppsId"></a>  
 
 Deletes an App. Authed user must be app owner. 
 
@@ -104,7 +104,7 @@ DESCRIPTION
 
 ***
 
-### GET /users/{id}/linkedApps <a id="wiki-GETUsersIdLinkedApps"></a>
+### GET /users/{id}/linkedApps <a id="GETUsersIdLinkedApps"></a>
 
 Gets a user's linked apps
 
@@ -121,7 +121,7 @@ DESCRIPTION
  
 ***
 
-### GET /users/{id}/linkedApps/{id} <a id="wiki-GETUsersIdLinkedAppsId"></a>
+### GET /users/{id}/linkedApps/{id} <a id="GETUsersIdLinkedAppsId"></a>
 
 Checks if a user has linked a certain app.
 
@@ -140,7 +140,7 @@ DESCRIPTION
 ***
 
 
-### DELETE /users/{id}/linkedApps/{id} <a id="wiki-DELETEUsersIdLinkedAppsId"></a>
+### DELETE /users/{id}/linkedApps/{id} <a id="DELETEUsersIdLinkedAppsId"></a>
 
 Unlinks an app (invalidates its access token)
 

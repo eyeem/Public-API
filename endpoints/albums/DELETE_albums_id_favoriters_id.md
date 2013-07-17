@@ -1,10 +1,10 @@
-# DELETE /albums/#{id}/likers/#{user_id} 
+# DELETE /albums/#{id}/favoriters/#{user_id} 
 ***
-`/albums/#{id}/likers/#{user_id}`
+`/albums/#{id}/favoriters/#{user_id}`
 
 ### Description
 ***
-Unlike an album.
+unfavorite an album.
 
 ### Parameters
 ***
@@ -19,17 +19,3 @@ Unlike an album.
 
 
 200 if success
-
-[Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/albums/1234/likers/1013`
-
-
-
-
-
-
- 

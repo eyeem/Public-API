@@ -1,10 +1,10 @@
-../../# PUT /albums/#{id}/likers/#{user_id} 
+../../# PUT /albums/#{id}/favoriters/#{user_id} 
 ***
-`/albums/#{id}/likers/#{user_id}`
+`/albums/#{id}/favoriters/#{user_id}`
 
 ### Description
 ***
-Like an album.
+favorite an album.
 
 ### Parameters
 ***
@@ -19,19 +19,3 @@ Like an album.
 
 
 200 if success
-
-[Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/albums/1234/likers/me`
-
-
-
-
-
-
-
-
- 

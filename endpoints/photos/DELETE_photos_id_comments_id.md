@@ -4,7 +4,9 @@
 
 ### Description
 ***
-Delete a specific comment on a photo (users can only delete their own comments).
+Delete a specific comment on a photo (users can only delete their own comments, or comments on their own photos).
+
+requires authed user with delete rights.
 
 ### Parameters
 ***
@@ -22,14 +24,3 @@ Delete a specific comment on a photo (users can only delete their own comments).
 200 if success
 
 [Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/photos/1234/comments/11353`
-
-
-
-
-
- 

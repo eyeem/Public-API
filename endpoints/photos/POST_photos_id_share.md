@@ -15,7 +15,7 @@ Share a photo to the user's connected social media services.
 |**parameter**| **description**| **type** |**required?** |**default**|
 |**services**|comma-separated list of services (twitter,facebook,tumblr,flickr,foursquare)|string|x||
 |**message**|user-entered message to be shared with the photo.|string|||
-|**upload**|The reason for flagging the photo (Pornographic, Terms of Service, Copyright).|string||0|
+|**upload**|whether it's a new upload or an existing photo to share|boolean||0|
 
 ### Response
 ***
@@ -24,11 +24,3 @@ Share a photo to the user's connected social media services.
 200 if success
 
 [Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/photos/1234/share?services=facebook`
-
-
-

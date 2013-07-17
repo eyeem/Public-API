@@ -12,7 +12,7 @@ Check if a user follows the given user.
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|the user id to get information from|integer|x||
-|**friend_id**|the user id of the friend|integer|x||
+|**friend_id**|the potential follower to check|integer|x||
 
 
 ### Response
@@ -33,7 +33,7 @@ Check if a user follows the given user.
 
 
 {
-  "message": "User X is following user Y."
+  "message": "User 1015 is following user 1013."
 }
 
 ```

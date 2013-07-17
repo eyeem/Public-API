@@ -1,10 +1,10 @@
-# POST /users/#{id}/newsSettings     
+# POST /users/#{id}/flags     
 ***
-`/users/#{id}/newsSettings`
+`/users/#{id}/flags`
 
 ### Description
 ***
-Only available for the authenticated user, this call edits a user's push and email notification settings.
+Only available for the authenticated user, this call edits a user's push and email notification settings, among others
 
 ### Parameters
 ***
@@ -25,7 +25,20 @@ Only available for the authenticated user, this call edits a user's push and ema
 |**email_user_joined**||boolean|||
 |**email_album_contributor**| |boolean|||
 |**email_photo_comment_mention**||boolean|||
-
+|**email_weekly_newsletter**||boolean|||
+|**push_album_invite**||boolean|||
+|**email_album_invite**||boolean|||
+|**facebook_photolike**||boolean|||
+|**facebook_photodiscover**||boolean|||
+|**facebook_albumfavorite**||boolean|||
+|**facebook_userfollow**||boolean|||
+|**facebook_timeline_popup**||boolean|||
+|**facebook_albumcontribution**||boolean|||
+|**email_newsletter**||boolean|||
+|**web_onboarded**||boolean|||
+|**web_banner_shown**||boolean|||
+|**push_photo_tagged_person**||boolean|||
+|**email_photo_tagged_person**||boolean|||
 
 
 ### Response
@@ -40,6 +53,6 @@ Only available for the authenticated user, this call edits a user's push and ema
 ### Examples
 ***
 
-`https://api.eyeem.com/v2/users/me/newsSettings`
+`https://api.eyeem.com/v2/users/me/flags`
 
 

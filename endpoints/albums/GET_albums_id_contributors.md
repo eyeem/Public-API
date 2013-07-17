@@ -16,7 +16,7 @@ Retrieves an array of the users who have added photos to the album.
 |**limit**|num of contributors to return|integer||20|
 |**offset**|offset of contributors to start at|integer||0|
 |**onlyId**|if true, returns only the user id|boolean||0|
-
+|**detailed**|if true, returns a detailed user profile for each contributor|boolean||0|
 
 ### Response
 ***

@@ -1,10 +1,10 @@
-# GET /users/#{id}/newsSettings     
+# GET /users/#{id}/flags     
 ***
-`/users/#{id}/newsSettings`
+`/users/#{id}/flags`
 
 ### Description
 ***
-Only available for the authenticated user, this call returns the user's chosen notification settings.
+Only available for the authenticated user, this call returns the user's chosen settings.
 
 ### Parameters
 ***
@@ -28,7 +28,7 @@ Only available for the authenticated user, this call returns the user's chosen n
 ### Examples
 ***
 
-`https://api.eyeem.com/v2/users/me/newsSettings`
+`https://api.eyeem.com/v2/users/me/flags`
 
 
 

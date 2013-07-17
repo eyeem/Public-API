@@ -13,15 +13,23 @@ Retrieves photos of an album specified in the id URL query parameter, sorted chr
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**limit**|num of photos to return|integer||20|
 |**offset**|(offset of photos to start at|integer||0|
+|**after**|new pagination|photo ID|||
+|**before**|new pagination|photo ID|||
+|**order**|sort order (desc,asc)|string||desc|
 |**onlyId**|if true, returns only the photo ids|boolean||0|
+|**filter**|get a subset, atm only "nearby" supported. requires lat/lng|string|||
+|**lat**|latitude|float| for filter="nearby"||
+|**lng**|longitude|float| for filter="nearby"||
+|**sort**|sort order (top,chronological)|string||chronological|
 |**detailed**|returns a simple or detailed photo object|boolean||0|
 |**includeComments**|If true, returns the latest two comments of a photo inline|boolean||0|
-|**includeLikers**|If true, returns the latest two likers of a photo|boolean||0|
 |**numComments**|the number of comments to include in the response|integer||2|
+|**includeLikers**|If true, returns the latest two likers of a photo|boolean||0|
 |**numLikers**|the number of likers to include in the response|integer||2|
-|**includeAlbums**|If true, includes the albums this photo is part of|boolean||0|
-|**top**|if true, sorts photos by popularity|boolean||0|
-
+|**includePeople**|If true, returns the tagged people in a photo|boolean||0|
+|**numPeople**|the number of tagged people to include in the response|integer||4|
+|**includeAlbums**|If true, includes the albums a photo is part of|boolean||0|
+|**userDetails**|If true, includes the detailed user profile of each photographer|boolean||0|
 
 
 ### Response

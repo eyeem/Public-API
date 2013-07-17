@@ -577,3 +577,7 @@ params:
 
 notes:
 	- requires authed admin
+
+
+
+`/users/#{id}/followers/#{friend_id}`

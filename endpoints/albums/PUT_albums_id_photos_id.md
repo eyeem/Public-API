@@ -1,10 +1,10 @@
-../../# PUT /albums/#{id}/photos/#{photo_id} 
+../../# GET /albums/#{id}/photos/#{photo_id} 
 ***
 `/albums/#{id}/photos/#{photo_id} `
 
 ### Description
 ***
-Add an existing photo to an album.
+Check if a photo is already in an album
 
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
@@ -13,16 +13,3 @@ Add an existing photo to an album.
 
 ### Response
 ***
-
-
-200 if success
-
-[Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/albums/1234/photos/11234134`)
-
-
- 

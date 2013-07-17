@@ -1,4 +1,4 @@
-# PUT /photos/#{id} 
+# PUT /photos/#{id}  (also PATCH or POST)   >> X-Api-Version 2.2.0 <<
 ***
 `/photos/#{id}`
 
@@ -13,10 +13,9 @@ Edits a photo by id (has to be a photo belonging to the authenticated user or ad
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|The id of the photo we want to edit.|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
-|**caption**|The new caption of the photo|string|||
-|**title**|The new title of the photo|string|||
+|**description**|String (could contain tag albums in the form of \[a:{id}\]|string|||
 |**hide**|removes photo from popular album|boolean|||
-
+|**deleteAlbumIds**|remove a photo from venue/city/country/tag|csv int|||
 
 ### Response
 ***

@@ -19,7 +19,11 @@ If requested from a user other than the authenticated one, only the user's liked
 |**X-GEO-cityName**|should contain the name of the city the device "thinks" it's in|string|||
 |**limit**|num of photos to return|integer||20|
 |**offset**|offset of photos to start at|integer||0|
-
+|**detailed**|returns a simple or detailed album object|boolean||1|
+|**includePhotos**|if true it returns some of the album's photos|boolean||1|
+|**numPhotos**|the number of album photos to return|integer||10|
+|**includeContributors**|if true, returns the album contributors|boolean| |0|
+|**includeLikers**| if true, returns the album likers|boolean| |0|
 
 ### Response
 ***

@@ -36,7 +36,7 @@ Check if the given user is friends with (follows) another user.
 
 
 {
-  "message": "User X is following user Y."
+  "message": "User 1013 is following user 1013."
 }
 
 ```

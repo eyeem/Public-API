@@ -23,9 +23,3 @@ Adds a new comment to a photo.
 200 and a comment object
 
 [Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/photos/1234/comments?message=Love_it`
-

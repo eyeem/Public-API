@@ -4,7 +4,7 @@
 
 ### Description
 ***
-Get a user's profile information.
+Get a user's profile information. some parameters (liked settings, are only available to native clients.)
 
 ### Parameters
 ***
@@ -13,89 +13,20 @@ Get a user's profile information.
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|the user id to get information from|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
-|**detailed**| returns further user details|boolean||0|
-
+|**detailed**|returns a simple or detailed album object|boolean||1|
+|**includePhotos**|if true it returns some of the album's photos|boolean||0|
+|**numPhotos**|the number of album photos to return|integer||10|
+|**photoDetails**|whether to return the photo details (comments, likes, albums)|boolean||0|
+|**photoLikers**|if true, returns the album contributors|boolean| |1|
+|**photoNumLikers**|the number of album contributors to return|integer||1|
+|**photoPeople**| if true, returns the album likers|boolean| |1|
+|**photoNumPeople**|the number of album favoriters to return|integer||1|
+|**photoComments**| if true, returns the album likers|boolean| |1|
+|**photoNumComments**|the number of album favoriters to return|integer||2|
+|**photoAlbums**|returns the albums a photo belongs to|boolean||1|
+|**includeSettings**|returns the user settings (native/own account)|boolean||0|
 
 
 ### Response
 ***
 200 and a user object 
-
-[Errors](../../resources/errors.md#files)
-
-### Examples
-***
-
-`https://api.eyeem.com/v2/users/me`
-
-```json
-{
-  "user": {
-    "id": "174921",
-    "nickname": "sb",
-    "fullname": "Sebastian",
-    "webUrl": "http://www.eyeem.com/u/sb",
-    "thumbUrl": "http://cdn.eyeem.com/thumb/sq/50/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
-    "photoUrl": "http://cdn.eyeem.com/thumb/sq/200/1629b0a3a6a4c9772fba1c82b2972ceff4b5c49a-1351259458",
-    "totalPhotos": 89,
-    "totalFollowers": 171,
-    "totalFriends": 69,
-    "totalLikedAlbums": 10,
-    "totalLikedPhotos": 4427,
-    "description": " @EyeEm",
-    "email": "sebastian@eyeem.com",
-    "emailNotifications": true,
-    "pushNotifications": true,
-    "services": {
-      "facebook": {
-        "third_party_id": "4Ci6GTRNyX8vIWfBBM1n09m9JdQ",
-        "id": "100000492297860",
-        "upload": false,
-        "photolike": true,
-        "photodiscover": false,
-        "photocomment": false,
-        "albumlike": false,
-        "userfollow": false,
-        "timelinepopup": true,
-        "managedPages": [
-          {
-            "id": "154793581210614",
-            "name": "Halö",
-            "posting": 0
-          }
-        ],
-        "status": "active"
-      },
-      "twitter": {
-        "id": "19140455",
-        "nickname": "ksslng",
-        "status": "active"
-      },
-      "tumblr": {
-        "status": "inactive"
-      },
-      "foursquare": {
-        "status": "active"
-      },
-      "flickr": {
-        "status": "inactive"
-      }
-    },
-    "newsSettings": {
-      "push_photo_like": true,
-      "push_photo_comment": true,
-      "push_user_follower": true,
-      "push_user_joined": true,
-      "push_album_contributor": true,
-      "push_photo_comment_mention": true,
-      "email_photo_like": false,
-      "email_photo_comment": false,
-      "email_user_follower": false,
-      "email_user_joined": false,
-      "email_album_contributor": false,
-      "email_photo_comment_mention": false,
-      "email_weekly_newsletter": true
-    }
-  }
-}
-```

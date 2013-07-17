@@ -4,7 +4,7 @@
 
 ### Description
 ***
-Retrieves the venueCategories available for a certain city
+Retrieves the venueCategories of albums associated with a certain city/country/tag album.
 
 ### Parameters
 ***
@@ -19,7 +19,7 @@ Retrieves the venueCategories available for a certain city
 ### Response
 ***
 
-200 and an array of album objects, includes pagination parameters
+200 and an array of venue categories, includes pagination parameters
 
 
 [Errors](../../resources/errors.md#files)

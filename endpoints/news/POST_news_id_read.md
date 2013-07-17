@@ -14,21 +14,10 @@ Marks multiple news items as read.
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**id**|The id of the news.|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
-|**markAsRead**|comma separated ids of news to be marked|string|x||
+|**include_older**|boolean indicating whether to mark only this item, or all previous ones, as read |boolean|x|0|
 
 
 ### Response
 ***
 
 200
-
-[Errors](../../resources/errors.md#files)
-### Examples
-***
-
-`https://api.eyeem.com/v2/news?markAsRead=1,2,3,4,5`
-
-
-
-
- 

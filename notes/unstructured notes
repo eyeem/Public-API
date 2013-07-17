@@ -37,3 +37,7 @@ shouldn't account creation (POST /users) be native scope?!
 
 
 streaming API?
+
+
+
+makes sense to keep POSTS on endpoints like /users/{id}/friends or /users/{id}/likedPhotos to enable batch actions?

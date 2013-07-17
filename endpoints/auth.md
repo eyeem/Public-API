@@ -5,36 +5,29 @@ These are the API calls available to native apps only. Note that all requests re
 
 Furthermore, only native apps can access this endpoint, and it's preferable to always include the following headers with every request:
 
-* X-buildVersion: the current version of the EyeEm app
-* X-clientDevice: iPhone 4, Samsung Galaxy S, Nokia Slide, whatever the device name is
-* X-clientFirmware: the current OS version running on the device.
-
-These are used for both our error-tracking as well as our internal metrics.
 
 ##Available endpoints
 ***
 * `/auth/login`, [POST](#POSTlogin)
-* `/auth/ping`, [POST](#POSTping)
-* `/auth/error`, [POST](#POSTerror)
-* `/auth/push`, [POST](#POSTpush), [DELETE](#DELETEpush)
 * `/auth/facebookLogin`, [POST](#POSTfacebookLogin)
-* `/auth/signUp`, [POST](#POSTsignUp)
 * `/auth/logout`, [POST](#POSTlogout)
-* `/auth/ok`, [GET](#GETok)
+* `/auth/signUp`, [POST](#POSTsignUp)
+* `/auth/checkNickname`, [GET](#GETcheckNickname)
+* `/auth/checkEmail`, [GET](#GETcheckEmail)
+* `/auth/confirmEmail`, [POST](#POSTconfirmEmail)
+* `/auth/requestPassword`, [POST](#POSTrequestPassword)
+* `/auth/resetPassword`, [GET](#GETresetPassword) [POST](#POSTresetPassword)
+* `/auth/deleteUser`, [POST] (#POSTdeleteUser)[DELETE] (#POSTdeleteUser)
+* `/auth/ping`, [POST](#POSTping)
+* `/auth/push`, [POST](#POSTpush), [DELETE](#DELETEpush)
 * `/auth/socialServiceKeys`, [GET](#GETsocialServiceKeys)
-
-
-##Representation
-***
-
-There is no `auth` object, the various calls return either `user` objects or simple confirmations.
 
 
 ##API Calls
 ***
 
 
-### POST /auth/login <a id="wiki-POSTlogin"></a>  
+### POST /auth/login <a id="POSTlogin"></a>  
 
 Logs a user in with email/password
 
@@ -61,7 +54,7 @@ DESCRIPTION
 ***
 
 
-### POST /auth/ping <a id="wiki-POSTping"></a> 
+### POST /auth/ping <a id="POSTping"></a> 
 Pings the server whenever the EyeEm app is started for the very first time on a device (used to track downloads)
 
 #### Headers
@@ -84,27 +77,7 @@ Pings the server whenever the EyeEm app is started for the very first time on a 
 
 ***
 
-### POST /auth/error <a id="wiki-POSTerror"></a> 
-posts an error message for the devs to look into. typically, this is called after some endpoint returns a 500 status, and the message supplied contains the entire request, so that the dev team can try to recreate and fix the error. 
-
-#### Headers
- - default required headers here
-
-#### Parameters
- - message (the error message the client wants to log)
-
-#### Response
-
- - 200
- - error code
-
-#### Examples
-
-`https://api.eyeem.com/v2/auth/error`
-
-***
-
-### POST /auth/push <a id="wiki-POSTpush"></a> 
+### POST /auth/push <a id="POSTpush"></a> 
 
 description: registers a device for push notification
 
@@ -128,7 +101,7 @@ description: registers a device for push notification
 
 ***
 
-### DELETE /auth/push <a id="wiki-DELETEpush"></a> 
+### DELETE /auth/push <a id="DELETEpush"></a> 
 
 unregisters a device from push notification
 
@@ -151,7 +124,7 @@ unregisters a device from push notification
 `https://api.eyeem.com/v2/auth/push`
 ***
 
-### POST /auth/facebookLogin <a id="wiki-POSTfacebookLogin"></a> 
+### POST /auth/facebookLogin <a id="POSTfacebookLogin"></a> 
 
 allow a user to signup OR login with their facebook credentials. This is called after the user connects with facebook and facebook returns the access_token and facebookId.
 
@@ -178,7 +151,7 @@ allow a user to signup OR login with their facebook credentials. This is called 
 
 ***
 
-### POST /auth/signUp <a id="wiki-POSTsignUp"></a> 
+### POST /auth/signUp <a id="POSTsignUp"></a> 
 create a new account
 
 #### Headers
@@ -205,7 +178,7 @@ create a new account
 
 ***
 
-### POST /auth/logout <a id="wiki-POSTlogout"></a> 
+### POST /auth/logout <a id="POSTlogout"></a> 
 
 logs a user out and deletes their access_token
 
@@ -223,30 +196,10 @@ logs a user out and deletes their access_token
 
 `https://api.eyeem.com/v2/auth/logout`
 
---------------------------------------------------------------------------------
-
-### GET /auth/ok <a id="wiki-GETok"></a> 
-
-check that the user is still logged in with a valid account
-
-#### Headers
-- Authorization: Bearer [access_token]
-- default required headers for /auth
-
-#### Parameters
-
-#### Response
-
- - 200 and a user object
- - 404 if the authentication is invalid
-
-#### Examples
-
-`https://api.eyeem.com/v2/auth/ok`
 
 ***
 
-### GET /auth/socialServiceKeys <a id="wiki-GETsocialServiceKeys"></a> 
+### GET /auth/socialServiceKeys <a id="GETsocialServiceKeys"></a> 
 
 get the keys for one of the supported social services
 
@@ -265,3 +218,124 @@ get the keys for one of the supported social services
 #### Examples
 
 `https://api.eyeem.com/v2/auth/socialServiceKeys?service_name=foursquare`
+
+***
+
+### GET /auth/checkNickname <a id="GETcheckNickname"></a> 
+
+Checks if a nickname is available
+
+#### Headers
+
+#### Parameters
+ - nickname = string
+
+#### Response
+ - 200 if available
+ - error codes if failed
+
+#### Examples
+
+***
+
+### GET /auth/checkEmail <a id="GETcheckEmail"></a> 
+
+Checks if an email is valid & available
+
+#### Headers
+
+#### Parameters
+ - email = string
+
+#### Response
+ - 200 if available
+ - error codes if failed
+
+#### Examples
+
+***
+
+### POST /auth/confirmEmail <a id="POSTconfirmEmail"></a> 
+
+Confirms an email as valid.
+
+#### Headers
+
+#### Parameters
+ - token = string (validation token sent in activation email)
+
+#### Response
+ - 200 if ok
+ - error codes if failed
+
+#### Examples
+
+***
+
+### POST /auth/requestPassword <a id="POSTrequestPassword"></a> 
+
+Requests a password reset.
+
+#### Headers
+
+#### Parameters
+ - email = string
+
+#### Response
+ - 200 if ok
+ - error codes if failed
+
+#### Examples
+
+***
+
+
+### POST /auth/resetPassword <a id="POSTresetPassword"></a> 
+
+Resets a password using the provided token.
+
+#### Headers
+
+#### Parameters
+ - token = string (reset token sent to user)
+
+#### Response
+ - 200 if ok
+ - error codes if failed
+
+#### Examples
+
+***
+
+
+### GET /auth/resetPassword <a id="GETresetPassword"></a> 
+
+**NO IDEA WHAT THIS DOES**
+
+#### Headers
+
+#### Parameters
+ - token = string
+
+#### Response
+ - 200 if ok
+ - error codes if failed
+
+#### Examples
+
+***
+
+### DELETE | POST /auth/deleteUser <a id="POSTdeleteUser"></a> 
+
+completely and permanently deletes a user! Requires either the user's access token, or an admin.
+
+#### Headers
+ - Authorization: Bearer [access_token]
+
+#### Parameters
+
+#### Response
+
+#### Examples
+
+***
