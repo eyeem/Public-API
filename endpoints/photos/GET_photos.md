@@ -30,6 +30,7 @@ the params type,date,frame/filter,ids are processed in that order. the first mat
 |**numPeople**| number of tagged people to return inline|integer||10|
 |**includeAlbums**|If true, returns the albums inline|boolean||0|
 |**userDetails**|If true, returns the detailed user profile of photo owner|boolean| |0|
+|**simpleDescription**|If true, returns a simple, human-readable photo description|boolean||0|
 
 
 ### Response

@@ -547,7 +547,7 @@ Calls to discover return various useful infos in the header, here's a sample dis
       "city": {
         "name": "Berlin",
         "lat": "52.52437",
-        "lon": "13.41053"
+        "lng": "13.41053"
       },
       "venue": {
         "name": "Soho House Berlin"

@@ -22,6 +22,7 @@ Retrieves a photo by id.
 |**userDetails**| If true, includes the detailed profile of the photo's owner|boolean||0|
 |**includePeople**|If true, returns the people tagged in this photo photo|boolean||1|
 |**numPeople**|the number of tagged people to include in the response|integer||10|
+|**simpleDescription**|If true, returns a simple, human-readable photo description|boolean||0|
 
 ### Response
 ***

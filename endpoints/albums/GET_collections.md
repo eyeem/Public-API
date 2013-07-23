@@ -24,7 +24,9 @@ NearbyLive is a mixture of photos uploaded very close to me w/in the last 2 hour
 |**includeLikers**|If true, returns the latest two likers of a photo|boolean| |0|
 |**numLikers**| number of likers to return inline|integer||1|
 |**includeAlbums**|If true, returns the albums inline|boolean||0|
-
+|**includePeople**|If true, returns the tagged persons in a photo|boolean| |0|
+|**numPeople**| number of tagged people to return inline|integer||10|
+|**simpleDescription**|If true, returns a simple, human-readable photo description|boolean||0|
 
 ### Response
 ***

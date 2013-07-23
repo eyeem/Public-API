@@ -31,7 +31,7 @@ Get the given user's photos, sorted chronologically (default).
 |**includePeople**|If true, returns the tagged people in a photo|boolean||0|
 |**numPeople**|the number of tagged people to include in the response|integer||4|
 |**includeAlbums**|If true, includes the albums a photo is part of|boolean||0|
-
+|**simpleDescription**|If true, returns a simple, human-readable photo description|boolean||0|
 
 ### Response
 ***

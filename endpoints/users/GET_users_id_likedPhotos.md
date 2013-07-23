@@ -25,7 +25,7 @@ Get all the photos that a user has liked.
 |**numPeople**|the number of tagged people to include in the response|integer||4|
 |**includeAlbums**|If true, includes the albums a photo is part of|boolean||0|
 |**userDetails**|If true, includes the detailed user profile of each photographer|boolean||0|
-
+|**simpleDescription**|If true, returns a simple, human-readable photo description|boolean||0|
 
 ### Response
 ***
