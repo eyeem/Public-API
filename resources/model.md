@@ -506,6 +506,7 @@ Collections are ad-hoc sets of photos that are related to each other, but not ne
     "title": "Black and White photos in Berlin",
     "subtitle": "150 photos in this collection",
     "type": "album" (could also be user, nearbyLive and other collections),
+    "primaryReason": "favorited" (or one of the others from "reason")
     "reason": "favorited,contributed,friendsContributed,nearby"
     "album": {
       (basic album description)
