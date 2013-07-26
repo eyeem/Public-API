@@ -18,6 +18,7 @@ For reference, check out the list of [API Endpoints being actively called from c
   - human-readable error message
   - notice for native clients (new app version, message from eyeem, etc)
   - rate-limit information
+  - human-readable message (optionally w/ link) to popup for native clients [ex: new android version available, update now!]
 
 ##Changes to Parameters (AKA params gone wild) 
 ***
@@ -36,3 +37,12 @@ Additionally, default values need to be normalized across all endpoints. Any end
 ###Pagination parameters
 ***
 Pagination needs a facelift. Offset/Limit doesn't scale, and it can't reliably return all new items. Already in v2.2.0, some endpoints work with `before` and `after`. We should consider switching to either that, or possibly some timestamp based pagination.
+
+###Features
+***
+- return photog's twitter handle with photo data if available (for native clients, to make twitter sharing more interactive)
+- store and use venue's twitter handle (if provided by foursquare)
+- regular text + link in news (w/ targeting, available through ccc)
+- regular text + link as push notification (w/ targeting, available through ccc)
+- friendly urls for albums (eyeem.com/a/berlin)
+- 
