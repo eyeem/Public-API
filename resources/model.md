@@ -498,6 +498,23 @@ venueService:{
 ***
 Collections are ad-hoc sets of photos that are related to each other, but not necessarily albums. For now, collections are primarily used in the discover feed.
 
+##Album Collections (onboarding)
+***
+generic collections recommended to users for following
+
+```json
+{
+  "id": 1,
+  "name": "Gente y Retratos",
+  "thumbUrl": "http://cdn.eyeem.com/images/collections/01.jpg",
+  "albumIds": [
+    "11500",
+    " 1845",
+    " 705013",
+    " 717799"
+  ]
+}
+```
 #### Object Format
 
 ```json
