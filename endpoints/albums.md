@@ -9,7 +9,7 @@ These are the API calls that you can use to retrieve albums, the photos in those
 ***
 
 * `/albums`, [GET](albums/GET_albums.md#files)
-* `/albums/collections`, [GET](albums/GET_albums_collections.md#files), [POST](albums/POST_albums_collections.md#files)
+* `/albums/onboarding`, [GET](albums/GET_albums_onboarding.md#files), [POST](albums/POST_albums_onboarding.md#files)
 * `/albums/#{id}`, [GET](albums/GET_albums_id.md#files)
 * `/albums/{album_id}/acceptInvites`, [POST](albums/POST_albums_id_accept_invites.md#files)
 * `/albums/#{id}/favoriters` [GET](albums/GET_albums_id_likers.md#files), [POST](albums/POST_albums_id_likers.md#files)

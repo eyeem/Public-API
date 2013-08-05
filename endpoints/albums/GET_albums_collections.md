@@ -1,10 +1,10 @@
-# GET /albums/collections 
+# GET /albums/onboarding 
 ***
-`/albums/collections`
+`/albums/onboarding`
 
 ### Description
 ***
-Retrieves an array of collections (of generic topics for onboarding)
+Retrieves an array of onboarding sets (of generic topics for onboarding)
 
 ### Parameters
 ***
@@ -12,8 +12,8 @@ Retrieves an array of collections (of generic topics for onboarding)
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
 |**parameter**| **description**| **type** |**required?** |**default**|
-|**limit**|num of favoriters to return|integer||20|
-|**offset**|offset of favoriters to start at|integer||0|
+|**limit**|num of sets to return|integer||20|
+|**offset**|offset of sets to start at|integer||0|
 
 
 

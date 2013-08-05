@@ -31,6 +31,8 @@ Request parameters need to be standardized. V3 will introduce the following (opt
 - `subFields`: In some endpoints, we can specify the fields required for child objects. For example, in `/albums/{id}` we can request that photos be included with certain fields. At the moment, we pass fields like `includePhotoLikers`. That's stupid. **what should we replace this with?**
 - `lat` & `lng`: Standardized naming for passing latitude and longitude throughout the API.
     - use `ll={latitude},{longitude}`` (a-la foursquare)?
+- extend parameter retrieval functions to also validate the passed params. ex: $this->getNumber('lat') actually checks that 'lat' is a number....
+
 
 Additionally, default values need to be normalized across all endpoints. Any endpoint that returns people (photo likers, album contributors, friends) should for example return the same number of people by default, same applies to pagination limits, etc.
 

@@ -1,10 +1,10 @@
-# POST /albums/collections 
+# POST /albums/onboarding 
 ***
-`/albums/collections`
+`/albums/onboarding`
 
 ### Description
 ***
-Subscribe to all the albums in an onboardingcollection
+Subscribe to all the albums in an onboarding set
 
 
 ### Parameters
@@ -12,7 +12,7 @@ Subscribe to all the albums in an onboardingcollection
 
 |header| description| type |required? |default|
 |:---------|:--------------|:----------:|:------------:|:------------:|
-|**ids**| an array of collection ids the user wants to follow the albums of|integer|x||
+|**ids**| an array of set ids the user wants to follow the albums of|integer|x||
 |**parameter**| **description**| **type** |**required?** |**default**|
 
 
