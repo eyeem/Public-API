@@ -19,6 +19,10 @@ For reference, check out the list of [API Endpoints being actively called from c
   - notice for native clients (new app version, message from eyeem, etc)
   - rate-limit information
   - human-readable message (optionally w/ link) to popup for native clients [ex: new android version available, update now!]
+- introduce a maintenance mode for API
+- always return a resource representation to UPDATE/CREATE requests
+- introduce rate-limiting for non-native clients
+- obfuscate user/photo ids
 
 ##Changes to Parameters (AKA params gone wild) 
 ***
@@ -47,4 +51,25 @@ Pagination needs a facelift. Offset/Limit doesn't scale, and it can't reliably r
 - regular text + link in news (w/ targeting, available through ccc)
 - regular text + link as push notification (w/ targeting, available through ccc)
 - friendly urls for albums (eyeem.com/a/berlin)
-- 
+- API apps: new state (lightweight delete): allowing users to fave/unfave, comment/uncomment, follow/unfollow.
+- new format for validation error:
+
+```json
+{ "code" : 1024, "message" : "Validation Failed", "errors" : [ { "code" : 5432, "field" : "first_name", "message" : "First name cannot have fancy characters" }, { "code" : 5622, "field" : "password", "message" : "Password cannot be blank" } ] }
+```
+
+###Sample API Response header
+***
+
+```json
+"system": {
+  "type": "notice"|"warning"|"error"|"info" (type of message... developer can decide what to do),
+  "code": http error code (?)
+  "message": optional, it's recommended to display the content to the users,
+  "url": optional, in addition to the message, could be the link to the latest app version, for example
+  "timestamp": needed??
+}
+"data": {
+  ... whatever else the response contains. (doesn't even need to be called data - "user","photos"...
+}
+```

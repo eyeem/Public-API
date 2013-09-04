@@ -36,7 +36,7 @@ looks like they're needed in `/users/{id}/feed`. Anywhere else? that endpoint st
 - `POST /albums`
     - non-existent. kill.
 
-* popular album: `/albums/dynamic:10`
+* popular album: `/albums/dynamic:10` + deprecate EyeemTopStream
 * radius album: `/albums/radius:#{latitude}:#{longitude}`
 
 - GET | POST /albums/{id}/favoriters
