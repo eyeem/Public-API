@@ -29,4 +29,5 @@ These are the API calls that you can use to retrieve users, their photos, friend
 * `/users/#{id}/topics`, [GET](users/GET_users_id_topics.md#files)
 * `/users/#{id}/smContacts`, [GET](users/GET_users_id_sm_contacts.md#files)
 * `/users/#{id}/emailContacts`, [GET](users/GET_users_id_email_contacts.md#files)
+* `/users/#{id}/contacts`, [GET](users/GET_users_id_contacts.md#files)
 * `/users/#{id}/hide`, [POST](users/POST_users_id_hide.md#files)
