@@ -17,7 +17,7 @@ Create a new account (email/pass). Only possible with a **native** scope.
 |**nickname**|representing the user's nickname|string|||
 |**email**|the user's email address|string|||
 |**password**|the user's new password|string|min. 6 characters||
-|**description**|brief text description of a user|string|||
+|**description**|brief text description of a user|string|max 150 chars||
 |**photo**|a user's profile photo|file|||
 
 
