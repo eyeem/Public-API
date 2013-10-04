@@ -18,6 +18,7 @@ These are the API calls that you can use to retrieve users, their photos, friend
 * `/users/#{id}/blocked/#{id}`, [GET](users/GET_users_id_blocked_id.md#files),[PUT](users/PUT_users_id_blocked_id.md#files),[DELETE](users/DELETE_users_id_blocked_id.md#files)
 * `/users/#{id}/friends/#{friend_id}`, [GET](users/GET_users_id_friends_id.md#files),  [PUT](users/PUT_users_id_friends_id.md#files),  [DELETE](users/DELETE_users_id_friends_id.md#files)
 * `/users/#{id}/friends`, [GET](users/GET_users_id_friends.md#files), [POST](users/POST_users_id_friends.md#files)
+* `/users/#{id}/friendToken`, [POST](users/POST_users_id_friendToken.md#files)
 * `/users/#{id}/followers/#{friend_id}`, [GET](users/GET_users_id_followers_id.md#files)
 * `/users/#{id}/photos`, [GET](users/GET_users_id_photos.md#files)
 * `/users/#{id}/likedPhotos`, [GET](users/GET_users_id_likedPhotos.md#files), [POST](users/POST_users_id_likedPhotos.md#files)
