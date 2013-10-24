@@ -25,7 +25,7 @@ Only available for the authenticated user, this call returns a service object wi
 ### Examples
 ***
 
-`https://api.eyeem.com/v2/users/me/facebookPage`
+`https://api.eyeem.com/v2/users/me/facebookPages`
 
 
 ```json

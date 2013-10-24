@@ -5,7 +5,7 @@
              xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
 
     <!-- Base defines the domain and base path of the endpoint -->
-    <resources base="https://eyeem.com/api/v2">
+    <resources base="https://api.eyeem.com/v2">
 
         <!-- A simple resource with a GET method -->
         <resource path="/albums">

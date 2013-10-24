@@ -27,7 +27,7 @@ These are the API calls that you can use to retrieve users, their photos, friend
 * `/users/#{id}/flags`, [GET](users/GET_users_id_flags.md#files), [POST](users/POST_users_id_flags.md#files), [PATCH](users/POST_users_id_flags.md#files), [PUT](users/POST_users_id_flags.md#files)
 * `/users/#{id}/unsubscribe`, [POST](users/POST_users_id_unsibscribe.md#files)
 * `/users/#{id}/socialMedia/{service}`, [POST](users/POST_users_id_socialMedia_service.md#files),[PATCH](users/POST_users_id_socialMedia_service.md#files), [PUT](users/PUT_users_id_socialMedia_service.md#files), [DELETE](users/DELETE_users_id_socialMedia_service.md#files)
-* `/users/#{id}/facebookPage`, [GET](users/GET_users_id_facebookPage.md#files), [POST](users/POST_users_id_facebookPage.md#files) 
+* `/users/#{id}/facebookPages`, [GET](users/GET_users_id_facebookPages.md#files), [POST](users/POST_users_id_facebookPage.md#files) 
 * `/users/#{id}/topics`, [GET](users/GET_users_id_topics.md#files)
 * `/users/#{id}/smContacts`, [GET](users/GET_users_id_sm_contacts.md#files)
 * `/users/#{id}/emailContacts`, [GET](users/GET_users_id_email_contacts.md#files)

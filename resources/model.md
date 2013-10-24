@@ -646,6 +646,31 @@ A person object is used to tag people from various services (fb, tw, eyeem) on a
 }
 
 ```
+
+##City / Country
+***
+A city/country object
+
+```json
+{
+  "id": "2950159",
+  "type": "city",
+  "name": "Berlin",
+  "ansiname": "Berlin",
+  "district_code": "16",
+  "country_id": "DE",
+  "country_name": "Germany",
+  "album_id": "17"
+},
+{
+  "id": "DE",
+  "type": "country",
+  "country_name": "Germany",
+  "album_id": "18"
+}
+
+```
+
 #### Remarks
 * Collections can have the following type: `album`,`user`,`nearbyLive`,`popular`,`userFavorites`,`nearby`
 * based on the type, collections can additionally contain a simple `album` or `user` object, as well as a photo array

@@ -1,3 +1,6 @@
+#2.2.1
+- cdn.eyeem.com instead of www.eyeem.com for thumbs
+
 #2.2.0
 - new topic suggestions format for venues
 - new discover types

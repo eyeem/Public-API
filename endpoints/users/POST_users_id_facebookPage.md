@@ -1,4 +1,4 @@
-# POST /users/#{id}/facebookPage    
+# POST /users/#{id}/facebookPage
 ***
 `/users/#{id}/facebookPage`
 

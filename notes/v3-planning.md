@@ -8,6 +8,7 @@ For reference, check out the list of [API Endpoints being actively called from c
 ##General Remarks
 ***
 
+- Moving forward, it would be interesting to tag components and have a generic read/write block in the logic - could be useful for online schema change too
 - API Versioning. Introduced in V2.1.0 (Requests should now always contain the X-Api-Version header).
 - URL/Path Changes:
   - main API path is now https://api.eyeem.com/v3. API will reject non-https requests

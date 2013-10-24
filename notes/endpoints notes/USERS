@@ -19,7 +19,7 @@ params:
 		- detailed = bool (default 1)
 	- ids = csv of user ids
 		- offset = int (default 0)
-		- limit = int (default 30)	
+		- limit = int (default 30)
 		- detailed = bool (default 1)
 	- action_ids = array of fb_action_ids << returns one user
 
@@ -198,7 +198,7 @@ notes:
 	- introduce fields
 
 
-GET /users/{id}/blocked/{blocked_id} 
+GET /users/{id}/blocked/{blocked_id}
 ------------------------------------
 params:
 	- user_id in url
@@ -207,7 +207,7 @@ params:
 
 
 
-PUT /users/{id}/blocked/{blocked_id} 
+PUT /users/{id}/blocked/{blocked_id}
 ------------------------------------
 params:
 	- user_id in url
@@ -315,7 +315,7 @@ params:
     - after = photo id
     - before = photo id
     - order = desc | asc (default: desc)
-	- onlyId = 1/0 (default 0)	
+	- onlyId = 1/0 (default 0)
 	- filter = nearby
   		- lat = latitude (float)
   		- lng = longitude (float)
@@ -389,7 +389,7 @@ params:
 
 todos:
 	- separate endpoint for onlyId (photoIds)
-	- onlyId is disabled, remove or reactivate	
+	- onlyId is disabled, remove or reactivate
 	- introduce fields
 	- remove duplicate pagination (use only before/after?)
 	- merge "order" w/ "sort" params?
@@ -489,7 +489,7 @@ params:
 notes:
 	- facebook forwards to users.facebookUpdate
 
-GET /users/{user_id}/facebookPage
+GET /users/{user_id}/facebookPages
 ---------------------------------
 gets the facebook pages a user manages
 
