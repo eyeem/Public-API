@@ -5,8 +5,8 @@ Retrieves and creates Apps that use the EyeEm API. **All endpoints below require
 
 ##Available endpoints
 ***
-* `/users/#{id}/apps`, [GET](#GETUsersIdApps), [POST](#POSTUsersIdApps)
-* `/apps/id`, [GET](#GETAppsId),[PATCH](#PATCHAppsId),[POST](#PATCHAppsId),[PUT](#PATCHAppsId),[DELETE](#DELETEAppsId)
+* `/users/#{id}/apps`, [GET](#GETUsersIdApps)
+* `/apps/id`, [GET](#GETAppsId)
 * `/users/#{id}/linkedApps`, [GET](#GETUsersIdLinkedApps)
 * `/users/#{id}/linkedApps/#{id}`, [GET](#GETUsersIdLinkedAppsId),[DELETE](#DELETEUsersIdLinkedApps)
 
@@ -30,26 +30,6 @@ DESCRIPTION
  
 ***
 
-### POST /users/{id}/apps <a id="POSTUsersIdApps"></a>  
-
-Creates a new App.
-
-DESCRIPTION
-#### Headers
- - 
-
-#### Parameters
- - name: string (app name), required
- - url: string (app url)
- - redirectUrl: string (oauth redirectUrl)
- - icon: file (app icon), sent in request body
-
-#### Response
- - 200 and an app object
- - error with code and message
- 
-***
-
 ### GET /apps/{id} <a id="GETAppsId"></a>  
 
 Gets the details of a specific app. **Available to native clients w/out authentication.**
@@ -65,43 +45,6 @@ DESCRIPTION
  - 200 and an app object
  - error with code and message
  
-***
-
-### POST | PATCH | PUT /apps/{id} <a id="PATCHAppsId"></a>  
-
-Updates an app details. Authed user must be app owner. 
-
-DESCRIPTION
-#### Headers
- - 
-
-#### Parameters
- - name: string (app name)
- - url: string (app url)
- - redirectUrl: string (oauth redirectUrl)
- - icon: file (app icon)
-
-#### Response
- - 200 and an app object
- - error with code and message
- 
-***
-
-### DELETE /apps/{id} <a id="DELETEAppsId"></a>  
-
-Deletes an App. Authed user must be app owner. 
-
-DESCRIPTION
-#### Headers
- - 
-
-#### Parameters
- -
-
-#### Response
- - 200
- - error with code and message
-
 ***
 
 ### GET /users/{id}/linkedApps <a id="GETUsersIdLinkedApps"></a>
@@ -138,19 +81,3 @@ DESCRIPTION
  - error with code and message
  
 ***
-
-
-### DELETE /users/{id}/linkedApps/{id} <a id="DELETEUsersIdLinkedAppsId"></a>
-
-Unlinks an app (invalidates its access token)
-
-DESCRIPTION
-#### Headers
- - 
-
-#### Parameters
- - 
-
-#### Response
- - 200 if success
- - error with code and message
