@@ -14,10 +14,8 @@ Retrieves an array containing photos
 |**q**|the keyword to search|string|x||
 |**limit**|num of items to return|integer||10|
 |**offset**|(offset of items to start at|integer||0|
-
 |**user_id**|get photos by a particular user|int|||
 |**album_id**|get photos in a particular album|int|||
-
 |**detailed**| If true, allow inclusion of details|boolean||1|
 |**includeComments**| If true, returns the latest two comments of a photo inline|boolean||1|
 |**includeLikers**|If true, returns the latest two likers of a photo|boolean||1|
