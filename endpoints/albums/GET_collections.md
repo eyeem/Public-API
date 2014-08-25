@@ -1,6 +1,6 @@
 # GET /collections
 ***
-`/collections`
+`/collection`
 
 ### Description
 ***
