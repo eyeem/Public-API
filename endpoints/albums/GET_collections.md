@@ -1,4 +1,4 @@
-# GET /collections
+# GET /collection
 ***
 `/collection`
 
