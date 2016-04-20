@@ -1,16 +1,14 @@
 #EyeEm API
-***
- **[Introduction](#introduction) | [API Documentation](#api-documentation) | [Basics](#basics) | [OAuth](#oauth) | [Request Headers](#request-headers) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [Contact](#contact)**
+
+**[Introduction](#introduction) | [API Documentation](#api-documentation) | [Basics](#basics) | [OAuth](#oauth) | [Request Headers](#request-headers) | [Pagination](#pagination) | [Images and Image Resolution](#images-and-image-resolutions) | [Contact](#contact)**
 
 ##Introduction
-***
 
 The EyeEm Public API is read-only by default, and covers the complete EyeEm functionality. We do offer write access on a case-by-case basis. We use the API ourselves for our mobile apps, and are actively developing and improving it. The API is currently in version 2.2.0. We are working on v3 and expect to release that soon.
 
 You can register an app by going to [Your apps on EyeEm](http://eyeem.com/developers).
 
 ##API Documentation
-***
 
 ###Endpoints
 
@@ -33,7 +31,6 @@ You can register an app by going to [Your apps on EyeEm](http://eyeem.com/develo
 
 
 ##Basics
-***
 
 Our API is RESTful, which means that requests are defined using the HTTP verbs `GET`, `PUT`, `DELETE` and `POST`.
 
@@ -77,35 +74,38 @@ A basic request using curl can look like this:
 ```
 
 #OAuth
-***
+
 To authenticated requests, we use OAuth2, and we try to comply to the [latest draft] (http://tools.ietf.org/html/draft-ietf-oauth-v2-23). Access Tokens do not expire, at the moment, however, that may also change, and we may start sending `refresh_token` and an `expires` parameter with the `access_token`.
 
 For the time being, you may pass a `client_id` parameter, or an `X-Client-Id` header instead of an `access_token` to most public `GET`. That is subject to change.
 
 After your registered app is approved, you can use your `client_id` and `client_secret` to generate access tokens. Here's the OAuth2 authentication process:
 
-1) Authorization code:
+__1) Authorization code:__
+
 First, point the browser to `http://www.eyeem.com/oauth/authorize?response_type=code&client_id=Chi6ae5sLes9beCinae5sohM&redirect_uri=http://example.com/callback`
 The user is prompted to allow/deny access to your app. If they allow access, EyeEm will redirect to the provided url with an authorization code
 `http://example.com/callback?code=Yeenie1H`
-otherwize, the user is redirected with an error message
+otherwise, the user is redirected with an error message
 ` http://example.com/callback?error=access_denied&error_description=The+user+denied+access+to+your+application`
 
-2) Access token:
+__2) Access token:__
+
 From your backend call
  `curl -X POST "http://api.eyeem.com/v2/oauth/token?grant_type=authorization_code&client_id=Chi6ae5sLes9beCinae5sohM&client_secret=IeBai4eeloRoiw3e&redirect_uri=http://example.com/callback&code=Yeenie1H"`
 
 The answer will look like:
+
 ```json
- {
- "access_token":"2b9b0ef6065e60f3cc81646f3a7622af68295afb",
- "expires_in":315360000,
- "token_type":"bearer"
- }
+{
+  "access_token":"2b9b0ef6065e60f3cc81646f3a7622af68295afb",
+  "expires_in":315360000,
+  "token_type":"bearer"
+}
 ```
 For now, EyeEm API `access_tokens` do not expire, that may change in the future.
 
-3) Making Authenticated Request:
+__3) Making Authenticated Request:__
 
  To make authenticated requests you provide your access token as credentials. You should send it as a header:
 ` Authorization: Bearer 2b9b0ef6065e60f3cc81646f3a7622af68295afb`
@@ -115,7 +115,6 @@ however, for the time being, it's also possible to send it as a  URL query param
 That's all you need to authenticate with EyeEm.
 
 ##Request Headers
-***
 
 In addition to your access token, the EyeEm API accepts the following headers (not required)
 - X-Client-Id: Your app's `client_id` can be provided instead of an `access_token`. This is valid for any public `GET` calls, but is subject to change, and therefore not recommended.
@@ -127,12 +126,10 @@ In addition to your access token, the EyeEm API accepts the following headers (n
 - X-buildVersion: client app build version
 
 ##Pagination
-***
 
 Some endpoints in the api return arrays of photos, users, or albums. Those endpoints always contain four fields: `offset`,`limit`,`total` and `items`. `items` is an array of the requested object, whereas the remaining parameters can be used to paginate the list.
 
 ##Images and Image Resolutions
-***
 
 You can request EyeEm photos in various sizes and formats. The default API endpoints return a `thumbUrl` and (optionally) a `photoUrl`
 Both urls have the format `http://cdn.eyeem.com/thumb/sq/50/0a4a321f1806b00c668d111a314bd98a14985765.jpg` and return different size photos that you can simply plug into your app.
@@ -144,6 +141,5 @@ In case you want to display photos in a different resolution you can use the sam
 
 
 ##Contact
-***
 
 For feedback, questions, complaints and props, you can get in touch with us at [api@eyeem.com](mailto:api@eyeem.com) or [@eyeemapi](http://twitter.com/eyeemapi) on Twitter.
